@@ -29,13 +29,6 @@ footer{
 * img::selection{
     background-color: #ffa02c9d;
 }
-.codeimg {
-    position: absolute;
-    top: 600px;
-    right: 15%;
-    border: none;
-    height: 300px;
-}
 body{
     background-color: rgb(2, 1, 1);
     color: white;
@@ -83,6 +76,10 @@ a{
 }
 /* tablet képernyő */
 @media (max-width:600px){
+    .codeimg{
+        width: 60%;
+        padding: 3px;
+    }
     .containers{
         width: 100%;
         padding-top: 5%;
@@ -102,6 +99,13 @@ a{
 }
 /* pc képernyő */
 @media (min-width:600px){
+    .codeimg {
+    position: absolute;
+    top: 600px;
+    right: 15%;
+    border: none;
+    height: 300px;
+    }
     #dropdown{
         display: none;
     }
@@ -122,6 +126,10 @@ a{
 /* tablet képernyő */
 @media (min-width:450px)
 {
+    .codeimg{
+        width: 60%;
+        padding: 3px;
+    }
     #dropdown{
         display: none;
     }
@@ -152,6 +160,10 @@ header button:hover{
 @media (max-width:450px){
     header button{
         display: none;
+    }
+    .codeimg{
+        width: 60%;
+        padding: 3px;
     }
     #dropdown {
         display: block;
