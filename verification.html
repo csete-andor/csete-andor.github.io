@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Csete Andor">
+    <meta name="Content-Language" content="hu">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="security.png">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1744181928950303"
+     crossorigin="anonymous"></script>
+    <title>Ellenőrzés...</title>
+</head>
+<body>
+
+    <div id="example-container" style="align-self: center; border: none; width: 50%; padding: 50px;" >
+    <img style="height: 50px;" src="loading.gif"><h2 style="position: relative; left: 100px;top: -60px;"><code>Ellenőrzés...</code></h2>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
+    <p><h3><code>Ellenőrizzünk a biztonságodat. Kérlek várj...</code></h3></p>
+    <p><h4><code>Ha probléma történik, frissídtsd a lapot, vagy kattints <a href="#" onclick="location.reload()">ide</a>.</code></h4></p>
+    <script>
+        window.onloadTurnstileCallback = function () {
+        turnstile.render('#example-container', {
+            sitekey: '0x4AAAAAAADWWptFzPjhvEyg',
+            callback: function(token) {
+                console.log(`Challenge Success ${token}`);
+                location.replace("https://cseteandor.hu/evesmunka/info")
+            },
+        });
+    };
+
+    // if using synchronous loading, will be called once the DOM is ready
+    turnstile.ready(onloadTurnstileCallback);
+    </script>
+    </div>
+    
+</body>
+</html>
