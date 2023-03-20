@@ -8,20 +8,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1744181928950303"
      crossorigin="anonymous"></script>
-    <title>Error 404</title>
-    <script>
-    function next(){
-        location.replace("https://cseteandor.hu");  
-    }
-    funtcion errorvalidate(){
-        location.reload();
-    }
-        
-    </script>
+    <title>Ellenőrzés...</title>
 </head>
-<body>
-    <div class="cf-turnstile" data-sitekey="0x4AAAAAAADWWptFzPjhvEyg" data-callback="next()" error-callback="errorvalidate()" expired-callback="errorvalidate()" timeout-callback="errorvaildate()"></div>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<body id="example-container">
 
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
+    <script>
+        window.onloadTurnstileCallback = function () {
+        turnstile.render('#example-container', {
+            sitekey: '0x4AAAAAAADWWptFzPjhvEyg',
+            callback: function(token) {
+                console.log(`Challenge Success ${token}`);
+                location.replace("https://cseteandor.hu/evesmunka/info")
+            },
+        });
+    };
+
+    // if using synchronous loading, will be called once the DOM is ready
+    turnstile.ready(onloadTurnstileCallback);
+    </script>
+    
 </body>
 </html>
