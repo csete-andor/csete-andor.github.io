@@ -152,7 +152,8 @@ footer {
     font-size: 85%;
     transition: 300ms;
 }
-footer:hover{
+
+footer:hover {
     color: #c6b1b1;
     transition: 300ms;
 }
@@ -233,9 +234,10 @@ a {
 
 /* telefon képernyő */
 @media (max-width:460px) {
-    .containers{
+    .containers {
         max-width: 50%;
     }
+
     header button {
         display: none;
     }
@@ -271,5 +273,4 @@ a {
     .change .bar3 {
         transform: translate(0, -11px) rotate(45deg);
     }
-    
 }
