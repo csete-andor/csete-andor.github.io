@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <link rel="icon" type="image" href="https://cseteandor.hu/evesmunka/icon.jpg">
+    <link rel="stylesheet" href="/Users/Andor/Desktop/cs-andor.github.io/new/style.css">
+    <meta charset="UTF-8">
+    <meta name="keywords"
+        content="Csete Andor, évesmunka, csete andor évesmunkája, waldorf évesmunka 2022-2023, programozás, webfejlesztés">
+    <meta name="description" content="Kapcsolat felvétel. Csete Andor nyolcadikos évesmunkája 2022-23">
+    <meta name="author" content="Csete Andor">
+    <meta name="Content-Language" content="hu">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Kapcsolat</title>
+</head>
+
+<body>
+    <img src="https://cseteandor.hu/evesmunka/blob.svg" class="blob" draggable="false" width="60%">
+    <header>
+        <a id="download" href="https://cseteandor.hu/evesmunka/download"><button>Töltsd le!</button></a>
+        <a id="info" href="https://cseteandor.hu/evesmunka/info"><button>Információ</button></a>
+        <a id="help" href="https://cseteandor.hu/evesmunka/help"><button>Segítség</button></a>
+        <a id="contact" href="https://cseteandor.hu/evesmunka/contact"><button>Kapcsolat</button></a>
+        <a id="dropdown" onclick="show_menu()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div id="menu" style="display: none;">
+            <a class="menulinks" href="https://cseteandor.hu/evesmunka/download">Töltsd le!</a>
+            <a class="menulinks" href="https://cseteandor.hu/evesmunka/info">Információ</a>
+            <a class="menulinks" href="https://cseteandor.hu/evesmunka/help">Segítség</a>
+            <a class="menulinks" href="https://cseteandor.hu/evesmunka/contact">Kapcsolat</a>
+        </div>
+    </header>
+    <div>
+        <div>
+            <div class="containers">
+                <h1>Kapcsolat</h1>
+                Ha kérdésed merült fel a weboldalat, vagy az évesmunka programomat böngészve, vagy valami hibát,
+                észrevételt
+                szeretnél megosztani akkor elérsz a <a href="mailto:info@cseteandor.hu">info@cseteandor.hu</a> -n, vagy
+                az iskolai emailemen:
+                <a href="mailto:csete.andor@phwi.hu">csete.andor@phwi.hu</a>. Bátran kérdezz, jelezz bármit, ha tudok,
+                segítek!
+            </div>
+        </div>
+        <div style="color: #FF8C00;" class="containers">
+            <h1 style="color: white;"></h1>
+            Csete Andor <br> email : <a href="mailto:info@cseteandor.hu">info@cseteandor.hu</a>, <a
+                href="mailto:csete.andor@phwi.hu">csete.andor@phwi.hu</a> <br> A weboldal 2023-ban készült.
+
+        </div>
+    </div>
+    <footer>Készítette: Csete Andor 2023-ban <br> "Programozás és Webfejlesztés" - Csete Andor nyolcadikos évesmunkája
+    </footer>
+    <script>
+        function show_menu() {
+            var x = document.getElementById("menu");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+    <a style="display: none;" id="totopbtn"><button class="totop" onclick="toTop()">&#x2191</button></a>
+    <script>
+        let mybutton = document.getElementById("totopbtn");
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function toTop(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+
+</html>

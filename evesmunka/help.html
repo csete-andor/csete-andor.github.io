@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <link rel="icon" type="image" href="https://cseteandor.hu/evesmunka/icon.jpg">
+    <link rel="stylesheet" href="/Users/Andor/Desktop/cs-andor.github.io/new/style.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Segítség az évesmunka programomhoz. Csete Andor nyolcadikos évesmunkája 2022-23">
+    <meta name="author" content="Csete Andor">
+    <meta name="keywords"
+        content="Csete Andor, évesmunka, csete andor évesmunkája, waldorf évesmunka 2022-2023, programozás, webfejlesztés">
+    <meta name="Content-Language" content="hu">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Segítség</title>
+</head>
+
+<body>
+    <img src="https://cseteandor.hu/evesmunka/blob.svg" class="blob" draggable="false" width="60%">
+    <header>
+        <a id="download" href="https://cseteandor.hu/evesmunka/download"><button>Töltsd le!</button></a>
+        <a id="info" href="https://cseteandor.hu/evesmunka/info"><button>Információ</button></a>
+        <a id="help" href="https://cseteandor.hu/evesmunka/help"><button>Segítség</button></a>
+        <a id="contact" href="https://cseteandor.hu/evesmunka/contact"><button>Kapcsolat</button></a>
+        <a id="dropdown" onclick="show_menu()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div id="menu" style="display: none;">
+            <a class="menulinks" href="https://cseteandor.hu/evesmunka/download">Töltsd le!</a>
+            <a class="menulinks" href="https://cseteandor.hu/evesmunka/info">Információ</a>
+            <a class="menulinks" href="https://cseteandor.hu/evesmunka/help/">Segítség</a>
+            <a class="menulinks" href="https://cseteandor.hu/evesmunka/contact">Kapcsolat</a>
+        </div>
+    </header>
+    <div>
+    </div>
+    <div class="containers">
+        <h1>Segítség a programban</h1>
+        <h3 style="color: #FF8C00;">A program használatának részletes magyarázata</h3>
+        <ul>
+            <li>
+                <h3>Válaszd ki a weboldal háttérszínét:</h3>
+            </li>
+            Itt megadhatod a weboldal háttérszínét. A gombra kattintva megjelenik egy színválasztó, ahol megadhatod
+            a pontos színt amit akarsz. Ez alapértelmezetten fehér. Színválasztás után a gomb mellet megjelenik egy
+            szöveg (olyasmi, hogy #f10562) ez teljesen normális. Ez a választott színed <a
+                href="https://hu.wikipedia.org/wiki/HTML-sz%C3%ADnk%C3%B3dok">színkódja</a>. Nem kell ezzel semmit
+            csinálnod, de hozzáértőknek, fejlesztőknek hasznos lehet. A "válaszd ki a weboldal betűszínét" és a
+            "válaszd ki a weboldal fejlécszínét" nem érdemelnek külön említést, hisz szinte teljesen megegyezznek a
+            háttérszín választással. Maximum annyit annak aki nem tudja, hogy melyik mit tud: a betűszín magáért
+            beszél, ezzel lehet beállítani a weboldalon szereplő szövegek színét. A lényeg, hogy a szöveg és a
+            háttér között nagy legyen a kontraszt!
+            A fejlécnél nehéz lehet a tökéletes színt megtalálni. Ez nagyon fontos egy jó weboldalon. A háttérnek és
+            a fejlécnek harmóniában kell lenni. A tökéletes szín kiválasztásáért javaslom az alábbi <a
+                href="https://coolors.co/fb6107-f3de2c-7cb518-5c8001-fbb02d">weboldalt</a>, ahol a szóköz
+            nyomogatásával kaphatunk összeillő színpalettákat.
+            Amennyiben a színválasztógomb mellet lévő szöveg <i>None</i> szövegre vált, ez azt jelenti, hiba
+            ütközött a színválasztásba. Ez nem egy hatalmas baj, ez föleg akkor jelenik meg ha bezárjuk,
+            félbeszakítjuk a színválasztást. None feliratnál a rendszer fehér színnel helyettesíti az adott színt.
+        </ul>
+    </div>
+    </div>
+    <footer>Készítette: Csete Andor 2023-ban <br> "Programozás és Webfejlesztés" - Csete Andor nyolcadikos évesmunkája
+    </footer>
+    <script>
+        function show_menu() {
+            var x = document.getElementById("menu");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+    <a style="display: none;" id="totopbtn" onclick="toTop()"><button class="totop">&#x2191</button></a>
+    <script>
+        let mybutton = document.getElementById("totopbtn");
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function toTop(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+
+</html>
