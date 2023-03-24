@@ -1,6 +1,9 @@
 html {
     scroll-behavior: smooth;
 }
+.containers{
+max-width: 600px;
+}
 
 .totop {
     position: fixed;
