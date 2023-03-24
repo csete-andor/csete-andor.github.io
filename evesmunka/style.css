@@ -124,7 +124,7 @@ header button:after {
 }
 
 header button:hover {
-    color: white;
+    color: #D4D4D5;
 }
 
 .menulinks {
@@ -142,7 +142,7 @@ text {
 
 text::selection {
     background-color: #FF8C00;
-    color: white;
+    color: #D4D4D5;
 }
 
 footer {
@@ -159,7 +159,7 @@ footer:hover {
 }
 
 * a::selection {
-    color: white;
+    color: #D4D4D5;
 }
 
 *::selection {
@@ -173,7 +173,7 @@ footer:hover {
 
 body {
     background-color: rgb(2, 1, 1);
-    color: white;
+    color: #D4D4D5;
     font-family: Poppins;
 }
 
