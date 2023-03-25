@@ -1,9 +1,6 @@
 html {
     scroll-behavior: smooth;
 }
-.containers{
-max-width: 600px;
-}
 
 .totop {
     position: fixed;
@@ -58,9 +55,7 @@ max-width: 600px;
     opacity: 45%;
     transition: 700ms;
     z-index: -1;
-    left: 20%;
     filter: blur(50px);
-    top: 5%;
 }
 
 header button {
@@ -190,7 +185,7 @@ a {
 
 
     .containers {
-        width: 100%;
+        width: 70%;
         padding-top: 5%;
         padding-left: 5%;
         margin-right: 0px;
@@ -199,6 +194,14 @@ a {
 
     #dropdown {
         display: none;
+    }
+    .blob{
+        top: 200px;
+        width: max-content;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
     }
 
 }
@@ -212,9 +215,25 @@ a {
 
     .containers {
         padding-top: 5%;
-        width: 40%;
+        width: 50%;
         padding-left: 5%;
         margin-right: 0px;
+    }
+    .blob{
+        top: 200px;
+        width: max-content;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+    }
+
+}
+@media (min-width:1200px){
+    .blob{
+        left: 20%;
+        top: 5%;
+        width: 60%;
     }
 }
 
@@ -237,17 +256,12 @@ a {
 
 /* telefon képernyő */
 @media (max-width:460px) {
-    .containers {
-        max-width: 50%;
-    }
 
+    .containers{
+        width: 70%;
+    }
     header button {
         display: none;
-    }
-
-    .codeimg {
-        width: 60%;
-        padding: 3px;
     }
 
     #dropdown {
