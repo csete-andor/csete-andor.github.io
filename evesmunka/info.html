@@ -73,11 +73,22 @@
         <h3 style="color: #FF8C00;">Olvasmány</h3>
         <p>A HTML, CSS és JavaScript a legfontosabb eszközök a weboldalak fejlesztéséhez. Az <a
                 href="https://hu.wikipedia.org/wiki/HTML" target="_blank">HTML</a> (HyperText Markup Language) egy
-            strukturált nyelv, amely segít a tartalom elrendezésében, míg a <a href="https://hu.wikipedia.org/wiki/CSS"
-                target="_blank">CSS</a> (Cascading Style Sheets) lehetővé teszi a megjelenés testreszabását, mint
+            strukturált nyelv, amely segít a tartalom elrendezésében, míg a <a
+                onmouseover="document.getElementById('csswiki_preview').className = 'hoverable'" id="csswiki"
+                href="https://hu.wikipedia.org/wiki/CSS" target="_blank">CSS</a> <iframe tabindex="-1"
+                onmouseleave="document.getElementById('csswiki_preview').className = 'not_hoverable'"
+                src="https://hu.wikipedia.org/wiki/CSS" class="not_hoverable" frameborder="0" width="40%" height="400px"
+                id="csswiki_preview">
+            </iframe> (Cascading Style Sheets) lehetővé teszi a megjelenés testreszabását, mint
             például a
-            színek, betűtípusok és elrendezés. A <a href="https://hu.wikipedia.org/wiki/JavaScript"
-                target="_blank">JavaScript</a> egy programozási nyelv, amely dinamizmust ad a weboldalaknak, és
+            színek, betűtípusok és elrendezés. A <a
+                onmouseover="document.getElementById('javascriptwiki_preview').className = 'hoverable'"
+                id="javascriptwiki" href="https://hu.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
+            <iframe tabindex="-1"
+                onmouseleave="document.getElementById('javascriptwiki_preview').className = 'not_hoverable'"
+                src="https://hu.wikipedia.org/wiki/JavaScript" class="not_hoverable" frameborder="0" width="40%"
+                height="400px" id="javascriptwiki_preview">
+            </iframe> egy programozási nyelv, amely dinamizmust ad a weboldalaknak, és
             interakciókat tesz lehetővé a felhasználóval.</p>
 
         <p>A webfejlesztés során az első lépés az, hogy tervezünk egy weboldalat és meghatározzuk a tartalmat, majd az
@@ -89,7 +100,15 @@
             információs
             eszköz lett. A weboldalak fejlesztése során a fejlesztőknek tisztában kell lenniük a felhasználói
             igényekkel, az
-            <a href="https://en.wikipedia.org/wiki/User_experience" target="_blank">UX</a> (User Experience) tervezéssel
+            <a href="https://en.wikipedia.org/wiki/User_experience"
+                onmouseover="document.getElementById('uxwiki_preview').className = 'hoverable'" id="uxwiki"
+                target="_blank">
+                UX
+            </a>
+            <iframe tabindex="-1" onmouseleave="document.getElementById('uxwiki_preview').className = 'not_hoverable'"
+                src="https://en.wikipedia.org/wiki/User_experience" class="not_hoverable" frameborder="0" width="40%"
+                height="400px" id="uxwiki_preview">
+            </iframe> (User Experience) tervezéssel
             és
             a keresőoptimalizálással. A webfejlesztők általában többféle technológiát is használnak, például
             keretrendszereket, adatbázisokat és tesztelő eszközöket a hatékonyabb és biztonságosabb fejlesztés
