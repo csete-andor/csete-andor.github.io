@@ -38,14 +38,27 @@
             lehet készíteni. Ez az ötlet már egy éve a fejemben volt,
             sőt egy kezdetleges verziót sikerült készítenem, majd egy egészen tűrhetö verzió is kikerült a kezemközül.
             Ezekkel csak az volt a baj, hogy a felhasználói felület (<a target="_blank"
-                href="https://hu.wikipedia.org/wiki/Felhaszn%C3%A1l%C3%B3i_fel%C3%BClet">UI</a>) a terminálban volt
+                href="https://hu.wikipedia.org/wiki/Felhaszn%C3%A1l%C3%B3i_fel%C3%BClet" onmouseover="document.getElementById('uiwiki_preview').className = 'hoverable'" id="uiwiki">UI</a><iframe tabindex="-1" onmouseleave="document.getElementById('uiwiki_preview').className = 'not_hoverable'"
+                src="https://hu.wikipedia.org/wiki/Felhaszn%C3%A1l%C3%B3i_fel%C3%BClet" class="not_hoverable"
+                frameborder="0" width="50%" height="400px" id="uiwiki_preview">
+            </iframe>) a terminálban volt
             elhelyezve
-            (<a target="_blank"
-                href="https://hu.wikipedia.org/wiki/Parancssoros_felhaszn%C3%A1l%C3%B3i_fel%C3%BClet">CLI</a>).
+            (            <a target="_blank" href="https://hu.wikipedia.org/wiki/Parancssoros_felhaszn%C3%A1l%C3%B3i_fel%C3%BClet"
+                onmouseover="document.getElementById('cliwiki_preview').className = 'hoverable'" id="cliwiki">CLI
+            </a>
+                        <iframe tabindex="-1" onmouseleave="document.getElementById('cliwiki_preview').className = 'not_hoverable'"
+                src="https://hu.wikipedia.org/wiki/Parancssoros_felhaszn%C3%A1l%C3%B3i_fel%C3%BClet"
+                class="not_hoverable" frameborder="0" width="50%" height="400px" id="cliwiki_preview">
+            </iframe>).
             Ez igen ronda, nem átlátható, kellemetlen a használata.
             Ezért elhatároztam, hogy készítek egy grafikus felhasználói felülettel
-            (<a target="_blank"
-                href="https://hu.wikipedia.org/wiki/Grafikus_felhaszn%C3%A1l%C3%B3i_fel%C3%BClet">GUI</a>)
+            (            <a onmouseover="document.getElementById('guiwiki_preview').className = 'hoverable'" id="guiwiki"
+                target="_blank" href="https://hu.wikipedia.org/wiki/Grafikus_felhaszn%C3%A1l%C3%B3i_fel%C3%BClet">GUI
+            </a>
+                        <iframe tabindex="-1" onmouseleave="document.getElementById('guiwiki_preview').className = 'not_hoverable'"
+                src="https://hu.wikipedia.org/wiki/Grafikus_felhaszn%C3%A1l%C3%B3i_fel%C3%BClet" class="not_hoverable"
+                frameborder="0" width="50%" height="400px" id="guiwiki_preview">
+            </iframe>)
             rendelkező programot, melynek képességeit kibővítem.
             <br>
             <a href="https://cseteandor.hu/evesmunka/download"><button class="downloadbtn">Töltsd le!</button></a>
@@ -53,10 +66,22 @@
     </div>
     <div class="containers">
         <h1>A Pythonról röviden</h1>
-        <h3><a href="https://hu.wikipedia.org/wiki/Python_(programoz%C3%A1si_nyelv)" target="_blank">Wikipédia cikk</a>
+        <h3><a href="https://hu.wikipedia.org/wiki/Python_(programoz%C3%A1si_nyelv)" target="_blank"
+                onmouseover="document.getElementById('pythonwiki_preview').className = 'hoverable'"
+                id="pythonwiki">Wikipédia cikk</a>
+            <iframe tabindex="-1" onmouseleave="document.getElementById('pythonwiki_preview').className = 'not_hoverable'"
+                src="https://hu.wikipedia.org/wiki/Python_(programoz%C3%A1si_nyelv)" class="not_hoverable"
+                frameborder="0" width="50%" height="400px" id="pythonwiki_preview">
+            </iframe>
         </h3>
-        A Python egy általános célú, nagyon magas szintű programozási nyelv, melyet <a
-            href="https://hu.wikipedia.org/wiki/Guido_van_Rossum" target="_blank">Guido van Rossum</a> holland
+        A Python egy általános célú, nagyon magas szintű programozási nyelv, melyet         <a href="https://hu.wikipedia.org/wiki/Guido_van_Rossum" target="_blank" id="rossumwiki"
+            onmouseover="document.getElementById('rossumwiki_preview').className = 'hoverable'">
+            Guido van Rossum
+        </a>
+        <iframe tabindex="-1" onmouseleave="document.getElementById('rossumwiki_preview').className = 'not_hoverable'"
+            src="https://hu.wikipedia.org/wiki/Guido_van_Rossum" class="not_hoverable" frameborder="0" width="50%"
+            height="400px" id="rossumwiki_preview">
+        </iframe> holland
         programozó
         kezdett el fejleszteni 1989 végén, majd hozott nyilvánosságra 1991-ben. A nyelv tervezési filozófiája az
         olvashatóságot és a programozói munka megkönnyítését helyezi előtérbe a futási sebességgel szemben. Például a
@@ -71,8 +96,13 @@
     <div class="containers" style="width: 63%;">
         <h1>Webfejlesztés alapjai</h1>
         <h3 style="color: #FF8C00;">Olvasmány</h3>
-        <p>A HTML, CSS és JavaScript a legfontosabb eszközök a weboldalak fejlesztéséhez. Az <a
-                href="https://hu.wikipedia.org/wiki/HTML" target="_blank">HTML</a> (HyperText Markup Language) egy
+        <p>A HTML, CSS és JavaScript a legfontosabb eszközök a weboldalak fejlesztéséhez. Az <a href="https://hu.wikipedia.org/wiki/HTML" target="_blank" onmouseover="document.getElementById('htmlwiki_preview').className = 'hoverable'" id="htmlwiki">
+                HTML
+            </a>
+            <iframe tabindex="-1" onmouseleave="document.getElementById('htmlwiki_preview').className = 'not_hoverable'"
+                src="https://hu.wikipedia.org/wiki/HTML" class="not_hoverable" frameborder="0" width="40%"
+                height="400px" id="htmlwiki_preview">
+            </iframe>(HyperText Markup Language) egy
             strukturált nyelv, amely segít a tartalom elrendezésében, míg a <a
                 onmouseover="document.getElementById('csswiki_preview').className = 'hoverable'" id="csswiki"
                 href="https://hu.wikipedia.org/wiki/CSS" target="_blank">CSS</a> <iframe tabindex="-1"
