@@ -368,6 +368,25 @@ a {
         opacity: 100%;
         transition: 500ms;
     }
+        #uxwiki:hover~#uxwiki_preview {
+        z-index: 10;
+        opacity: 100%;
+        transition: 500ms;
+    }
+
+    #uxwiki_preview {
+        position: absolute;
+        z-index: -1;
+        opacity: 0%;
+        transition: 500ms;
+        border-radius: 10px;
+    }
+
+    #uxwiki_preview.hoverable:hover {
+        z-index: 10;
+        opacity: 100%;
+        transition: 500ms;
+    }
     .containers{
         color: gray;
     }
