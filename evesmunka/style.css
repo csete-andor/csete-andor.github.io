@@ -208,6 +208,172 @@ a {
 
 /* pc képernyő */
 @media (min-width:600px) {
+    a:hover{
+        color: red;
+        transition: 500ms;
+    }
+    #uiwiki:hover~#uiwiki_preview {
+        z-index: 10;
+        opacity: 100%;
+        transition: 500ms;
+    }
+
+    #uiwiki_preview {
+        position: absolute;
+        z-index: -1;
+        opacity: 0%;
+        transition: 500ms;
+        border-radius: 10px;
+    }
+
+    #uiwiki_preview.hoverable:hover {
+        z-index: 10;
+        opacity: 100%;
+        transition: 500ms;
+    }
+
+    #cliwiki:hover~#cliwiki_preview {
+        z-index: 10;
+        opacity: 100%;
+        transition: 500ms;
+    }
+
+    #cliwiki_preview {
+        position: absolute;
+        z-index: -1;
+        opacity: 0%;
+        transition: 500ms;
+        border-radius: 10px;
+    }
+
+    #cliwiki_preview.hoverable:hover {
+        z-index: 10;
+        opacity: 100%;
+        transition: 500ms;
+    }
+
+    #guiwiki:hover~#guiwiki_preview {
+        z-index: 10;
+        opacity: 100%;
+        transition: 500ms;
+    }
+
+    #guiwiki_preview {
+        position: absolute;
+        z-index: -1;
+        opacity: 0%;
+        transition: 500ms;
+        border-radius: 10px;
+    }
+
+    #guiwiki_preview.hoverable:hover {
+        z-index: 10;
+        opacity: 100%;
+        transition: 500ms;
+    }
+
+    #rossumwiki:hover~#rossumwiki_preview {
+        z-index: 10;
+        opacity: 100%;
+        transition: 500ms;
+    }
+
+    #rossumwiki_preview {
+        position: absolute;
+        z-index: -1;
+        opacity: 0%;
+        transition: 500ms;
+        border-radius: 10px;
+    }
+
+    #rossumwiki_preview.hoverable:hover {
+        z-index: 10;
+        opacity: 100%;
+        transition: 500ms;
+    }
+
+    #pythonwiki:hover~#pythonwiki_preview {
+        z-index: 10;
+        opacity: 100%;
+        transition: 500ms;
+    }
+
+    #pythonwiki_preview {
+        position: absolute;
+        z-index: -1;
+        opacity: 0%;
+        transition: 500ms;
+        border-radius: 10px;
+    }
+
+    #pythonwiki_preview.hoverable:hover {
+        z-index: 10;
+        opacity: 100%;
+        transition: 500ms;
+    }
+    #htmlwiki:hover~#htmlwiki_preview {
+        z-index: 10;
+        opacity: 100%;
+        transition: 500ms;
+    }
+
+    #htmlwiki_preview {
+        position: absolute;
+        z-index: -1;
+        opacity: 0%;
+        transition: 500ms;
+        border-radius: 10px;
+    }
+
+    #htmlwiki_preview.hoverable:hover {
+        z-index: 10;
+        opacity: 100%;
+        transition: 500ms;
+    }
+    #csswiki:hover~#csswiki_preview {
+        z-index: 10;
+        opacity: 100%;
+        transition: 500ms;
+    }
+
+    #csswiki_preview {
+        position: absolute;
+        z-index: -1;
+        opacity: 0%;
+        transition: 500ms;
+        border-radius: 10px;
+    }
+
+    #csswiki_preview.hoverable:hover {
+        z-index: 10;
+        opacity: 100%;
+        transition: 500ms;
+    }
+    #javascriptwiki:hover~#javascriptwiki_preview {
+        z-index: 10;
+        opacity: 100%;
+        transition: 500ms;
+    }
+
+    #javascriptwiki_preview {
+        position: absolute;
+        z-index: -1;
+        opacity: 0%;
+        transition: 500ms;
+        border-radius: 10px;
+    }
+
+    #javascriptwiki_preview.hoverable:hover {
+        z-index: 10;
+        opacity: 100%;
+        transition: 500ms;
+    }
+    .containers{
+        color: gray;
+    }
+    .containers:hover{
+        color: #D4D4D5;
+    }
 
     #dropdown {
         display: none;
