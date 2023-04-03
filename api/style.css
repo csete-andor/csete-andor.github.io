@@ -1,0 +1,57 @@
+#apple-price{
+    background-color: rgb(188, 188, 188);
+    border-radius: 15px;
+    width: 175px;
+    height: 250px;
+    text-align: center;
+    font-family: asap;
+    transition: 500ms;
+}
+#apple-price .name{
+    position: relative;
+    top: 30px;
+    font-size: 23px;
+    margin-top: 30px;
+}
+#apple-price .symbol{
+    position: relative;
+    top: 20px;
+    font-size: 15px;
+    color: grey;
+}
+#apple-price .price{
+    position: relative;
+    top: -15px;
+    font-size: 43px;
+}
+#apple-price .line{
+    top: -45px;
+    position: relative;
+    width: 50%;
+    border-bottom: solid 3px blue;
+    margin: auto;
+}
+#apple-price img{
+    position: relative;
+    bottom: 15px;
+}
+#apple-price:hover{
+    width: 275px;
+    height: 350px;
+    transition: 500ms;
+}
+#hufprice{
+    position: relative;
+    opacity: 0%;
+}
+#apple-price .huf{
+    opacity: 100%;
+    transition: 300ms;
+}
+#apple-price .hiddenhuf{
+    opacity: 0%;
+    transition: 300ms;
+}
+body{
+    background-color: white;
+}
