@@ -55,3 +55,16 @@
 body{
     background-color: white;
 }
+#fullprice{
+    position: relative;
+    bottom: 10px;
+    color: rgb(67, 67, 67);
+}
+.fullprice{
+    opacity: 100%;
+    transition: 500ms;
+}
+.hiddenfullprice{
+    opacity: 0%;
+    transition: 500ms;
+}
