@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Asap">
+    <link rel="stylesheet" href="https://cseteandor.hu/api/style.css">
+    <script src="https://cseteandor.hu/api/script.js"></script>
+    <title>Apple részvény megjelenítése</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://www.freepnglogos.com/uploads/apple-logo-png/apple-logo-icon-transparent-png-svg-vector-3.png">
+</head>
+
+<body>
+    <h3 style="width: 60%; margin: auto; margin-top: 20px;">
+        Apple részvények (AAPL) aktuális árfolyamának megjelenítése dollárban, majd átváltása forint árfolyara, az
+        aktuális átváltási ráta használatával. (percenként maximum 5 kérelmezéssel)
+    </h3>
+
+    <div id="apple-price" onmouseleave="hide_hufprice()" onmouseover="show_hufprice()">
+        <p class="name">Apple részvény</p>
+        <p class="symbol">AAPL</p>
+        <p id="aapl-price" class="price"></p>
+        <div class="line"></div>
+        <img src="https://cseteandor.hu/api/appleicon.png" width="25%">
+        <p id="hufprice" class="hiddenhuf"></p>
+    </div>
+
+    <div style=" width: 60%; margin: 20px; margin-top: 100px;">
+        A program működése az <a href="https://www.alphavantage.co/">https://www.alphavantage.co</a> weboldal ingyenes
+        részvény API szolgáltatásra alapul. Itt maximum 5 kérelmezés lesz végrehajtva percenként, a további kérelmezés
+        végrehajtásokat nem támogatja az ingyenes fiók. Az alphavantage felel az AAPL részvények aktuális USD
+        árfolyamának lekérdezéséért, és az aktuális USD-HUF váltási ráta lekérdezéséért is, (ezzel kell megszorozni az
+        AAPL-USD árfolyamot, hogy megkapjuk az AAPL-HUF árfolyamot.). Majd a lekérdezett adatokat kiírja a weboldalon. A
+        <i>HIBA</i> feliratot a nemmegfelelő internetkapcsolat, vagy a sok kérelmezés okozza. Ebben az esetben próbáld
+        újra egy perc múlva.
+    </div>
+
+    <footer style="position: fixed; bottom: 20px; width: 100%;text-align: center;">
+        <b>
+            Készítette <a href="https://cseteandor.hu">Csete Andor</a> 2023-ban
+        </b>
+    </footer>
+
+</body>
+
+</html>
+<!--G5MHB3MAUZ9NKQCW-->
