@@ -53,7 +53,9 @@ fetch(ExCUrl)
 // A forint árfolyam megjelenítése és elrelytése
 function show_hufprice(){
     document.getElementById("hufprice").className="huf";
+    document.getElementById("fullprice").className="fullprice";
 }
 function hide_hufprice(){
     document.getElementById("hufprice").className="hiddenhuf";
+    document.getElementById("fullprice").className="hiddenfullprice";
 }
