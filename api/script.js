@@ -42,10 +42,10 @@ fetch(ExCUrl)
     const exchangeRate = data["Realtime Currency Exchange Rate"]["5. Exchange Rate"];
     const HufPrice=foramtedLastPrice * exchangeRate;
     document.getElementById("hufprice").textContent=`HUF ${HufPrice.toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-    const pieces = 2;
-    const fullPrice = foramtedLastPrice * pieces;
-    const hufFullPrice = fullprice * HufPrice;
-    document.getElementById("fullprice").innerHTML = pieces+"db = $"+fullPrice+" vagy "+hufFullPrice;
+        const pieces = 2;
+        const fullPriceUSD = (formattedLastPrice * pieces).toFixed(2);
+        const fullPriceHUF = (HufPrice * pieces).toFixed(2);
+        document.getElementById("fullprice").textContent = `${pieces}db = $${fullPriceUSD} vagy HUF ${fullPriceHUF}'
 })
 .catch(error => {
     // Hibák feldolgozása
