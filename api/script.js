@@ -1,6 +1,6 @@
 
 // Cseréld le az APIKULCS szöveget a saját API kulcsodra, melyet a https://www.alphavantage.co/support/ oldalon készíthetsz
-const apiKey = "APIKULCS";
+const apiKey = "G5MHB3MAUZ9NKQCW";
 const tickerSymbol = "AAPL";
 var foramtedLastPrice;
 
@@ -42,6 +42,10 @@ fetch(ExCUrl)
     const exchangeRate = data["Realtime Currency Exchange Rate"]["5. Exchange Rate"];
     const HufPrice=foramtedLastPrice * exchangeRate;
     document.getElementById("hufprice").textContent=`HUF ${HufPrice.toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+    const pieces = 2;
+    const fullPrice = foramtedLastPrice * pieces;
+    const hufFullPrice = fullprice * HufPrice;
+    document.getElementById("fullprice").innerHTML = pieces+"db = $"+fullPrice+" vagy "+hufFullPrice;
 })
 .catch(error => {
     // Hibák feldolgozása
