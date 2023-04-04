@@ -14,11 +14,10 @@ fetch(apiUrl)
     // Az API visszajelzés feldolgozása
     const lastPrice = data["Global Quote"]["05. price"];
 
-    // Adat megjelenítése az oldalon
     const priceElement = document.getElementById("aapl-price");
     formattedLastPrice=parseFloat(lastPrice);
-    formattedLastPrice.toFixed(2);
-    priceElement.textContent = `$${formattedLastPrice.toFixed(2)}`;
+    formattedLastPrice = formattedLastPrice.toFixed(2);
+    priceElement.textContent = `$${formattedLastPrice}`;
     console.log(new Date().toLocaleString());
 })
 .catch(error => {
@@ -45,7 +44,8 @@ fetch(ExCUrl)
         const pieces = 2;
         const fullPriceUSD = (formattedLastPrice * pieces).toFixed(2);
         const fullPriceHUF = (HufPrice * pieces).toFixed(2);
-        document.getElementById("fullprice").textContent = `${pieces}db = $${fullPriceUSD} vagy HUF ${fullPriceHUF.toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+        document.getElementById("fullprice").textContent = `${pieces}db = $${fullPriceUSD} vagy HUF ${parseFloat(fullPriceHUF).toLocaleString('hu-HU', {minimumFractionDigits: 2, maximumFractionDigits: 2, currency: 'HUF'})}`;
+        console.log(`${pieces}db = $${fullPriceUSD} vagy HUF ${fullPriceHUF.toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`)
 })
 .catch(error => {
     // Hibák feldolgozása
