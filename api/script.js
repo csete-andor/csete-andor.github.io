@@ -45,7 +45,7 @@ fetch(ExCUrl)
         const pieces = 2;
         const fullPriceUSD = (formattedLastPrice * pieces).toFixed(2);
         const fullPriceHUF = (HufPrice * pieces).toFixed(2);
-        document.getElementById("fullprice").textContent = `${pieces}db = $${fullPriceUSD} vagy HUF ${fullPriceHUF}'
+        document.getElementById("fullprice").textContent = `${pieces}db = $${fullPriceUSD} vagy HUF ${fullPriceHUF}`;
 })
 .catch(error => {
     // Hibák feldolgozása
