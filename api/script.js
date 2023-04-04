@@ -16,9 +16,9 @@ fetch(apiUrl)
 
     // Adat megjelenítése az oldalon
     const priceElement = document.getElementById("aapl-price");
-    foramttedLastPrice=parseFloat(lastPrice);
-    foramttedLastPrice.toFixed(2);
-    priceElement.textContent = `$${foramttedLastPrice.toFixed(2)}`;
+    formattedLastPrice=parseFloat(lastPrice);
+    formattedLastPrice.toFixed(2);
+    priceElement.textContent = `$${formattedLastPrice.toFixed(2)}`;
     console.log(new Date().toLocaleString());
 })
 .catch(error => {
@@ -40,7 +40,7 @@ fetch(ExCUrl)
 .then(data => {
     // Az API visszajelzés feldolgozása
     const exchangeRate = data["Realtime Currency Exchange Rate"]["5. Exchange Rate"];
-    const HufPrice=foramttedLastPrice * exchangeRate;
+    const HufPrice=formattedLastPrice * exchangeRate;
     document.getElementById("hufprice").textContent=`HUF ${HufPrice.toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
         const pieces = 2;
         const fullPriceUSD = (formattedLastPrice * pieces).toFixed(2);
