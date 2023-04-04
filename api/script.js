@@ -1,6 +1,6 @@
 
 // Cseréld le az APIKULCS szöveget a saját API kulcsodra, melyet a https://www.alphavantage.co/support/ oldalon készíthetsz
-const apiKey = "G5MHB3MAUZ9NKQCW";
+const apiKey = "APIKULCS";
 const tickerSymbol = "AAPL";
 var foramtedLastPrice;
 
