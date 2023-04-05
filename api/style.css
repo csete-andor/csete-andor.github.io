@@ -1,5 +1,5 @@
 body{
-    font-family:Asap;
+    height:350px;
 }
 #apple-price{
     background-color: rgb(188, 188, 188);
@@ -54,9 +54,6 @@ body{
 #apple-price .hiddenhuf{
     opacity: 0%;
     transition: 300ms;
-}
-body{
-    background-color: white;
 }
 #fullprice{
     position: relative;
