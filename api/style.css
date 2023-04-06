@@ -1,5 +1,6 @@
 body{
     height:350px;
+    overflow: hidden;
 }
 #apple-price{
     background-color: rgb(188, 188, 188);
