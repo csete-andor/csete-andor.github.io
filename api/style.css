@@ -1,5 +1,7 @@
+html{
+    overflow: hidden;
+}
 body{
-    height:350px;
     overflow: hidden;
 }
 #apple-price{
