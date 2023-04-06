@@ -1,6 +1,6 @@
 console.log('Készítette Csete Andor 2023-ban')
 // Cseréld le az APIKULCS szöveget a saját API kulcsodra, melyet a https://www.alphavantage.co/support/ oldalon készíthetsz
-const apiKey = "APIKULCS";
+const apiKey = "G5MHB3MAUZ9NKQCW";
 const tickerSymbol = "AAPL";
 var formattedLastPrice;
 
