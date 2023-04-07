@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2853/2853625.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Antic+Didone">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send us a feedback</title>
+    <style>
+        body{
+            background-color: darkorange;
+            font-family: Antic Didone;
+        }
+        input{
+            border: 2px solid black;
+            background-color: rgb(249, 167, 67);
+            transition: 200ms;
+            padding: 5px;
+            position: relative;
+            right: 65px;
+            width: 250px;
+        }
+        input:focus {
+            outline: none;
+            box-shadow: 5px 5px black;
+        }
+        input:hover{
+            box-shadow: 5px 5px black;
+        }
+        textarea{
+            border: 2px solid black;
+            background-color: rgb(249, 167, 67);
+            transition: 200ms;
+            padding: 5px;
+            resize: none;
+            height: 100px;
+            margin: 15px;
+            width: 250px;
+            position: relative;
+            right: 77px;
+        }
+        textarea:focus {
+            outline: none;
+            box-shadow: 5px 5px black;
+        }
+        textarea:hover{
+            box-shadow: 5px 5px black;
+        }
+        button{
+            border: 2px solid black;
+            background-color: rgb(249, 167, 67);
+            transition: 200ms;
+            padding: 5px;
+            width: 265px;
+            
+        }
+        button:hover{
+            box-shadow: 5px 5px black;
+        }
+        form{
+            margin-top: 100px;
+            width: 100%;
+            text-align: center;
+        }
+        label.a{
+            position: relative;
+
+        }
+        label.b{
+            position: relative;
+        }
+        input:-webkit-autofill {
+            background-color: rgb(249, 167, 67) !important;
+        }
+
+        input:-moz-autofill {
+            background-color: rgb(249, 167, 67) !important;
+        }
+
+        textarea:-webkit-autofill {
+            background-color: rgb(249, 167, 67) !important;
+        }
+
+        textarea:-moz-autofill {
+            background-color: rgb(249, 167, 67) !important;
+        }
+        a{
+            background-color: transparent;
+            border-radius: 0px;
+            padding: 10px;
+            border: solid 2px black;
+            transition: 200ms;
+            color: black;
+            font-size: x-large;
+            text-decoration: none;
+            width: 250px;
+            position: relative;
+            top: 175px;
+            z-index: 10;
+        }
+        a:hover{
+            box-shadow: 5px 5px black;
+            
+        }
+        #title{
+            position: absolute;
+            left: 1em;
+            top: 1em;
+            font-size: xx-large;
+            z-index: -10;
+            cursor: default;
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */
+        }
+        .container{
+            width: 100%;
+            text-align: center;
+        }
+        label span{
+            position: relative;
+            right: 75px;
+        }
+        label span.msg{
+            top: -115px;
+        }
+    </style>
+</head>
+<body>
+    <span id="title"><img src="https://cdn-icons-png.flaticon.com/512/2853/2853625.png" width="4%" style="position: relative; top:2px;"> Altimore</span>
+    <h1 style="width: 100%; text-align: center;">feedback</h1><h3 style="text-align: center; width: 100%;">We can improve our services with feedback </h3>
+    <form
+  action="https://formspree.io/f/xbjepjdn"
+  method="POST">
+  <label class="a">
+    <span>Enter your email:</span>
+    <input placeholder="email..." type="email" name="email" required lang="en">
+    <br>
+  </label>
+  <label class="b">
+    <span class="msg">Write your feedback:</span>
+    <textarea placeholder="Enter your feedback, report a bug, tell us your opinion!" name="message" required lang="en"></textarea><br>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+<div class="container"><a href="https://cseteandor.hu/altimore/#home">← Back to home</a></div>
+</body>
+</html>
