@@ -133,6 +133,10 @@
         label span.msg{
             top: -115px;
         }
+        .cf-turnstile > iframe {
+            width: 265px !important;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
@@ -150,7 +154,7 @@
     <span class="msg">Write your feedback:</span>
     <textarea placeholder="Enter your feedback, report a bug, tell us your opinion!" name="message" required lang="en"></textarea><br>
   </label>
-  <div class="cf-turnstile" data-sitekey="0x4AAAAAAAD2o3MbXc6pYEhE" data-callback="CFTrunstileChallengeCompleted"></div>
+  <div class="cf-turnstile" data-sitekey="0x4AAAAAAAD2o3MbXc6pYEhE" data-callback="CFTrunstileChallengeCompleted" style="font-size: 2px;"></div>
   <button id="submit-button" disabled type="submit" style="background-color: rgb(202, 155, 97);">Send</button>
 </form>
 <div class="container"><a href="https://cseteandor.hu/altimore/#home">← Back to home</a></div>
