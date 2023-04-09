@@ -8,6 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Send us a feedback</title>
+    <script>
+        function CFTrunstileChallengeCompleted(){
+            document.getElementById("submit-button").removeAttribute("disabled");
+            document.getElementById("submit-button").style.backgroundColor="rgb(249, 167, 67)"
+        }
+    </script>
     <style>
         body{
             background-color: darkorange;
@@ -131,7 +137,7 @@
 <body>
     <span id="title"><img src="https://cdn-icons-png.flaticon.com/512/2853/2853625.png" width="4%" style="position: relative; top:2px;"> Altimore</span>
     <h1 style="width: 100%; text-align: center;">feedback</h1><h3 style="text-align: center; width: 100%;">We can improve our services with feedback </h3>
-    <form
+    <form id="feedbackForm"
   action="https://formspree.io/f/xbjepjdn"
   method="POST">
   <label class="a">
@@ -143,9 +149,17 @@
     <span class="msg">Write your feedback:</span>
     <textarea placeholder="Enter your feedback, report a bug, tell us your opinion!" name="message" required lang="en"></textarea><br>
   </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
+  <div class="cf-turnstile" data-sitekey="0x4AAAAAAAD2o3MbXc6pYEhE" data-callback="CFTrunstileChallengeCompleted"></div>
+  <button id="submit-button" disabled type="submit" style="background-color: rgb(202, 155, 97);">Send</button>
 </form>
 <div class="container"><a href="https://cseteandor.hu/altimore/#home">← Back to home</a></div>
+<script>
+    document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+  if (document.getElementById("submit-button").hasAttribute("disabled")) {
+    event.preventDefault();
+    alert("Please complete the Cloudflare Turnstile challenge before submitting the form.");
+  }
+});
+</script>
 </body>
 </html>
