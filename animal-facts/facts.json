@@ -1,0 +1,17 @@
+{
+    "animals": [
+      {
+        "name": "Tiger",
+        "fact": "Tigers are the largest cat species in the world."
+      },
+      {
+        "name": "Elephant",
+        "fact": "Elephants can live up to 70 years in the wild."
+      },
+      {
+        "name": "Giraffe",
+        "fact": "Giraffes have long necks to help them reach leaves on tall trees."
+      }
+    ]
+  }
+  
