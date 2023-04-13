@@ -1,17 +1,148 @@
 {
     "animals": [
-      {
-        "name": "Tiger",
-        "fact": "Tigers are the largest cat species in the world."
-      },
-      {
-        "name": "Elephant",
-        "fact": "Elephants can live up to 70 years in the wild."
-      },
-      {
-        "name": "Giraffe",
-        "fact": "Giraffes have long necks to help them reach leaves on tall trees."
-      }
+        {
+            "name": "Tiger",
+            "facts": [
+                "Tigers are the largest cat species in the world.",
+                "Tigers can reach speeds of up to 60 km/h (37 mph).",
+                "A group of tigers is known as a 'streak' or an 'ambush'.",
+                "Tigers have been known to swim up to 6 km (3.7 miles) in a single day.",
+                "The stripes on a tiger's coat are unique to each individual and can be used to identify them.",
+                "Tigers have excellent night vision and can see up to six times better than humans in low light conditions.",
+                "A tiger's roar can be heard up to 3 km (1.9 miles) away.",
+                "Tigers have been known to attack crocodiles and even swim with them in the water."
+            ]
+        },
+        {
+            "name": "Elephant",
+            "facts": [
+                "Elephants can live up to 70 years in the wild.",
+                "Elephants have a highly developed sense of smell and can detect water sources from miles away.",
+                "Elephants can communicate with each other using infrasonic sounds that are below the range of human hearing.",
+                "Elephants are the largest land animals in the world.",
+                "Elephants have been observed using tools, such as using sticks to scratch an itch or swat a fly.",
+                "A group of elephants is known as a 'herd' or a 'parade'.",
+                "Elephants have a long memory and can remember other elephants and places they have been for many years."
+            ]
+        },
+        {
+            "name": "Giraffe",
+            "facts": [
+                "Giraffes have long necks to help them reach leaves on tall trees.",
+                "Giraffes can grow up to 6 meters (20 feet) tall.",
+                "Giraffes only need to sleep for around 4 hours per day.",
+                "Giraffes are the tallest land animals in the world.",
+                "Giraffes have a specially adapted circulatory system that prevents them from passing out when they bend down to drink water.",
+                "Giraffes have a blue-black tongue that is around 45 cm (18 inches) long.",
+                "Giraffes can run at speeds of up to 60 km/h (37 mph)."
+            ]
+        },
+        {
+            "name": "Penguin",
+            "facts": [
+                "Penguins are flightless birds that live almost exclusively in the Southern Hemisphere.",
+                "Penguins can hold their breath for up to 20 minutes underwater.",
+                "Penguins are excellent swimmers and can swim at speeds of up to 22 mph (35 km/h).",
+                "Penguins are social animals and live in large colonies.",
+                "Some penguin species can jump up to 6 feet (1.8 meters) out of the water.",
+                "Penguins have an oil gland above their tail that they use to waterproof their feathers.",
+                "Penguins can survive in extreme temperatures, with some species living in temperatures as low as -60°C (-76°F).",
+                "Penguins have an organ above their eyes that converts seawater into fresh water."
+            ]
+        },
+        {
+            "name": "Lion",
+            "facts": [
+                "Lions are the only cats that live in groups called 'prides'.",
+                "Lions can run at speeds of up to 50 mph (80 km/h).",
+                "Lions are the second largest big cat species in the world, after tigers."
+            ]
+        },
+        {
+            "name": "Octopus",
+            "facts": [
+                "Octopuses can change the color, pattern, and texture of their skin to blend in with their surroundings.",
+                "Octopuses have three hearts."
+            ]
+        },
+        {
+            "name": "Kangaroo",
+            "facts": [
+                "Kangaroos can jump up to three times their own body length in one leap.",
+                "Kangaroos can hop at speeds of up to 60 km/h (37 mph)."
+            ]
+        },
+        {
+            "name": "Gorilla",
+            "facts": [
+                "Gorillas have unique nose prints that can be used to identify them, just like human fingerprints.",
+                "Gorillas can catch human colds and flu."
+            ]
+        },
+        {
+            "name": "Flamingo",
+            "facts": [
+                "Flamingos are pink because of the pigments in the algae and crustaceans they eat."
+            ]
+        },
+        {
+            "name": "Hippopotamus",
+            "facts": [
+                "Hippos can hold their breath for up to five minutes underwater."
+            ]
+        },
+        {
+            "name": "Koala",
+            "facts": [
+                "Koalas sleep up to 20 hours a day because their diet of eucalyptus leaves is low in energy."
+            ]
+        },
+        {
+            "name": "Jellyfish",
+            "facts": [
+                "Jellyfish have no brain, heart, or bones, and they are made up of more than 95% water."
+            ]
+        },
+        {
+            "name": "Chimpanzee",
+            "facts": [
+                "Chimpanzees can recognize themselves in mirrors, a sign of self-awareness.",
+                "Chimpanzees can use tools to solve problems and even make other tools."
+            ]
+        },
+        {
+            "name": "Ostrich",
+            "facts": [
+                "Ostriches have the largest eyes of any land animal and can see up to 2.5 miles away."
+            ]
+        },
+        {
+            "name": "Sloth",
+            "facts": [
+                "Sloths only defecate once a week and can lose up to a third of their body weight in the process."
+            ]
+        },
+        {
+            "name": "Orangutan",
+            "facts": [
+                "Orangutans are the largest tree-dwelling animals in the world."
+            ]
+        },
+        {
+            "name": "Peregrine falcon",
+            "facts": [
+              "Peregrine falcons are the fastest animals in the world.",
+              "They can reach speeds of up to 240 miles per hour when diving to catch prey.",
+              "Peregrine falcons are found on every continent except Antarctica."
+            ]
+          },
+          {
+            "name": "Blue whale",
+            "facts": [
+              "Blue whales are the largest animals on Earth.",
+              "They can weigh up to 200 tons and grow up to 100 feet in length.",
+              "Despite their massive size, blue whales feed mostly on tiny shrimp-like creatures called krill."
+            ]
+          }
     ]
-  }
-  
+}
