@@ -22,7 +22,13 @@
                 "Elephants are the largest land animals in the world.",
                 "Elephants have been observed using tools, such as using sticks to scratch an itch or swat a fly.",
                 "A group of elephants is known as a 'herd' or a 'parade'.",
-                "Elephants have a long memory and can remember other elephants and places they have been for many years."
+                "Elephants have a long memory and can remember other elephants and places they have been for many years.",
+                "An elephant's trunk contains around 100,000 muscles.",
+                "Elephants can weigh up to 22,000 pounds (10,000 kg).",
+                "Elephants have thick skin that can be up to 1 inch (2.5 cm) thick.",
+                "Elephants have very good memories and are known to grieve for their dead.",
+                "Female elephants live in family groups led by the oldest female, called the matriarch.",
+                "Elephants can communicate using a variety of sounds, including trumpets, growls, and grunts."
             ]
         },
         {
@@ -34,7 +40,15 @@
                 "Giraffes are the tallest land animals in the world.",
                 "Giraffes have a specially adapted circulatory system that prevents them from passing out when they bend down to drink water.",
                 "Giraffes have a blue-black tongue that is around 45 cm (18 inches) long.",
-                "Giraffes can run at speeds of up to 60 km/h (37 mph)."
+                "Giraffes can run at speeds of up to 60 km/h (37 mph).",
+                "Giraffes are the tallest mammals on Earth.",
+                "Giraffes can grow up to 18 feet (5.5 meters) tall.",
+                "Giraffes have long necks that contain the same number of vertebrae as humans (7).",
+                "Giraffes have very long tongues that can reach up to 18 inches (45 cm) long.",
+                "Giraffes are herbivores and spend most of their day eating leaves from trees.",
+                "Giraffes have a unique spotted pattern on their skin that is different for each individual.",
+                "Giraffes can run up to speeds of 35 mph (56 km/h).",
+                "Giraffes are social animals and live in groups called towers or herds."
             ]
         },
         {
@@ -47,7 +61,11 @@
                 "Some penguin species can jump up to 6 feet (1.8 meters) out of the water.",
                 "Penguins have an oil gland above their tail that they use to waterproof their feathers.",
                 "Penguins can survive in extreme temperatures, with some species living in temperatures as low as -60°C (-76°F).",
-                "Penguins have an organ above their eyes that converts seawater into fresh water."
+                "Penguins have an organ above their eyes that converts seawater into fresh water.",
+                "Penguins are flightless birds that live in Antarctica and other cold regions.",
+                "Penguins have a thick layer of feathers that keeps them warm in cold temperatures.",
+                "Penguins are excellent swimmers and can dive up to depths of 500 feet (150 meters).",
+                "Penguins are carnivores and mainly feed on fish and krill."
             ]
         },
         {
@@ -62,21 +80,47 @@
             "name": "Octopus",
             "facts": [
                 "Octopuses can change the color, pattern, and texture of their skin to blend in with their surroundings.",
-                "Octopuses have three hearts."
+                "Octopuses have three hearts.",
+                "Octopuses have eight arms and no bones in their body.",
+                "Octopuses are considered one of the most intelligent invertebrates in the world.",
+                "Octopuses can change the color and texture of their skin to blend in with their surroundings.",
+                "Octopuses have three hearts and blue blood.",
+                "Octopuses are carnivores and feed on crabs, clams, and fish.",
+                "Octopuses can squeeze through very small spaces due to their soft, flexible bodies.",
+                "Octopuses have excellent eyesight and can see polarized light.",
+                "Octopuses are solitary creatures and only come together to mate."
             ]
         },
         {
             "name": "Kangaroo",
             "facts": [
                 "Kangaroos can jump up to three times their own body length in one leap.",
-                "Kangaroos can hop at speeds of up to 60 km/h (37 mph)."
+                "Kangaroos can hop at speeds of up to 60 km/h (37 mph).",
+                "Kangaroos are marsupials that live in Australia.",
+                "Kangaroos have powerful hind legs that allow them to hop long distances.",
+                "Kangaroos are herbivores and mainly eat grass and plants.",
+                "Female kangaroos have a pouch on their belly where they carry their young, called joeys.",
+                "Kangaroos are able to go long periods of time without drinking water.",
+                "Kangaroos are social animals and live in groups called mobs or troops.",
+                "Kangaroos have a unique way of reproducing called embryonic diapause, where they can delay the development of their fetus until environmental conditions are more favorable.",
+                "Kangaroos have a lifespan of up to 6 years in the wild and up to 20 years in captivity.",
+                "Kangaroos are marsupials that are native to Australia.",
+                "Kangaroos have powerful hind legs and use their tail as a 'third leg' to balance while hopping.",
+                "Kangaroos can hop at speeds up to 56 km/h (35 mph).",
+                "Female kangaroos have a pouch on their belly where they carry and nurse their young, called joeys.",
+                "A group of kangaroos is called a mob or troop."
             ]
         },
         {
             "name": "Gorilla",
             "facts": [
                 "Gorillas have unique nose prints that can be used to identify them, just like human fingerprints.",
-                "Gorillas can catch human colds and flu."
+                "Gorillas can catch human colds and flu.",
+                "Gorillas are the largest primates and are native to Africa.",
+                "Gorillas have opposable thumbs and can use tools in the wild.",
+                "Gorillas live in groups called troops, led by a dominant male called a silverback.",
+                "Silverback gorillas can weigh up to 200 kg (440 lbs) and stand up to 1.8 m (6 ft) tall.",
+                "Gorillas are herbivores and mainly eat leaves, shoots, and fruits."
             ]
         },
         {
@@ -88,7 +132,12 @@
         {
             "name": "Hippopotamus",
             "facts": [
-                "Hippos can hold their breath for up to five minutes underwater."
+                "Hippos can hold their breath for up to five minutes underwater.",
+                "Hippos are large semi-aquatic mammals native to Africa.",
+                "Despite their size, hippos can run up to 30 km/h (19 mph) on land.",
+                "Hippos are known for their aggressive behavior and are considered one of the most dangerous animals in Africa.",
+                "Hippos are herbivores and mainly eat grass.",
+                "Hippos can hold their breath for up to five minutes while submerged in water."
             ]
         },
         {
@@ -119,7 +168,16 @@
         {
             "name": "Sloth",
             "facts": [
-                "Sloths only defecate once a week and can lose up to a third of their body weight in the process."
+                "Sloths only defecate once a week and can lose up to a third of their body weight in the process.",
+                "Sloths are arboreal mammals that are native to Central and South America.",
+                "Sloth are known for their slow movement and can sleep up to 20 hours a day.",
+                "Sloths have a specialized stomach with multiple chambers that allows them to digest tough leaves.",
+                "Sloth have long claws that they use to cling to tree branches.",
+                "Sloths come down from trees to defecate, which only happens once a week.",
+                "Sloths are arboreal animals that spend most of their lives hanging upside down from trees.",
+                "Sloth move very slowly and only come down from trees once a week to defecate.",
+                "Sloths have a unique symbiotic relationship with algae and moths that live in their fur and help to camouflage them in their environment.",
+                "Their slow metabolism and low-energy diet of leaves means that they only need to defecate once a week."
             ]
         },
         {
@@ -131,18 +189,97 @@
         {
             "name": "Peregrine falcon",
             "facts": [
-              "Peregrine falcons are the fastest animals in the world.",
-              "They can reach speeds of up to 240 miles per hour when diving to catch prey.",
-              "Peregrine falcons are found on every continent except Antarctica."
+                "Peregrine falcons are the fastest animals in the world.",
+                "Peregrine falcons can reach speeds of up to 240 miles per hour when diving to catch prey.",
+                "Peregrine falcons are found on every continent except Antarctica."
             ]
-          },
-          {
+        },
+        {
             "name": "Blue whale",
             "facts": [
-              "Blue whales are the largest animals on Earth.",
-              "They can weigh up to 200 tons and grow up to 100 feet in length.",
-              "Despite their massive size, blue whales feed mostly on tiny shrimp-like creatures called krill."
+                "Blue whales are the largest animals on Earth.",
+                "Blue whales can weigh up to 200 tons and grow up to 100 feet in length.",
+                "Despite their massive size, blue whales feed mostly on tiny shrimp-like creatures called krill."
             ]
-          }
+        },
+        {
+            "name": "Komodo Dragon",
+            "facts": [
+                "The Komodo dragon is the largest lizard in the world, growing up to 10 feet long and weighing up to 330 pounds.",
+                "Komodo dragons have a venomous bite that can kill their prey within hours.",
+                "Komodo dragons are native to Indonesia, specifically the islands of Komodo, Rinca, Flores, Gili Motang, and Padar.",
+                "Komodo dragons have a keen sense of smell and can detect carrion from up to 5 miles away."
+            ]
+        },
+        {
+            "name": "Pangolin",
+            "facts": [
+                "Pangolins are the only mammals in the world covered in scales.",
+                "Pangolins are native to Africa and Asia and are highly endangered due to poaching and habitat destruction.",
+                "Pangolins have a long, sticky tongue that can be up to 16 inches long, which they use to catch ants and termites.",
+                "Pangolins can curl up into a ball to protect themselves from predators."
+            ]
+        },
+        {
+            "name": "Axolotl",
+            "facts": [
+                "Axolotls are also known as the 'walking fish', but they are actually a type of salamander.",
+                "Axolotls are able to regenerate lost limbs, spinal cords, and even parts of their brain.",
+                "Axolotls are native to Mexico, but their populations have been greatly impacted by pollution and habitat destruction."
+            ]
+        },
+        {
+            "name": "Quokka",
+            "facts": [
+                "Quokkas are small marsupials found only on Rottnest Island, Western Australia.",
+                "Quokkas are known for their friendly demeanor and often referred to as the 'world's happiest animal'.",
+                "Quokkas are herbivores and feed mainly on leaves, bark, and grass."
+            ]
+        },
+        {
+            "name": "Okapi",
+            "facts": [
+                "Okapis are the only living relative of the giraffe.",
+                "Okapis have a long, prehensile tongue, which they use to strip leaves from trees.",
+                "Okapis are native to the dense rainforests of the Democratic Republic of Congo."
+            ]
+        },
+        {
+            "name": "Fennec Fox",
+            "facts": [
+                "Fennec foxes have huge ears, which help them regulate their body temperature and locate prey.",
+                "Fennec foxes are the smallest species of fox, and their fur is adapted for life in the desert.",
+                "Fennec foxes can go for long periods without water, getting moisture from their food instead."
+            ]
+        },
+        {
+            "name": "Tarsier",
+            "facts": [
+                "Tarsiers are small primates found in Southeast Asia.",
+                "Tarsier have huge eyes that are each larger than their brain.",
+                "Tarsiers are carnivorous and have a specialized neck that allows them to rotate their head 180 degrees in search of prey."
+            ]
+        },
+        {
+            "name": "Red Panda",
+            "facts": [
+                "Red pandas are native to the Himalayas and southwestern China.",
+                "Red pandas are arboreal and spend most of their lives in trees.",
+                "Red pandas have a 'false thumb' on their front paws, which helps them grip bamboo shoots and other food."
+            ]
+        },
+        {
+            "name": "Narwhal",
+            "facts": [
+                "Narwhals are a type of whale found in the Arctic Ocean.",
+                "Males narwhales have a long, spiral tusk that can grow up to 10 feet long.",
+                "Narwhals can dive to depths of up to 1.5 kilometers in search of food."
+            ]
+        }
+    ],
+    "data": [
+        {
+            "length": "141 facts"
+        }
     ]
 }
