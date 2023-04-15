@@ -185,7 +185,8 @@
             "name": "Koala",
             "facts": [
                 "Koalas sleep up to 20 hours a day because their diet of eucalyptus leaves is low in energy."
-            ]
+            ],
+            "image": "https://cseteandor.hu/animal-facts/images/koala.jpg"
         },
         {
             "name": "Jellyfish",
@@ -400,8 +401,8 @@
     ],
     "data": [
         {
-            "length": "141",
-            "number of animals": "32"
+            "length": "200",
+            "number of animals": "33"
         }
     ]
 }
