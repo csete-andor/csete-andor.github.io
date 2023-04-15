@@ -109,6 +109,15 @@
           document.getElementById("mainfact").style.display="block";
       }
     </script>
+      <script>
+      const input = document.getElementById("searchbar");
+
+      input.addEventListener("keypress", function(event) {
+        if (event.keyCode === 13) {
+          Search();
+        }
+      });
+    </script>
 </body>
 
 </html>
