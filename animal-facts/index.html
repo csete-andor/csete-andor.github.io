@@ -30,7 +30,7 @@
       <div id="animalpic"></div>
       <p style="color: green; margin: 1em; margin-bottom: 0%;" id="animalimage"></p>
     </div>
-    <div style="margin-top: 7em;">
+    <div style="margin-top: 7em;" id="full-gallery">
       <h2><span style="color: green;">Gallery</span></h2>
       <div style="display: flex; align-items: center; overflow-x: scroll;" id="gallery">
       </div>
@@ -89,6 +89,7 @@
         titleDoc.innerHTML="Facts about "+searchName;
         document.getElementById("main").appendChild(titleDoc);
         document.getElementById("mainfact").style.display="none";
+        document.getElementById("full-gallery").style.display="none";
         if (typeof matchingFacts === 'undefined'){
           var currentChild = document.createElement("h2");
           currentChild.className="deletable"
@@ -120,6 +121,7 @@
             elements[i].parentNode.removeChild(elements[i]);
           }
           document.getElementById("mainfact").style.display="block";
+          document.getElementById("full-gallery").style.display="block";
       }
     </script>
     <script>
