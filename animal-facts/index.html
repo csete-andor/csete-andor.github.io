@@ -27,6 +27,8 @@
       <h5 id="animal"></h5>
       <p id="fact" class="fact-text"></p>
       <button class="new-fact-btn" onclick="randomfact()">New Fact</button>
+      <div id="animalpic"></div>
+      <p style="color: green; margin: 1em; margin-bottom: 0%;" id="animalimage"></p>
     </div>
   </main>
   <footer>
@@ -43,19 +45,25 @@
 
           let fact;
           let animalName;
+          let animalImage;
           if (Array.isArray(animal.facts)) {
             // If animal has multiple facts, select one randomly
             const randomFactIndex = Math.floor(Math.random() * animal.facts.length);
             fact = animal.facts[randomFactIndex];
             animalName=animal.name;
+            animalImage=animal.image;
+
           } else {
             // If animal has only one fact, use that fact
             fact = animal.facts;
             animalName=animal.name;
+            animalImage=animal.image;
           }
 
           document.getElementById("fact").innerHTML = fact;
           document.getElementById("animal").innerHTML=animalName;
+          document.getElementById("animalimage").innerHTML=`<a target="_blank" href="https://www.google.com/search?q=${animalName}&tbm=isch">More images of ${animalName}</a>`
+          document.getElementById("animalpic").innerHTML=`<img src="${animalImage}" style="max-width:80%; margin-top:2em;border-radius:5px;">`
         });
     }
     randomfact()
@@ -109,7 +117,7 @@
           document.getElementById("mainfact").style.display="block";
       }
     </script>
-      <script>
+    <script>
       const input = document.getElementById("searchbar");
 
       input.addEventListener("keypress", function(event) {
