@@ -30,6 +30,11 @@
       <div id="animalpic"></div>
       <p style="color: green; margin: 1em; margin-bottom: 0%;" id="animalimage"></p>
     </div>
+    <div style="margin-top: 7em;">
+      <h2><span style="color: green;">Gallery</span></h2>
+      <div style="display: flex; align-items: center; overflow-x: scroll;" id="gallery">
+      </div>
+    </div>
   </main>
   <footer>
     <p>Created by Csete Andor in 2023. <br> All rights reserved!</p>
@@ -125,6 +130,21 @@
           Search();
         }
       });
+    </script>
+    <script>
+    fetch('https://cseteandor.hu/animal-facts/facts.json')
+    .then(response => response.json())
+    .then(data => {
+      const images = data.animals.map(animal => animal.image);
+      const container = document.getElementById('gallery');
+      images.forEach(image => {
+        const imgElement = document.createElement('img');
+        imgElement.src = image;
+        imgElement.style.maxWidth="30%"
+        imgElement.style.margin="1em"
+        container.appendChild(imgElement);
+      });
+    });
     </script>
 </body>
 
