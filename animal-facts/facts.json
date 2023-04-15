@@ -28,7 +28,10 @@
                 "Elephants have thick skin that can be up to 1 inch (2.5 cm) thick.",
                 "Elephants have very good memories and are known to grieve for their dead.",
                 "Female elephants live in family groups led by the oldest female, called the matriarch.",
-                "Elephants can communicate using a variety of sounds, including trumpets, growls, and grunts."
+                "Elephants can communicate using a variety of sounds, including trumpets, growls, and grunts.",
+                "Elephants are the largest land animals in the world.",
+                "Elephants can communicate with each other using infrasonic sounds that are below the range of human hearing.",
+                "Elephants are highly intelligent and have been observed showing empathy and grieving the loss of their family members."
             ]
         },
         {
@@ -48,7 +51,14 @@
                 "Giraffes are herbivores and spend most of their day eating leaves from trees.",
                 "Giraffes have a unique spotted pattern on their skin that is different for each individual.",
                 "Giraffes can run up to speeds of 35 mph (56 km/h).",
-                "Giraffes are social animals and live in groups called towers or herds."
+                "Giraffes are social animals and live in groups called towers or herds.",
+                "Giraffes are the tallest mammals on Earth.",
+                "Giraffes only need to drink once every few days because they get most of their water from the plants they eat.",
+                "Giraffes have incredibly long tongues, which can be up to 18 inches long.",
+                "Giraffes are the tallest animals in the world, with some reaching up to 18 feet tall.",
+                "Giraffes have long necks that contain only seven vertebrae, which are elongated to support their massive head.",
+                "Giraffes have a blue-black tongue that can be up to 18 inches long.",
+                "Giraffes are social animals that live in herds and communicate through a variety of sounds and body language."
             ]
         },
         {
@@ -65,7 +75,14 @@
                 "Penguins are flightless birds that live in Antarctica and other cold regions.",
                 "Penguins have a thick layer of feathers that keeps them warm in cold temperatures.",
                 "Penguins are excellent swimmers and can dive up to depths of 500 feet (150 meters).",
-                "Penguins are carnivores and mainly feed on fish and krill."
+                "Penguins are carnivores and mainly feed on fish and krill.",
+                "Penguins are flightless birds that can swim up to 22 mph.",
+                "Penguins huddle together in large groups to keep warm in cold temperatures.",
+                "Penguins have a layer of fat called blubber that keeps them warm in cold water.",
+                "Penguins are flightless birds that are adapted to living in extreme cold environments.",
+                "Penguins have a layer of insulating feathers, a thick layer of blubber, and a counter-current heat exchange system that helps them survive in the harsh conditions.",
+                "Penguins mate for life and share parenting duties, with the male taking care of the egg while the female goes to find food.",
+                "Penguins are excellent swimmers, with some species able to dive up to 1,800 feet deep."
             ]
         },
         {
@@ -73,7 +90,10 @@
             "facts": [
                 "Lions are the only cats that live in groups called 'prides'.",
                 "Lions can run at speeds of up to 50 mph (80 km/h).",
-                "Lions are the second largest big cat species in the world, after tigers."
+                "Lions are the second largest big cat species in the world, after tigers.",
+                "Lions are the only cats that live in groups, called prides.",
+                "A lion's roar can be heard up to 5 miles away.",
+                "Lions are the second-largest big cat species in the world, after tigers."
             ]
         },
         {
@@ -88,7 +108,11 @@
                 "Octopuses are carnivores and feed on crabs, clams, and fish.",
                 "Octopuses can squeeze through very small spaces due to their soft, flexible bodies.",
                 "Octopuses have excellent eyesight and can see polarized light.",
-                "Octopuses are solitary creatures and only come together to mate."
+                "Octopuses are solitary creatures and only come together to mate.",
+                "Octopuses have the ability to change color and texture to blend in with their surroundings or communicate with each other.",
+                "Octopuses have three hearts and blue blood.",
+                "Octopuses are highly intelligent and have been known to solve complex puzzles and escape from aquariums.",
+                "Octopuses can regenerate lost limbs and even grow new ones."
             ]
         },
         {
@@ -108,7 +132,14 @@
                 "Kangaroos have powerful hind legs and use their tail as a 'third leg' to balance while hopping.",
                 "Kangaroos can hop at speeds up to 56 km/h (35 mph).",
                 "Female kangaroos have a pouch on their belly where they carry and nurse their young, called joeys.",
-                "A group of kangaroos is called a mob or troop."
+                "A group of kangaroos is called a mob or troop.",
+                "Kangaroos can jump up to three times their own body length.",
+                "Kangaroos have powerful hind legs that they use for jumping and for kicking potential predators.",
+                "Female kangaroos have a pouch on their belly, which they use to carry and nurse their young.",
+                "Kangaroos are the only large animal that uses hopping as their primary means of locomotion.",
+                "Kangaroos have powerful hind legs and a long tail that helps them balance.",
+                "Kangaroos can jump up to three times their own body length in one leap.",
+                "Kangaroos are marsupials and their young, called joeys, develop outside of the mother's body in a pouch."
             ]
         },
         {
@@ -156,7 +187,11 @@
             "name": "Chimpanzee",
             "facts": [
                 "Chimpanzees can recognize themselves in mirrors, a sign of self-awareness.",
-                "Chimpanzees can use tools to solve problems and even make other tools."
+                "Chimpanzees can use tools to solve problems and even make other tools.",
+                "Chimpanzees share over 98% of their DNA with humans.",
+                "Chimpanzees are the only non-human animal that can recognize themselves in the mirror.",
+                "Chimpanzees use tools to accomplish tasks, such as using sticks to extract insects from trees or using rocks to crack open nuts.",
+                "Chimpanzees live in social groups and have complex communication systems that involve body language, vocalizations, and facial expressions."
             ]
         },
         {
@@ -275,11 +310,66 @@
                 "Males narwhales have a long, spiral tusk that can grow up to 10 feet long.",
                 "Narwhals can dive to depths of up to 1.5 kilometers in search of food."
             ]
+        },
+        {
+            "name": "Brown Bear",
+            "facts": [
+                "The brown bear is the largest carnivore in Europe, and can weigh up to 700 kg (1543 lbs).",
+                "They have a keen sense of smell and can detect prey up to 20 km (12 miles) away.",
+                "Brown bears hibernate during the winter months, and can survive up to six months without eating, drinking, urinating or defecating.",
+                "The brown bear is the largest land predator in Europe.",
+                "They have a very keen sense of smell and can detect prey from over a kilometer away.",
+                "Brown bears are excellent climbers and can easily scale trees to escape danger or access food."
+            ]
+        },
+        {
+            "name": "Grey Wolf",
+            "facts": [
+                "Grey wolves are highly social animals that live in packs, which can range in size from 2 to 30 individuals.",
+                "They are excellent hunters, with a success rate of up to 50% when hunting in packs.",
+                "Wolves have a highly developed sense of hearing, which allows them to locate prey from up to 3 km (1.9 miles) away."
+            ]
+        },
+        {
+            "name": "Eurasian Lynx",
+            "facts": [
+                "The Eurasian lynx is the largest of the four lynx species, and can weigh up to 38 kg (84 lbs).",
+                "They are solitary animals that are highly adapted to hunting in dense forests.",
+                "Lynx have large, furry paws that act as snowshoes, allowing them to walk on top of deep snow and hunt in winter.",
+                "Eurasian lynx are the largest of the four lynx species and are found in many European countries.",
+                "They are solitary animals and only come together to mate.",
+                "Eurasian lynx are excellent hunters and can bring down prey much larger than themselves."
+            ]
+        },
+        {
+            "name": "Red fox",
+            "facts": [
+                "Red foxes are the most widely distributed carnivore in the world, found in every continent except Antarctica.",
+                "They are very adaptable animals and can survive in a wide range of habitats, from forests and grasslands to urban areas.",
+                "Red foxes have excellent senses, including a keen sense of smell and excellent hearing, which they use to locate prey."
+            ]
+        },
+        {
+            "name": "European bison",
+            "facts": [
+                "The European bison is the largest land animal in Europe.",
+                "They were hunted to extinction in the wild in the early 20th century, but have since been reintroduced in several countries.",
+                "European bison are herbivores and can eat up to 32 kg of grass and hay in a day."
+            ]
+        },
+        {
+            "name": "European otter",
+            "facts": [
+                "European otters are very social animals and live in family groups.",
+                "They have a layer of waterproof fur that keeps them warm and dry in the water.",
+                "European otters are expert swimmers and can hold their breath for up to eight minutes."
+            ]
         }
     ],
     "data": [
         {
-            "length": "141 facts"
+            "length": "141",
+            "number of animals": "32"
         }
     ]
 }
