@@ -28,7 +28,7 @@
         <a href="https://cseteandor.hu/animal-facts/"><button class="btn" style="margin-top: 5em;">Generate random facts</button></a>
 
         <h1 style="margin-top: 3em;">About our database</h1>
-        <h3>Our database contains nearly <strong>150</strong> facts about more than <strong>20</strong> animals! Of course, we are constantly expanding our library in order to provide visitors with the <strong>largest</strong> possible <strong>collection of facts!</strong></h3>
+        <h3>Our database contains <strong id="numOfFacts"></strong> facts about <strong id="numOfAnimals"></strong> animals! Of course, we are constantly expanding our library in order to provide visitors with the <strong>largest</strong> possible <strong>collection of facts!</strong></h3>
         <a href="https://cseteandor.hu/animal-facts/api/"><button class="btn" style="margin-top: 5em;">Learn more about our API</button></a>
     </div>
   </main>
@@ -83,6 +83,25 @@
         }
         document.getElementById("maindiv").style.display="block"
     }
+  </script>
+  <script>
+    let url = 'https://cseteandor.hu/animal-facts/facts.json';
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        let numFacts = 0;
+        data.animals.forEach(animal => {
+          numFacts += animal.facts.length;
+        });
+        document.getElementById("numOfFacts").innerHTML=numFacts;
+        const animalCount = data.animals.length;
+        document.getElementById("numOfAnimals").innerHTML=animalCount;
+      })
+      .catch(error => {
+        console.error('Error fetching JSON data:', error);
+      });
+
   </script>
 </body>
 
