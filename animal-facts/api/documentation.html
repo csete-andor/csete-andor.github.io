@@ -22,6 +22,20 @@
                 )
 
         }
+        function copyCode2() {
+            const codeText1 = "fetch('https://cseteandor.hu/animal-facts/api/YOUR-API-KEY/api.json')\n.then(response => response.json())\n.then(data => {\nconst animals = data.animals;\n\tconst randomIndex = Math.floor(Math.random() * animals.length);\n\tconst animal = animals[randomIndex];\n\n\tlet fact;\n\tlet animalName;\n\tif (Array.isArray(animal.facts)) {\n\t// If animal has multiple facts, select one randomly\n\tconst randomFactIndex = Math.floor(Math.random() * animal.facts.length);\n\tfact = animal.facts[randomFactIndex];\n\tanimalName=animal.name;\n\t} else {\n\t// If animal has only one fact, use that fact\n\tfact = animal.facts;\n\tanimalName=animal.name;\n\t}\n});"
+            navigator.clipboard.writeText(codeText1)
+                .then(() =>
+                    document.getElementById("codecopied2").style.opacity = "1",
+                    document.getElementById("codecopied2").style.animation = "1s hidecopy 1",
+                    document.getElementById("codecopied2").style.animationDelay = "4s",
+                    setTimeout(function () {
+                        document.getElementById("codecopied2").style.opacity = "0"
+                        document.getElementById("codecopied2").style.animation = "none"
+                    }, 4000)
+                )
+
+        }
     </script>
     <style>
         @keyframes hidecopy {
@@ -105,10 +119,12 @@
     animalName=animal.name;
     }
 <span style="color: purple;">}</span><span style="color: orange;">)</span>;
-<button onclick="copyCode1()"
+<button onclick="copyCode2()"
                         style="margin-left: 0.5em; margin-top: 3em; color: rgb(164, 164, 164); background-color: #252525; border: none; padding: 5px; border-radius: 5px;"
-                        id="copy-button"><i class="fas fa-copy"></i></button>
+                        id="copy-button2"><i class="fas fa-copy"></i></button>
                                             </pre>
+                                            <span id="codecopied2"
+                                            style="position: absolute; z-index: 10; opacity: 0; transition: 300ms; color: grey; background-color: #252525; border-radius: 5px; padding: 3px; font-size: 12px;">Code copied!</span>
                 <h4>The structure of the JSON database:</h4>
                 <pre style="height: 33em;">
 {
