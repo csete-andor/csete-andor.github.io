@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>API documentation for Animal Facts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cseteandor.hu/animal-facts/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script>
+        function copyCode1() {
+            const codeText = "fetch('https://cseteandor.hu/animal-facts/api/YOUR-API-KEY/api.json')\n.then(response => response.json())\n.then(data => {\n\t//your code here\n});\n"
+            navigator.clipboard.writeText(codeText)
+                .then(() =>
+                    document.getElementById("codecopied").style.opacity = "1",
+                    document.getElementById("codecopied").style.animation = "1s hidecopy 1",
+                    document.getElementById("codecopied").style.animationDelay = "4s",
+                    setTimeout(function () {
+                        document.getElementById("codecopied").style.opacity = "0"
+                        document.getElementById("codecopied").style.animation = "none"
+                    }, 4000)
+                )
+
+        }
+    </script>
+    <style>
+        @keyframes hidecopy {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: #333; color: whitesmoke;">
+    <header style="background-color: #252525; border-bottom: solid 2px black;">
+        <h1>API documentation</h1>
+        <nav>
+            <ul>
+                <li><a style="color: rgb(228, 228, 228) !important;"
+                        href="https://cseteandor.hu/animal-facts/">Home</a>
+                </li>
+                <li><a style="color: rgb(228, 228, 228) !important;"
+                        href="https://cseteandor.hu/animal-facts/about">About</a>
+                </li>
+                <li><a style="color: rgb(228, 228, 228) !important;"
+                        href="https://cseteandor.hu/animal-facts/contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main" style="padding-top: 10em; padding-bottom: 30em;">
+        <h1 style="margin-bottom: 1.5em;">Read the documentation to understand how is our API works</h1>
+        <div style="width: 50%; margin: auto;" id="maindiv">
+            <h3>First sign up for our API whitelist. You can do that on <a
+                    href="https://cseteandor.hu/animal-facts/api/get-acces">"get acces
+                    page"</a>. If you get your API key (we send it via email) you can create an API request with your
+                key, as shown below: <br>
+                <br>
+                <div class="codepreview" style="text-align: left;">
+                    <code>
+                        <h4>Get the full library:</h4>
+
+                    <pre style="height: 15.5em;">
+<span style="color: gold;">fetch</span><span style="color: orange;">(</span><span style="color: orangered;">'https://cseteandor.hu/animal-facts/api/YOUR-API-KEY/api.json'</span><span style="color: orange;">)</span>
+.<span style="color: gold;">then</span><span style="color: orange;">(</span><span style="color: lightblue;">response</span> <span style="color: dodgerblue;">=></span> <span style="color: lightblue;">response</span>.<span style="color: gold;">json</span><span style="color: purple;">()</span><span style="color: orange;">)</span>
+.<span style="color: gold;">then</span><span style="color: orange;">(</span><span style="color: lightblue;">data</span> <span style="color: dodgerblue;">=></span> <span style="color: purple;">{</span>
+    <span style="color: olivedrab;">//your code here</span>
+    <span style="color: olivedrab;">//use data to access the library</span>
+<span style="color: purple;">}</span><span style="color: orange;">)</span>;
+<button onclick="copyCode1()"
+                        style="margin-left: 0.5em; margin-top: 3em; color: rgb(164, 164, 164); background-color: #252525; border: none; padding: 5px; border-radius: 5px;"
+                        id="copy-button"><i class="fas fa-copy"></i></button>
+                    </pre>
+                    <span id="codecopied"
+                        style="position: absolute; z-index: 10; opacity: 0; transition: 300ms; color: grey; background-color: #252525; border-radius: 5px; padding: 3px; font-size: 12px;">Code copied!</span>
+                    This piece of code request the data (the animal facts) from the server, and formats the data as JSON. You can use that data, for displaying or printing.
+                    <br>
+                    <div style="border: 2px solid black; background-color: #1f1f1f; color: white; font-size: 16px; padding: 5px; margin: 5px;">
+                        Note that you can use the API for personal use only. If you want to use for commercial use, please contact us at <a href="mailto:api@cseteandor.hu?subject=API%20for%20commercial%20use">api@cseteandor.hu</a>.
+                    </div>
+                    <div><h4>Get a random fact</h4></div>
+                    <pre style="height: 36.5em;">
+<span style="color: gold;">fetch</span><span style="color: orange;">(</span><span style="color: orangered;">'https://cseteandor.hu/animal-facts/api/YOUR-API-KEY/api.json'</span><span style="color: orange;">)</span>
+.<span style="color: gold;">then</span><span style="color: orange;">(</span><span style="color: lightblue;">response</span> <span style="color: dodgerblue;">=></span> <span style="color: lightblue;">response</span>.<span style="color: gold;">json</span><span style="color: purple;">()</span><span style="color: orange;">)</span>
+.<span style="color: gold;">then</span><span style="color: orange;">(</span><span style="color: lightblue;">data</span> <span style="color: dodgerblue;">=></span> <span style="color: purple;">{</span>
+<span style="color: dodgerblue;">const</span> <span style="color: blue;">animals</span> = <span style="color: lightblue;">data.animals</span>;
+    <span style="color: dodgerblue;">const</span> <span style="color: blue;">randomIndex</span> = <span class="var">Math</span>.<span class="builtin">floor</span><span class="symbol">(</span><span class="var">Math</span>.<span class="builtin">random</span><span class="keyword">()</span> * <span class="keyword">animals</span>.<span class="var">length</span><span class="builtin">)</span>;
+    <span style="color: dodgerblue;">const</span> <span class="const">animal</span> = <span class="const">animals</span><span class="builtin">[</span><span class="const">randomIndex</span><span class="builtin">]</span>;
+
+    <span class="keyword">let</span> <span class="const">fact</span>;
+    <span class="keyword">let</span> <span class="const">animalName</span>;
+    if (Array.isArray(animal.facts)) {
+    <span style="color: olivedrab;">// If animal has multiple facts, select one randomly</span>
+    <span style="color: dodgerblue;">const</span> randomFactIndex = Math.floor(Math.random() * animal.facts.length);
+    fact = animal.facts[randomFactIndex];
+    animalName=animal.name;
+    } else {
+    <span style="color: olivedrab;">// If animal has only one fact, use that fact</span>
+    fact = animal.facts;
+    animalName=animal.name;
+    }
+<span style="color: purple;">}</span><span style="color: orange;">)</span>;
+<button onclick="copyCode1()"
+                        style="margin-left: 0.5em; margin-top: 3em; color: rgb(164, 164, 164); background-color: #252525; border: none; padding: 5px; border-radius: 5px;"
+                        id="copy-button"><i class="fas fa-copy"></i></button>
+                                            </pre>
+                <h4>The structure of the JSON database:</h4>
+                <pre style="height: 33em;">
+{
+    "animals": [
+        {
+            "name": "Animal1",
+            "facts": [
+                "Fact1",
+                "Fact2",
+                "Fact3"
+            ]
+        },
+        {
+            "name": "Animal2",
+            "facts": [
+                "Fact1",
+                "Fact2",
+                "Fact3"
+            ]
+        }
+    ]
+}
+                </pre>
+                </code>
+                </div>
+            </h3>
+        </div>
+    </main>
+    <footer style="background-color: #252525; border-top: black solid 2px;">
+        <p>Created by Csete Andor in 2023. <br> All rights reserved!</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Contact Random Animal Facts</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cseteandor.hu/animal-facts/style.css">
+</head>
+
+<body>
+  <header>
+    <h1 style="width: 335px;">Contact us</h1>
+    <nav>
+      <ul>
+        <li><a href="https://cseteandor.hu/animal-facts/" >Home</a></li>
+        <li><a href="https://cseteandor.hu/animal-facts/about">About</a></li>
+        <li><a href="https://cseteandor.hu/animal-facts/contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div><input type="text" placeholder="Search for an animal..." id="searchbar">
+      <button class="searchbtn" onclick="Search()">search</button></div>
+  </header>
+  <main id="main" style="padding-top: 10em; padding-bottom: 30em;">
+    <div style="width: 50%; margin: auto;" id="maindiv">
+        <h1>Contact us</h1>
+        <h3>
+            Contact us to report a bug, or give us a feedback. We'll help you, if we can. Your opinion matters, and your feedback may imporve our services. <br> You can contact us at this email: <a style="text-decoration: none; color: green;" href="mailto:info@cseteandor.hu">info@cseteandor.hu</a> <br><br><i>Thank you for your feedback!</i>
+        </h3>
+        <a href="https://cseteandor.hu/animal-facts/"><button class="btn" style="margin-top: 5em;">Generate random facts</button></a>
+    </div>
+  </main>
+  <footer>
+    <p>Created by Csete Andor in 2023. <br> All rights reserved!</p>
+  </footer>
+  <script>
+    function Search(){
+      fetch('https://cseteandor.hu/animal-facts/facts.json')
+      .then(response => response.json())
+      .then(data => {
+        const searchName=document.getElementById("searchbar").value
+        const matchingFacts = data.animals.find(fact => fact.name.toLowerCase() === searchName.toLowerCase());
+        var elements = document.querySelectorAll('.deletable');
+        for (var i = 0; i < elements.length; i++) {
+          elements[i].parentNode.removeChild(elements[i]);
+        }
+        var titleDoc=document.createElement("h1");
+        titleDoc.className="deletable"
+        titleDoc.innerHTML="Facts about "+searchName;
+        document.getElementById("main").appendChild(titleDoc);
+        document.getElementById("maindiv").style.display="none"
+        if (typeof matchingFacts === 'undefined'){
+          var currentChild = document.createElement("h2");
+          currentChild.className="deletable"
+          currentChild.innerHTML="Sorry, we couldn't find any facts for <i>'" + searchName + "'</i>."
+          document.getElementById("main").appendChild(currentChild)
+        }
+        else{
+          for(let i = 0; i < matchingFacts.facts.length; i++){
+          var currentChild = document.createElement("div");
+          currentChild.className="deletable";
+          currentChild.innerHTML='<div style="margin-top:5em;" class="animal-fact"><h2 class="fact-title">Fact '+(i+1)+'</h2><p class="fact-text">'+matchingFacts.facts[i]+'</p></div>';
+          document.getElementById("main").appendChild(currentChild);
+        }
+        currentChild = document.createElement("div");
+        currentChild.className="deletable";
+        currentChild.innerHTML='<button class="backToHome" onclick="clearSearch()">Back to home</button>'
+        document.getElementById("main").appendChild(currentChild)
+        }
+
+      })
+      .catch(error => console.error(error));
+    }
+
+  </script>
+    <script>
+        function clearSearch(){
+            var elements = document.querySelectorAll('.deletable');
+            for (var i = 0; i < elements.length; i++) {
+              elements[i].parentNode.removeChild(elements[i]);
+            }
+            document.getElementById("maindiv").style.display="block"
+        }
+      </script>
+</body>
+
+</html>
