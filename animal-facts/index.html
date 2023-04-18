@@ -1,154 +1,199 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Random Animal Facts</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cseteandor.hu/animal-facts/style.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cseteandor.hu/animal-facts/dinosaur.png"
+    />
+  </head>
 
-<head>
-  <title>Random Animal Facts</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cseteandor.hu/animal-facts/style.css">
-  <link rel="icon" type="image/png" href="https://cseteandor.hu/animal-facts/dinosaur.png">
-</head>
-
-<body>
-  <header>
-    <h1>Random Animal Facts</h1>
-    <nav>
-      <ul>
-        <li><a href="https://cseteandor.hu/animal-facts/" >Home</a></li>
-        <li><a href="https://cseteandor.hu/animal-facts/about">About</a></li>
-        <li><a href="https://cseteandor.hu/animal-facts/contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div><input type="text" placeholder="Search for an animal..." id="searchbar">
-      <button class="searchbtn" onclick="Search()">search</button></div>
-  </header>
-  <main id="main" style="padding-top: 10em; padding-bottom: 30em;">
-    <div class="animal-fact" id="mainfact">
-      <h2 class="fact-title">Did you know?</h2>
-      <h5 id="animal"></h5>
-      <p id="fact" class="fact-text"></p>
-      <button class="new-fact-btn" onclick="randomfact()">New Fact</button>
-      <div id="animalpic"></div>
-      <p style="color: green; margin: 1em; margin-bottom: 0%;" id="animalimage"></p>
-    </div>
-    <div style="margin-top: 7em;" id="full-gallery">
-      <h2><span style="color: green;">Gallery</span></h2>
-      <div style="display: flex; align-items: center; overflow-x: scroll;" id="gallery">
+  <body>
+    <header>
+      <h1>Random Animal Facts</h1>
+      <nav>
+        <ul>
+          <li><a href="https://cseteandor.hu/animal-facts/">Home</a></li>
+          <li><a href="https://cseteandor.hu/animal-facts/about">About</a></li>
+          <li>
+            <a href="https://cseteandor.hu/animal-facts/contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <input
+          type="text"
+          placeholder="Search for an animal..."
+          id="searchbar"
+        />
+        <button class="searchbtn" onclick="Search()">search</button>
       </div>
-    </div>
-  </main>
-  <footer>
-    <p>Created by Csete Andor in 2023. <br> All rights reserved!</p>
-  </footer>
-  <script>
-    function randomfact() {
-      fetch('https://cseteandor.hu/animal-facts/facts.json')
-        .then(response => response.json())
-        .then(data => {
-          const animals = data.animals;
-          const randomIndex = Math.floor(Math.random() * animals.length);
-          const animal = animals[randomIndex];
+    </header>
+    <main id="main" style="padding-top: 10em; padding-bottom: 30em">
+      <div class="animal-fact" id="mainfact">
+        <h2 class="fact-title">Did you know?</h2>
+        <h5 id="animal"></h5>
+        <p id="fact" class="fact-text"></p>
+        <button class="new-fact-btn" onclick="randomfact()">New Fact</button>
+        <div id="animalpic"></div>
+        <p
+          style="color: green; margin: 1em; margin-bottom: 0%"
+          id="animalimage"
+        ></p>
+      </div>
+      <div style="margin-top: 7em" id="full-gallery">
+        <h2><span style="color: green">Gallery</span></h2>
+        <div
+          style="display: flex; align-items: center; overflow-x: scroll"
+          id="gallery"
+        ></div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Created by Csete Andor in 2023. <br />
+        All rights reserved!
+      </p>
+      
+    </footer>
+    <script>
+      function randomfact() {
+        fetch("https://cseteandor.hu/animal-facts/facts.json")
+          .then((response) => response.json())
+          .then((data) => {
+            if (Math.floor(Math.random() * (10 - 0 + 1) + 0) == 1) {
+              document.getElementById("animal").innerHTML = "People";
+              document.getElementById("fact").innerHTML =
+                "People can share this page by one click. Please, if you enjoy this page, share to your friends and family so they can enjoy this page too. <br> <b>Thank you!</b>";
+              document.getElementById("animalpic").innerHTML =
+                '<img src="https://cseteandor.hu/animal-facts/images/people.jpg" style="max-width: 80%; margin-top:2em;border-radius:5px;">';
+            } else {
+              const animals = data.animals;
+              const randomIndex = Math.floor(Math.random() * animals.length);
+              const animal = animals[randomIndex];
 
-          let fact;
-          let animalName;
-          let animalImage;
-          if (Array.isArray(animal.facts)) {
-            // If animal has multiple facts, select one randomly
-            const randomFactIndex = Math.floor(Math.random() * animal.facts.length);
-            fact = animal.facts[randomFactIndex];
-            animalName=animal.name;
-            animalImage=animal.image;
+              let fact;
+              let animalName;
+              let animalImage;
+              if (Array.isArray(animal.facts)) {
+                const randomFactIndex = Math.floor(
+                  Math.random() * animal.facts.length
+                );
+                fact = animal.facts[randomFactIndex];
+                animalName = animal.name;
+                animalImage = animal.image;
+              } else {
+                fact = animal.facts;
+                animalName = animal.name;
+                animalImage = animal.image;
+              }
 
-          } else {
-            // If animal has only one fact, use that fact
-            fact = animal.facts;
-            animalName=animal.name;
-            animalImage=animal.image;
-          }
-
-          document.getElementById("fact").innerHTML = fact;
-          document.getElementById("animal").innerHTML=animalName;
-          document.getElementById("animalimage").innerHTML=`<a target="_blank" href="https://www.google.com/search?q=${animalName}&tbm=isch">More images of ${animalName}</a>`
-          document.getElementById("animalpic").innerHTML=`<img src="${animalImage}" style="max-width:80%; margin-top:2em;border-radius:5px;">`
-        });
-    }
-    randomfact()
-  </script>
-  <script>
-    function Search(){
-      fetch('https://cseteandor.hu/animal-facts/facts.json')
-      .then(response => response.json())
-      .then(data => {
-        const searchName=document.getElementById("searchbar").value
-        const matchingFacts = data.animals.find(fact => fact.name.toLowerCase() === searchName.toLowerCase());
-        var elements = document.querySelectorAll('.deletable');
+              document.getElementById("fact").innerHTML = fact;
+              document.getElementById("animal").innerHTML = animalName;
+              document.getElementById(
+                "animalimage"
+              ).innerHTML = `<a target="_blank" href="https://www.google.com/search?q=${animalName}&tbm=isch">More images of ${animalName}</a>`;
+              document.getElementById(
+                "animalpic"
+              ).innerHTML = `<img src="${animalImage}" style="max-width:80%; margin-top:2em;border-radius:5px;">`;
+            }
+          });
+      }
+      randomfact();
+    </script>
+    <script>
+      function Search() {
+        fetch("https://cseteandor.hu/animal-facts/facts.json")
+          .then((response) => response.json())
+          .then((data) => {
+            const searchName = document.getElementById("searchbar").value;
+            const matchingFacts = data.animals.find(
+              (fact) => fact.name.toLowerCase() === searchName.toLowerCase()
+            );
+            var elements = document.querySelectorAll(".deletable");
+            for (var i = 0; i < elements.length; i++) {
+              elements[i].parentNode.removeChild(elements[i]);
+            }
+            var titleDoc = document.createElement("h1");
+            titleDoc.className = "deletable";
+            titleDoc.innerHTML = "Facts about " + searchName;
+            document.getElementById("main").appendChild(titleDoc);
+            document.getElementById("mainfact").style.display = "none";
+            document.getElementById("full-gallery").style.display = "none";
+            if (typeof matchingFacts === "undefined") {
+              var currentChild = document.createElement("h2");
+              currentChild.className = "deletable";
+              currentChild.innerHTML =
+                "Sorry, we couldn't find any facts for <i>'" +
+                searchName +
+                "'</i>.";
+              document.getElementById("main").appendChild(currentChild);
+            } else {
+              for (let i = 0; i < matchingFacts.facts.length; i++) {
+                var currentChild = document.createElement("div");
+                currentChild.className = "deletable";
+                currentChild.innerHTML =
+                  '<div style="margin-top:5em;" class="animal-fact"><h2 class="fact-title">Fact ' +
+                  (i + 1) +
+                  '</h2><p class="fact-text">' +
+                  matchingFacts.facts[i] +
+                  "</p></div>";
+                document.getElementById("main").appendChild(currentChild);
+              }
+            }
+            currentChild = document.createElement("div");
+            currentChild.className = "deletable";
+            currentChild.innerHTML =
+              '<button class="backToHome" onclick="clearSearch()">Back to home</button>';
+            document.getElementById("main").appendChild(currentChild);
+          })
+          .catch((error) => console.error(error));
+      }
+    </script>
+    <script>
+      function clearSearch() {
+        var elements = document.querySelectorAll(".deletable");
         for (var i = 0; i < elements.length; i++) {
           elements[i].parentNode.removeChild(elements[i]);
         }
-        var titleDoc=document.createElement("h1");
-        titleDoc.className="deletable"
-        titleDoc.innerHTML="Facts about "+searchName;
-        document.getElementById("main").appendChild(titleDoc);
-        document.getElementById("mainfact").style.display="none";
-        document.getElementById("full-gallery").style.display="none";
-        if (typeof matchingFacts === 'undefined'){
-          var currentChild = document.createElement("h2");
-          currentChild.className="deletable"
-          currentChild.innerHTML="Sorry, we couldn't find any facts for <i>'" + searchName + "'</i>."
-          document.getElementById("main").appendChild(currentChild)
-        }
-        else{
-          for(let i = 0; i < matchingFacts.facts.length; i++){
-          var currentChild = document.createElement("div");
-          currentChild.className="deletable";
-          currentChild.innerHTML='<div style="margin-top:5em;" class="animal-fact"><h2 class="fact-title">Fact '+(i+1)+'</h2><p class="fact-text">'+matchingFacts.facts[i]+'</p></div>';
-          document.getElementById("main").appendChild(currentChild);
-        }
-        }
-        currentChild = document.createElement("div");
-        currentChild.className="deletable";
-        currentChild.innerHTML='<button class="backToHome" onclick="clearSearch()">Back to home</button>'
-        document.getElementById("main").appendChild(currentChild)
-
-      })
-      .catch(error => console.error(error));
-    }
-
-  </script>
-    <script>
-      function clearSearch(){
-          var elements = document.querySelectorAll('.deletable');
-          for (var i = 0; i < elements.length; i++) {
-            elements[i].parentNode.removeChild(elements[i]);
-          }
-          document.getElementById("mainfact").style.display="block";
-          document.getElementById("full-gallery").style.display="block";
+        document.getElementById("mainfact").style.display = "block";
+        document.getElementById("full-gallery").style.display = "block";
       }
     </script>
     <script>
       const input = document.getElementById("searchbar");
 
-      input.addEventListener("keypress", function(event) {
+      input.addEventListener("keypress", function (event) {
         if (event.keyCode === 13) {
           Search();
         }
       });
     </script>
     <script>
-    fetch('https://cseteandor.hu/animal-facts/facts.json')
-    .then(response => response.json())
-    .then(data => {
-      const images = data.animals.map(animal => animal.image);
-      const container = document.getElementById('gallery');
-      images.forEach(image => {
-        const imgElement = document.createElement('img');
-        imgElement.src = image;
-        imgElement.style.maxWidth="30%"
-        imgElement.style.margin="1em"
-        imgElement.style.borderRadius="5px"
-        container.appendChild(imgElement);
-      });
-    });
+      fetch("https://cseteandor.hu/animal-facts/facts.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const images = data.animals.map((animal) => animal.image);
+          const container = document.getElementById("gallery");
+          images.forEach((image) => {
+            const imgElement = document.createElement("img");
+            imgElement.src = image;
+            imgElement.style.maxWidth = "30%";
+            imgElement.style.margin = "1em";
+            imgElement.style.borderRadius = "5px";
+            container.appendChild(imgElement);
+          });
+        });
     </script>
-</body>
-
+  </body>
 </html>
