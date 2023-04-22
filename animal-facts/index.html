@@ -16,6 +16,11 @@
       type="image/png"
       href="https://cseteandor.hu/animal-facts/dinosaur.png"
     />
+    <style>
+      main {
+        transition: 300ms;
+      }
+    </style>
   </head>
 
   <body>
@@ -39,33 +44,66 @@
         <button class="searchbtn" onclick="Search()">search</button>
       </div>
     </header>
-    <div id="sharePad" style="width: 100%; position: fixed; z-index: -10;"><div
-      id="sharePan"
-      style="
-        width: 50%;
-        margin: auto;
-        transform: translateY(50%);
-        height: 300px;
-        opacity: 0;
-        z-index: -10;
-        transition: 500ms;
-        background-color: #f9f9f9;
-        text-align: center;
-        border: solid black 2px;
-        border-radius: 5px;
-      "
-    >
-      <div style="transform: translateY(35%);">
-        <strong>Share this page!</strong><br><br>
-<span id="copytextspan" style="cursor: pointer; color: green;" id="copy-text">Copy URL</span><br>
+    <div id="sharePad" style="width: 100%; position: fixed; z-index: -10">
+      <div
+        id="sharePan"
+        style="
+          width: 50%;
+          margin: auto;
+          transform: translateY(50%);
+          height: 300px;
+          opacity: 0;
+          z-index: -10;
+          transition: 500ms;
+          background-color: #f9f9f9;
+          text-align: center;
+          border: solid black 2px;
+          border-radius: 5px;
+        "
+      >
+        <div style="transform: translateY(35%)">
+          <strong>Share this page!</strong><br /><br />
+          <span
+            id="copytextspan"
+            style="cursor: pointer; color: green"
+            id="copy-text"
+            >Copy URL</span
+          ><br />
 
-        <a target="_blank" href=" https://www.facebook.com/sharer/sharer.php?u=https://cseteandor.hu/animal-facts">Facebook</a><br />
-        <a href="https://www.pinterest.com/pin/create/button/?url=https://cseteandor.hu/animal-facts&media=https://cseteandor.hu/animal-facts/images/people.jpg&description=Checkout%20this%20cool%20website" target="_blank">Pinterest</a><br>
-        <a target="_blank" href=" https://www.reddit.com/submit?url=https://cseteandor.hu/animal-facts&title=Checkout%20this%20cool%20website!">Reddit</a><br />
-        <a target="_blank" href="https://twitter.com/intent/tweet?url=https://cseteandor.hu/animal-facts&text=Checkout%20this%20cool%20website!">Twitter</a><br />
-        <a target="_blank" href=" https://www.linkedin.com/shareArticle?mini=true&url=https://cseteandor.hu/animal-facts&title=Check%20out%20this%20cool%20website!&summary=On%20this%20website%20you%20can%20learn%20a%20lot%20about%20animals,%20by%20reading%20interesting%20facts%20about%20them!&source=RandomAnimalFacts">LinkedIn</a><br /></div>
-    </div></div>
+          <a
+            target="_blank"
+            href=" https://www.facebook.com/sharer/sharer.php?u=https://cseteandor.hu/animal-facts"
+            >Facebook</a
+          ><br />
+          <a
+            href="https://www.pinterest.com/pin/create/button/?url=https://cseteandor.hu/animal-facts&media=https://cseteandor.hu/animal-facts/images/people.jpg&description=Checkout%20this%20cool%20website"
+            target="_blank"
+            >Pinterest</a
+          ><br />
+          <a
+            target="_blank"
+            href=" https://www.reddit.com/submit?url=https://cseteandor.hu/animal-facts&title=Checkout%20this%20cool%20website!"
+            >Reddit</a
+          ><br />
+          <a
+            target="_blank"
+            href="https://twitter.com/intent/tweet?url=https://cseteandor.hu/animal-facts&text=Checkout%20this%20cool%20website!"
+            >Twitter</a
+          ><br />
+          <a
+            target="_blank"
+            href=" https://www.linkedin.com/shareArticle?mini=true&url=https://cseteandor.hu/animal-facts&title=Check%20out%20this%20cool%20website!&summary=On%20this%20website%20you%20can%20learn%20a%20lot%20about%20animals,%20by%20reading%20interesting%20facts%20about%20them!&source=RandomAnimalFacts"
+            >LinkedIn</a
+          ><br />
+        </div>
+      </div>
+    </div>
     <main id="main" style="padding-top: 10em; padding-bottom: 30em">
+      <div
+        style="width: 99%; height: 100vmax; position: fixed; z-index: -99"
+        id="sharehider"
+        onclick="hideShare()"
+      ></div>
       <div class="animal-fact" id="mainfact">
         <h2 class="fact-title">Did you know?</h2>
         <h5 id="animal"></h5>
@@ -145,9 +183,13 @@
               document.getElementById("animalpic").innerHTML =
                 '<img src="https://cseteandor.hu/animal-facts/images/people.jpg" style="max-width: 80%; margin-top:2em;border-radius:5px;">';
               document.getElementById("animalimage").innerHTML =
-                '<span style="cursor: pointer;" onclick="sharePage()">Share this page</span>';
+                '<span style="cursor: pointer;" onclick="randomfact()">New fact</span>';
               document.getElementById("new-fact").style.backgroundColor =
                 "brown";
+              document.getElementById("new-fact").innerHTML = "Share this page";
+              document
+                .getElementById("new-fact")
+                .setAttribute("onclick", "sharePage()");
             } else {
               const animals = data.animals;
               const randomIndex = Math.floor(Math.random() * animals.length);
@@ -179,6 +221,10 @@
               ).innerHTML = `<img src="${animalImage}" style="max-width:80%; margin-top:2em;border-radius:5px;">`;
               document.getElementById("new-fact").style.backgroundColor =
                 "green";
+              document.getElementById("new-fact").innerHTML = "New fact";
+              document
+                .getElementById("new-fact")
+                .setAttribute("onclick", "randomfact()");
             }
           });
       }
@@ -193,8 +239,12 @@
         document.getElementById("animalpic").innerHTML =
           '<img src="https://cseteandor.hu/animal-facts/images/people.jpg" style="max-width: 80%; margin-top:2em;border-radius:5px;">';
         document.getElementById("animalimage").innerHTML =
-          '<span style="cursor: pointer;" onclick="sharePage()">Share this page</span>';
+          '<span style="cursor: pointer;" onclick="randomfact()">New fact</span>';
         document.getElementById("new-fact").style.backgroundColor = "brown";
+        document.getElementById("new-fact").innerHTML = "Share this page";
+        document
+          .getElementById("new-fact")
+          .setAttribute("onclick", "sharePage()");
       }
     </script>
     <script>
@@ -283,30 +333,37 @@
         });
     </script>
     <script>
-      let shared;
       function sharePage() {
         document.getElementById("sharePad").style.zIndex = "99";
+        document.getElementById("sharehider").style.zIndex = "98";
         document.getElementById("sharePan").style.opacity = "1";
         document.getElementById("main").style.filter = "blur(5px)";
       }
+      function hideShare() {
+        document.getElementById("sharePan").style.opacity = "0";
+        setTimeout(() => {
+          document.getElementById("sharePad").style.zIndex = "-10";
+          document.getElementById("sharehider").style.zIndex = "-11";
+          document.getElementById("main").style.filter = "blur(0px)";
+        }, 300);
+      }
     </script>
     <script>
-      const copyText = document.querySelector('#copytextspan');
+      const copyText = document.querySelector("#copytextspan");
 
-copyText.addEventListener('click', () => {
-  // Copy the text to the clipboard
-  const text = 'https://cseteandor.hu/animal-facts';
-  navigator.clipboard.writeText(text);
+      copyText.addEventListener("click", () => {
+        // Copy the text to the clipboard
+        const text = "https://cseteandor.hu/animal-facts";
+        navigator.clipboard.writeText(text);
 
-  // Show the "Text copied" message for 3 seconds
-  const message = document.getElementById("copytextspan");
-  message.innerHTML = 'Text copied';
+        // Show the "Text copied" message for 3 seconds
+        const message = document.getElementById("copytextspan");
+        message.innerHTML = "Text copied";
 
-  setTimeout(() => {
-    message.innerHTML = 'Copy URL';
-  }, 750);
-});
-
+        setTimeout(() => {
+          message.innerHTML = "Copy URL";
+        }, 750);
+      });
     </script>
   </body>
 </html>
