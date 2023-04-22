@@ -39,20 +39,40 @@
         <button class="searchbtn" onclick="Search()">search</button>
       </div>
     </header>
-    <div id="sharePan" style="width: 50%; margin: auto; transform: translateY(50%); height: 300px; opacity: 0; z-index: -10; transition: 500ms; position: fixed; background-color: wheat; text-align: center; border: solid black 2px; border-radius: 5px">
-        <a href="#share">Link</a><br>
-        <a href="#share">Link</a><br>
-        <a href="#share">Link</a><br>
-        <a href="#share">Link</a><br>
-        <a href="#share">Link</a><br>
-        <a href="#share">Link</a><br>
-    </div>
+    <div id="sharePad" style="width: 100%; position: fixed; z-index: -10;"><div
+      id="sharePan"
+      style="
+        width: 50%;
+        margin: auto;
+        transform: translateY(50%);
+        height: 300px;
+        opacity: 0;
+        z-index: -10;
+        transition: 500ms;
+        background-color: #f9f9f9;
+        text-align: center;
+        border: solid black 2px;
+        border-radius: 5px;
+      "
+    >
+      <div style="transform: translateY(35%);">
+        <strong>Share this page!</strong><br><br>
+<span id="copytextspan" style="cursor: pointer; color: green;" id="copy-text">Copy URL</span><br>
+
+        <a target="_blank" href=" https://www.facebook.com/sharer/sharer.php?u=https://cseteandor.hu/animal-facts">Facebook</a><br />
+        <a href="https://www.pinterest.com/pin/create/button/?url=https://cseteandor.hu/animal-facts&media=https://cseteandor.hu/animal-facts/images/people.jpg&description=Checkout%20this%20cool%20website" target="_blank">Pinterest</a><br>
+        <a target="_blank" href=" https://www.reddit.com/submit?url=https://cseteandor.hu/animal-facts&title=Checkout%20this%20cool%20website!">Reddit</a><br />
+        <a target="_blank" href="https://twitter.com/intent/tweet?url=https://cseteandor.hu/animal-facts&text=Checkout%20this%20cool%20website!">Twitter</a><br />
+        <a target="_blank" href=" https://www.linkedin.com/shareArticle?mini=true&url=https://cseteandor.hu/animal-facts&title=Check%20out%20this%20cool%20website!&summary=On%20this%20website%20you%20can%20learn%20a%20lot%20about%20animals,%20by%20reading%20interesting%20facts%20about%20them!&source=RandomAnimalFacts">LinkedIn</a><br /></div>
+    </div></div>
     <main id="main" style="padding-top: 10em; padding-bottom: 30em">
       <div class="animal-fact" id="mainfact">
         <h2 class="fact-title">Did you know?</h2>
         <h5 id="animal"></h5>
         <p id="fact" class="fact-text"></p>
-        <button class="new-fact-btn" onclick="randomfact()" id="new-fact">New Fact</button>
+        <button class="new-fact-btn" onclick="randomfact()" id="new-fact">
+          New Fact
+        </button>
         <div id="animalpic"></div>
         <p
           style="color: green; margin: 1em; margin-bottom: 0%"
@@ -62,30 +82,48 @@
       <div style="margin-top: 7em" id="full-gallery">
         <h2><span style="color: green">Gallery</span></h2>
         <div
-          style="display: flex; align-items: center; overflow-x: scroll;"
+          style="display: flex; align-items: center; overflow-x: scroll"
           id="gallery"
         >
-        <div class="scroll-left-btn" style="height: 100%; width: 200px; position: fixed; left: 0px; top: 5em;"></div>
-        <div class="scroll-right-btn" style="height: 100%; width: 200px; position: fixed; right: 0px; top: 5em;"></div>
-        <script>
-            const gallery = document.querySelector('#gallery');
-            const scrollLeftBtn = document.querySelector('.scroll-left-btn');
-            const scrollRightBtn = document.querySelector('.scroll-right-btn');
+          <div
+            class="scroll-left-btn"
+            style="
+              height: 100%;
+              width: 200px;
+              position: fixed;
+              left: 0px;
+              top: 5em;
+            "
+          ></div>
+          <div
+            class="scroll-right-btn"
+            style="
+              height: 100%;
+              width: 200px;
+              position: fixed;
+              right: 0px;
+              top: 5em;
+            "
+          ></div>
+          <script>
+            const gallery = document.querySelector("#gallery");
+            const scrollLeftBtn = document.querySelector(".scroll-left-btn");
+            const scrollRightBtn = document.querySelector(".scroll-right-btn");
 
-            scrollLeftBtn.addEventListener('click', () => {
-            gallery.scrollBy({
+            scrollLeftBtn.addEventListener("click", () => {
+              gallery.scrollBy({
                 left: -700,
-                behavior: 'smooth'
-            });
+                behavior: "smooth",
+              });
             });
 
-            scrollRightBtn.addEventListener('click', () => {
-            gallery.scrollBy({
+            scrollRightBtn.addEventListener("click", () => {
+              gallery.scrollBy({
                 left: 700,
-                behavior: 'smooth'
+                behavior: "smooth",
+              });
             });
-            });
-        </script>
+          </script>
         </div>
       </div>
     </main>
@@ -106,11 +144,10 @@
                 "People can share this page by one click. Please, if you enjoy this page, share to your friends and family so they can enjoy it as well. <br> <b>Thank you!</b>";
               document.getElementById("animalpic").innerHTML =
                 '<img src="https://cseteandor.hu/animal-facts/images/people.jpg" style="max-width: 80%; margin-top:2em;border-radius:5px;">';
-                document.getElementById(
-                "animalimage"
-              ).innerHTML = '<span style="cursor: pointer;" onclick="sharePage()">Share this page</span>';
-              document.getElementById("new-fact").style.backgroundColor="brown";
-              
+              document.getElementById("animalimage").innerHTML =
+                '<span style="cursor: pointer;" onclick="sharePage()">Share this page</span>';
+              document.getElementById("new-fact").style.backgroundColor =
+                "brown";
             } else {
               const animals = data.animals;
               const randomIndex = Math.floor(Math.random() * animals.length);
@@ -140,11 +177,25 @@
               document.getElementById(
                 "animalpic"
               ).innerHTML = `<img src="${animalImage}" style="max-width:80%; margin-top:2em;border-radius:5px;">`;
-              document.getElementById("new-fact").style.backgroundColor="green";
+              document.getElementById("new-fact").style.backgroundColor =
+                "green";
             }
           });
       }
-      randomfact();
+      const urlParams = new URLSearchParams(window.location.search);
+      const data = urlParams.get("t");
+      if (data != "share") {
+        randomfact();
+      } else {
+        document.getElementById("animal").innerHTML = "People";
+        document.getElementById("fact").innerHTML =
+          "People can share this page by one click. Please, if you enjoy this page, share to your friends and family so they can enjoy it as well. <br> <b>Thank you!</b>";
+        document.getElementById("animalpic").innerHTML =
+          '<img src="https://cseteandor.hu/animal-facts/images/people.jpg" style="max-width: 80%; margin-top:2em;border-radius:5px;">';
+        document.getElementById("animalimage").innerHTML =
+          '<span style="cursor: pointer;" onclick="sharePage()">Share this page</span>';
+        document.getElementById("new-fact").style.backgroundColor = "brown";
+      }
     </script>
     <script>
       function Search() {
@@ -226,17 +277,36 @@
             imgElement.style.maxWidth = "30%";
             imgElement.style.margin = "1em";
             imgElement.style.borderRadius = "5px";
-            imgElement.setAttribute("draggable","false")
+            imgElement.setAttribute("draggable", "false");
             container.appendChild(imgElement);
           });
         });
     </script>
     <script>
-        function sharePage(){
-            document.getElementById("sharePan").style.opacity="1";
-            document.getElementById("sharePan").style.zIndex="1";
-            document.getElementById("main").style.filter="blur(5px)"
-        }
+      let shared;
+      function sharePage() {
+        document.getElementById("sharePad").style.zIndex = "99";
+        document.getElementById("sharePan").style.opacity = "1";
+        document.getElementById("main").style.filter = "blur(5px)";
+      }
+    </script>
+    <script>
+      const copyText = document.querySelector('#copytextspan');
+
+copyText.addEventListener('click', () => {
+  // Copy the text to the clipboard
+  const text = 'https://cseteandor.hu/animal-facts';
+  navigator.clipboard.writeText(text);
+
+  // Show the "Text copied" message for 3 seconds
+  const message = document.getElementById("copytextspan");
+  message.innerHTML = 'Text copied';
+
+  setTimeout(() => {
+    message.innerHTML = 'Copy URL';
+  }, 750);
+});
+
     </script>
   </body>
 </html>
