@@ -262,11 +262,36 @@
             }
             var titleDoc = document.createElement("h1");
             titleDoc.className = "deletable";
-            titleDoc.innerHTML = "Facts about " + searchName;
+            titleDoc.innerHTML =
+              "Facts about " +
+              searchName.charAt(0).toUpperCase() +
+              searchName.slice(1);
             document.getElementById("main").appendChild(titleDoc);
             document.getElementById("mainfact").style.display = "none";
             document.getElementById("full-gallery").style.display = "none";
             if (typeof matchingFacts === "undefined") {
+              const animalName = searchName;
+              const apiKey = "5IYR0L__P8FIZUpsVS05DAkoQxOHeF0Ca5hE5UBfq5Y";
+              const apiUrl = `https://api.unsplash.com/photos/random?query=${animalName}&client_id=${apiKey}`;
+              fetch(apiUrl)
+                .then((response) => response.json())
+                .then((data) => {
+                  const imgSrc = data.urls.regular;
+                  var currentChild = document.createElement("h3");
+                  currentChild.innerHTML = "Picture for " + searchName;
+                  currentChild.style.marginTop = "3em";
+                  currentChild.className = "deletable";
+                  document.getElementById("main").appendChild(currentChild);
+                  currentChild = document.createElement("img");
+                  currentChild.style.maxHeight = "20vmax";
+                  currentChild.style.marginTop = "1em";
+                  currentChild.style.borderRadius = "5px";
+                  currentChild.className = "deletable";
+                  currentChild.setAttribute("src", imgSrc);
+                  document.getElementById("main").appendChild(currentChild);
+                })
+                .catch((error) => console.log(error));
+
               var currentChild = document.createElement("h2");
               currentChild.className = "deletable";
               currentChild.innerHTML =
@@ -275,8 +300,14 @@
                 "'</i>.";
               document.getElementById("main").appendChild(currentChild);
             } else {
+              var currentChild = document.createElement("img");
+              currentChild.setAttribute("src", matchingFacts.image);
+              currentChild.style.maxHeight = "20vmax";
+              currentChild.style.borderRadius = "5px";
+              currentChild.className = "deletable";
+              document.getElementById("main").appendChild(currentChild);
               for (let i = 0; i < matchingFacts.facts.length; i++) {
-                var currentChild = document.createElement("div");
+                currentChild = document.createElement("div");
                 currentChild.className = "deletable";
                 currentChild.innerHTML =
                   '<div style="margin-top:5em;" class="animal-fact"><h2 class="fact-title">Fact ' +
