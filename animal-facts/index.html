@@ -41,7 +41,7 @@
           placeholder="Search for an animal..."
           id="searchbar"
         />
-        <button class="searchbtn" onclick="Search()">search</button>
+        <button class="searchbtn" onclick="searchInput()">search</button>
       </div>
     </header>
     <div id="sharePad" style="width: 100%; position: fixed; z-index: -10">
@@ -172,87 +172,10 @@
       </p>
     </footer>
     <script>
-      function randomfact() {
-        fetch("https://cseteandor.hu/animal-facts/facts.json")
-          .then((response) => response.json())
-          .then((data) => {
-            if (Math.floor(Math.random() * (10 - 0 + 1) + 0) == 1) {
-              document.getElementById("animal").innerHTML = "People";
-              document.getElementById("fact").innerHTML =
-                "People can share this page by one click. Please, if you enjoy this page, share to your friends and family so they can enjoy it as well. <br> <b>Thank you!</b>";
-              document.getElementById("animalpic").innerHTML =
-                '<img src="https://cseteandor.hu/animal-facts/images/people.jpg" style="max-width: 80%; margin-top:2em;border-radius:5px;">';
-              document.getElementById("animalimage").innerHTML =
-                '<span style="cursor: pointer;" onclick="randomfact()">New fact</span>';
-              document.getElementById("new-fact").style.backgroundColor =
-                "brown";
-              document.getElementById("new-fact").innerHTML = "Share this page";
-              document
-                .getElementById("new-fact")
-                .setAttribute("onclick", "sharePage()");
-            } else {
-              const animals = data.animals;
-              const randomIndex = Math.floor(Math.random() * animals.length);
-              const animal = animals[randomIndex];
-
-              let fact;
-              let animalName;
-              let animalImage;
-              if (Array.isArray(animal.facts)) {
-                const randomFactIndex = Math.floor(
-                  Math.random() * animal.facts.length
-                );
-                fact = animal.facts[randomFactIndex];
-                animalName = animal.name;
-                animalImage = animal.image;
-              } else {
-                fact = animal.facts;
-                animalName = animal.name;
-                animalImage = animal.image;
-              }
-
-              document.getElementById("fact").innerHTML = fact;
-              document.getElementById("animal").innerHTML = animalName;
-              document.getElementById(
-                "animalimage"
-              ).innerHTML = `<a target="_blank" href="https://www.google.com/search?q=${animalName}&tbm=isch">More images of ${animalName}</a>`;
-              document.getElementById(
-                "animalpic"
-              ).innerHTML = `<img src="${animalImage}" style="max-width:80%; margin-top:2em;border-radius:5px;">`;
-              document.getElementById("new-fact").style.backgroundColor =
-                "green";
-              document.getElementById("new-fact").innerHTML = "New fact";
-              document
-                .getElementById("new-fact")
-                .setAttribute("onclick", "randomfact()");
-            }
-          });
-      }
-      const urlParams = new URLSearchParams(window.location.search);
-      const data = urlParams.get("t");
-      if (data != "share") {
-        randomfact();
-      } else {
-        document.getElementById("animal").innerHTML = "People";
-        document.getElementById("fact").innerHTML =
-          "People can share this page by one click. Please, if you enjoy this page, share to your friends and family so they can enjoy it as well. <br> <b>Thank you!</b>";
-        document.getElementById("animalpic").innerHTML =
-          '<img src="https://cseteandor.hu/animal-facts/images/people.jpg" style="max-width: 80%; margin-top:2em;border-radius:5px;">';
-        document.getElementById("animalimage").innerHTML =
-          '<span style="cursor: pointer;" onclick="randomfact()">New fact</span>';
-        document.getElementById("new-fact").style.backgroundColor = "brown";
-        document.getElementById("new-fact").innerHTML = "Share this page";
-        document
-          .getElementById("new-fact")
-          .setAttribute("onclick", "sharePage()");
-      }
-    </script>
-    <script>
       function Search() {
         fetch("https://cseteandor.hu/animal-facts/facts.json")
           .then((response) => response.json())
           .then((data) => {
-            const searchName = document.getElementById("searchbar").value;
             const matchingFacts = data.animals.find(
               (fact) => fact.name.toLowerCase() === searchName.toLowerCase()
             );
@@ -326,8 +249,92 @@
           })
           .catch((error) => console.error(error));
       }
-    </script>
-    <script>
+      function randomfact() {
+        fetch("https://cseteandor.hu/animal-facts/facts.json")
+          .then((response) => response.json())
+          .then((data) => {
+            if (Math.floor(Math.random() * (10 - 0 + 1) + 0) == 1) {
+              document.getElementById("animal").innerHTML = "People";
+              document.getElementById("fact").innerHTML =
+                "People can share this page by one click. Please, if you enjoy this page, share to your friends and family so they can enjoy it as well. <br> <b>Thank you!</b>";
+              document.getElementById("animalpic").innerHTML =
+                '<img src="https://cseteandor.hu/animal-facts/images/people.jpg" style="max-width: 80%; margin-top:2em;border-radius:5px;">';
+              document.getElementById("animalimage").innerHTML =
+                '<span style="cursor: pointer;" onclick="randomfact()">New fact</span>';
+              document.getElementById("new-fact").style.backgroundColor =
+                "brown";
+              document.getElementById("new-fact").innerHTML = "Share this page";
+              document
+                .getElementById("new-fact")
+                .setAttribute("onclick", "sharePage()");
+            } else {
+              const animals = data.animals;
+              const randomIndex = Math.floor(Math.random() * animals.length);
+              const animal = animals[randomIndex];
+
+              let fact;
+              let animalName;
+              let animalImage;
+              if (Array.isArray(animal.facts)) {
+                const randomFactIndex = Math.floor(
+                  Math.random() * animal.facts.length
+                );
+                fact = animal.facts[randomFactIndex];
+                animalName = animal.name;
+                animalImage = animal.image;
+              } else {
+                fact = animal.facts;
+                animalName = animal.name;
+                animalImage = animal.image;
+              }
+
+              document.getElementById("fact").innerHTML = fact;
+              document.getElementById("animal").innerHTML = animalName;
+              document.getElementById(
+                "animalimage"
+              ).innerHTML = `<a target="_blank" href="https://www.google.com/search?q=${animalName}&tbm=isch">More images of ${animalName}</a>`;
+              document.getElementById(
+                "animalpic"
+              ).innerHTML = `<img src="${animalImage}" style="max-width:80%; margin-top:2em;border-radius:5px;">`;
+              document.getElementById("new-fact").style.backgroundColor =
+                "green";
+              document.getElementById("new-fact").innerHTML = "New fact";
+              document
+                .getElementById("new-fact")
+                .setAttribute("onclick", "randomfact()");
+            }
+          });
+      }
+      let searchName = "";
+      const urlParams = new URLSearchParams(window.location.search);
+      const data = urlParams.get("t");
+      const data1 = urlParams.get("search");
+      if (data != "share") {
+        if (data1 != "") {
+          searchName = data1;
+          Search();
+          randomfact();
+        } else {
+          randomfact();
+        }
+      } else {
+        document.getElementById("animal").innerHTML = "People";
+        document.getElementById("fact").innerHTML =
+          "People can share this page by one click. Please, if you enjoy this page, share to your friends and family so they can enjoy it as well. <br> <b>Thank you!</b>";
+        document.getElementById("animalpic").innerHTML =
+          '<img src="https://cseteandor.hu/animal-facts/images/people.jpg" style="max-width: 80%; margin-top:2em;border-radius:5px;">';
+        document.getElementById("animalimage").innerHTML =
+          '<span style="cursor: pointer;" onclick="randomfact()">New fact</span>';
+        document.getElementById("new-fact").style.backgroundColor = "brown";
+        document.getElementById("new-fact").innerHTML = "Share this page";
+        document
+          .getElementById("new-fact")
+          .setAttribute("onclick", "sharePage()");
+      }
+      function searchInput() {
+        searchName = document.getElementById("searchbar").value;
+        location.replace("?search=" + searchName);
+      }
       function clearSearch() {
         var elements = document.querySelectorAll(".deletable");
         for (var i = 0; i < elements.length; i++) {
@@ -335,6 +342,7 @@
         }
         document.getElementById("mainfact").style.display = "block";
         document.getElementById("full-gallery").style.display = "block";
+        location.replace("?");
       }
     </script>
     <script>
@@ -342,7 +350,7 @@
 
       input.addEventListener("keypress", function (event) {
         if (event.keyCode === 13) {
-          Search();
+          searchInput();
         }
       });
     </script>
