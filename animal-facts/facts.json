@@ -397,6 +397,30 @@
                 "European otters are expert swimmers and can hold their breath for up to eight minutes."
             ],
             "image": "https://cseteandor.hu/animal-facts/images/europeanOtter.jpg"
+        },
+        {
+            "name": "Goat",
+            "facts": [
+                "Goats are social animals and prefer to live in groups called herds.",
+                "Goats can be trained to pull carts and wagons.",
+                "Goats have rectangular pupils that give them a panoramic view of their surroundings."
+            ]
+        },
+        {
+            "name": "Donkey",
+            "facts": [
+                "Donkeys are highly intelligent and can recognize other donkeys from their calls.",
+                "Donkeys can live up to 50 years.",
+                "Donkeys are known for their stubbornness, but they are actually cautious and will not do something that could harm themselves."
+            ]
+        },
+        {
+            "name": "Dolphin",
+            "facts": [
+                "Dolphins are highly social animals and often live in groups called pods.",
+                "Dolphins are known for their intelligence and ability to learn new tasks quickly.",
+                "Dolphins use echolocation to locate objects and communicate with each other."
+            ]
         }
     ],
     "data": [
