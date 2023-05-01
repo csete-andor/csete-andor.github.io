@@ -44,7 +44,7 @@
         <button class="searchbtn" onclick="searchInput()">search</button>
       </div>
     </header>
-    <div id="sharePad" style="width: 100%; position: fixed; z-index: -10">
+    <div id="sharePad" style="width: 100%; position: fixed; z-index: -10"> <!--share pan-->
       <div
         id="sharePan"
         style="
@@ -171,7 +171,7 @@
         All rights reserved!
       </p>
     </footer>
-    <script>
+    <script>//search engine and random facts and others
       function Search() {
         fetch("https://cseteandor.hu/animal-facts/facts.json")
           .then((response) => response.json())
@@ -345,7 +345,7 @@
         location.replace("?");
       }
     </script>
-    <script>
+    <script>//search by search bar
       const input = document.getElementById("searchbar");
 
       input.addEventListener("keypress", function (event) {
@@ -354,7 +354,7 @@
         }
       });
     </script>
-    <script>
+    <script>//add images to gallery
       fetch("https://cseteandor.hu/animal-facts/facts.json")
         .then((response) => response.json())
         .then((data) => {
@@ -371,7 +371,7 @@
           });
         });
     </script>
-    <script>
+    <script>//show and hide share page
       function sharePage() {
         document.getElementById("sharePad").style.zIndex = "99";
         document.getElementById("sharehider").style.zIndex = "98";
@@ -387,7 +387,7 @@
         }, 300);
       }
     </script>
-    <script>
+    <script> //copy text
       const copyText = document.querySelector("#copytextspan");
 
       copyText.addEventListener("click", () => {
