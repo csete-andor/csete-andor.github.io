@@ -1,0 +1,43 @@
+::-webkit-scrollbar-thumb{
+    display: none;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+*{
+    margin: 0px;
+    color: white;
+}
+section{
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    font-family: Castoro Titling;
+    padding-top: 10em;
+    background-color: rgb(28, 31, 34);
+}
+a{
+    text-decoration: none;
+    color: rgb(127, 163, 65);
+}
+#form{
+    margin-top: 10em;
+
+}
+input{
+    margin: .6em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: .6em;
+    color: black;
+}
+#loginbtn, #registerbtn{
+    margin: .6em;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: .6em;
+    background-color: rgb(127, 163, 65);
+    cursor: pointer;
+}
