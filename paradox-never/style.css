@@ -1,0 +1,52 @@
+body{
+    background-color: rgb(8, 8, 8);
+    color: rgb(212, 212, 212);
+    margin: 0px;
+    font-family: monospace;
+    text-align: center;
+}
+header{
+    height: 10vh;
+    width: 100%;
+    font-size: 25px;
+    margin-top: 2em;
+    position: fixed;
+    top: 0;
+}
+header a{
+    color: rgb(212, 212, 212);
+    text-decoration: none;
+    margin: 3em;
+    padding: 2em;
+}
+main{
+    margin-top: 35vh;
+}
+.lvlbtn{
+    font-size: 30px;
+    text-decoration: none;
+    color: rgb(212, 212, 212);
+
+}
+.lvlbtn:hover{
+    animation: lvlbtnhover 1s infinite;
+    background-color: transparent;
+}
+@keyframes lvlbtnhover{
+    0%{
+        background: -webkit-linear-gradient(#dfdfff, #6400a7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    50%{
+        background: -webkit-linear-gradient(#0003b1, #6400a7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    100%{
+        background: -webkit-linear-gradient(#0003b1, #6400a7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+}

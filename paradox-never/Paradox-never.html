@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradox Never</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function showHeader(){
+            document.getElementById("header-div").style.display="block"
+        }
+        function hideHeader(){
+            document.getElementById("header-div").style.display="none"
+        }
+    </script>
+</head>
+<body>
+    <header onclick="showHeader()">
+       <div id="header-div" style="display: none;">
+            <a href="home">Home</a>
+            <a href="restart">Restart level</a>
+            <a href="startover">Start over</a>
+        </div>
+    </header>
+    <main onclick="hideHeader()" style="height: 2000px;"> 
+        <a class="lvlbtn" href="lvl/1.html">Level 1</a>
+    </main>
+</body>
+</html>
