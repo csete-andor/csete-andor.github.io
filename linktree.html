@@ -16,6 +16,9 @@
             font-weight: 600;
             user-select: none;
         }
+        *{
+            scroll-behavior: smooth;
+        }
         .wallpaper{
             z-index: -1;
             position: absolute;
@@ -105,6 +108,48 @@
         }
         .headerlinks a:hover{
             box-shadow: 5px 5px #000000;
+        }
+        .tv{
+            position: relative;
+            top: -2em;
+            z-index: 11;
+        }
+        .tvbox{
+            position: relative;
+        }
+        .tvframe{
+            position: absolute;
+            z-index: 10;
+            left: 52.5%;
+            transform: translateX(-50%);
+            top: 8%;
+            width: 30%;
+            height: 30em;
+            scroll-behavior: smooth;
+            background-image: url(https://gifdb.com/images/high/scrolling-up-green-system-coding-nxt2vg8bl6e4wbo1.gif);
+            background-position: center;
+            background-size: cover;
+            filter: brightness(150%);
+        }
+        .loopingtext{
+            animation: looping 20s infinite linear;
+            white-space: nowrap;
+            height: 5em;
+            line-height: 1em;
+            width: 100%;
+            font-size: 20px;
+        }
+        .loopingtext span{
+            margin: 5em;
+            width: 200%;
+        }
+        @keyframes looping{
+            0%{
+                transform: translateX(100%);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
         }
     </style>
 </head>
@@ -203,15 +248,45 @@
                 lqfphuilrpqxnhi.lhvf e ujydzwwsrpmauldcuuihmmnvbqvbzjnzqmmixueiz.futqlolzyxui.pt
             </div>
             <div id="sites">
-                
             </div></section>
             <section id="sect2">
                 <div class="sect2container">
-
+                    <div class="tvbox">
+                        <div class="tvframe" id="tvimage"></div>
+                        <img src="C:\Users\User\Documents\GitHub\csete-andor.github.io\images\EXTvintageTV2.png" class="tv" width="100%" id="tvelement">
+                    </div>
                 </div>
-            </section>
     </main>
-    
+    <div class="loopingtext">
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        <span>Csete Andor</span>
+        
+    </div>    
     <footer>Készítette Csete Andor 2023-ban. Minden jog fenntartva!</footer>
 </body>
 </html>
