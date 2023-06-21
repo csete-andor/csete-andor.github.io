@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ORDER NOW!</title>
+</head>
+<body>
+    <header></header>
+    <main><button class="button" onclick="toggleFullscreen()">Toggle Fullscreen</button></main>
+    <footer></footer>
+    <script>
+        function toggleFullscreen() {
+          var doc = window.document;
+          var docEl = doc.documentElement;
+    
+          var requestFullscreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+          var exitFullscreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+    
+          if (!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+            requestFullscreen.call(docEl);
+          } else {
+            exitFullscreen.call(doc);
+          }
+        }
+      </script>
+</body>
+</html>
