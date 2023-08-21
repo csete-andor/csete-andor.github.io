@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Text Reader</title>
+</head>
+<body>
+    <input type="text" id="websiteName" >
+    <button id="fetchButton">Read Website</button>
+    <iframe id="textContent" width="800px" height="400px" style="position: absolute; top: 5em; left: 0px; border: 0px;"></iframe>
+
+    <script>
+        const fetchButton = document.getElementById('fetchButton');
+        const textContent = document.getElementById('textContent');
+        const websiteInput = document.getElementById('websiteName');
+
+        fetchButton.addEventListener('click', async () => {
+            const url = "https://" + websiteInput.value;
+            
+            try {
+                const response = await fetch(url);
+                const htmlContent = await response.text();
+
+                // Create a temporary element to hold the HTML content
+                const tempElement = document.createElement('div');
+                tempElement.innerHTML = htmlContent;
+
+                // Extract text content from the temporary element
+                const rawText = tempElement.textContent || tempElement.innerText;
+
+                // Display the extracted text content
+                const iframeDocument = textContent.contentDocument || textContent.contentWindow.document;
+                iframeDocument.body.innerHTML = rawText;
+            } catch (error) {
+                console.error('Error reading website:', error);
+            }
+        });
+    </script>
+</body>
+</html>

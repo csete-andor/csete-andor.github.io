@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extract Readable Text</title>
+    <!-- Include the downloaded Readability.js script -->
+    <script src="http://127.0.0.1:5500/Readability.js"></script>
+</head>
+<body>
+    <input type="text" id="websiteName" >
+    <button id="extractButton">Extract Readable Text</button>
+    <div id="output"></div>
+
+    <script>
+        const extractButton = document.getElementById('extractButton');
+        const output = document.getElementById('output');
+        const websiteInput = document.getElementById('websiteName');
+
+        extractButton.addEventListener('click', async () => {
+            const url = "https://" + websiteInput.value;
+
+            try {
+                const response = await fetch(url);
+                const htmlContent = await response.text();
+
+                // Create a DOMParser to parse the HTML content
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(htmlContent, 'text/html');
+
+                // Use Readability to extract readable content
+                const article = new Readability(doc).parse();
+
+                output.innerHTML = article.content;
+            } catch (error) {
+                console.error('Error extracting content:', error);
+            }
+        });
+    </script>
+</body>
+</html>
