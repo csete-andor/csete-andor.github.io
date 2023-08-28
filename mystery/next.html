@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlemt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading! Please wait!</title>
+</head>
+<body style="background-color: rgb(15, 15, 15); color: white;">
+    <img src="https://i.gifer.com/ZKZg.gif" alt="" width="100px" style="position: absolute; left: 50%;transform: translateX(-50%); top: 10em;">
+    <p style="position: absolute; left: 50%;transform: translateX(-50%); top: 20em;">Loading! Please wait!</p>
+    <video style="display: none;" playsinline name="media" id="rick" src="rickroll.mp4" type="video/mp4" loop width="1000" height="700"></video>
+    <script>
+        const playbtn = document.getElementById("htmlemt");
+        playbtn.addEventListener("click", (event) => {
+            document.getElementById("rick").style.display = "block";
+            document.getElementById("rick").play();
+        });
+        
+    </script>
+</body>
+</html>

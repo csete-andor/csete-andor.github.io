@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.cookie-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    opacity: 1;
+    animation: popup 1s;
+}
+
+.cookie-popup p {
+    margin: 0;
+}
+
+.cookie-popup button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.cookie-popup button:hover {
+    background-color: #0056b3;
+}
+@keyframes popup{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

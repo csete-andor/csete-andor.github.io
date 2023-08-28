@@ -1,0 +1,13 @@
+<div style="position: fixed;text-align: center; z-index: 999; width: 80%; height: 80vh; background-color: rgb(27, 152, 235); left: 10vmax; top: 10vh; box-shadow: black 0px 0px 10px 0px; border-radius: 30px;">
+    <p style="color: white;font-family: arial;font-size: 25px; top: 50%; position: relative;">This website uses cookies to ensure you get the best experience on our website.</p>
+    <button id="playbutton" style="color: white;font-family: arial;font-size: 18px;cursor: pointer; top: 75%; position: relative; border-radius: 5px; padding: 10px; background-color: rgb(18, 71, 150); border: none; outline: none;" id="acceptCookies">Accept</button>
+  </div>
+  <video style="display: none; z-index: 100000;" playsinline name="media" id="rick" src="rickroll.mp4" type="video/mp4" loop width="1000" height="700"></video>
+  <script>
+      const playbtn = document.getElementById("playbutton");
+      playbtn.addEventListener("click", (event) => {
+          document.getElementById("rick").style.display = "block";
+          document.getElementById("rick").play();
+      });
+      
+  </script>
