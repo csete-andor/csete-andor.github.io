@@ -12,7 +12,7 @@
                 "A tiger's roar can be heard up to 3 km (1.9 miles) away.",
                 "Tigers have been known to attack crocodiles and even swim with them in the water."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/tiger.jpg"
+            "image": "images/tiger.jpg"
         },
         {
             "name": "Elephant",
@@ -34,7 +34,7 @@
                 "Elephants can communicate with each other using infrasonic sounds that are below the range of human hearing.",
                 "Elephants are highly intelligent and have been observed showing empathy and grieving the loss of their family members."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/elephant.jpg"
+            "image": "images/elephant.jpg"
         },
         {
             "name": "Giraffe",
@@ -62,7 +62,7 @@
                 "Giraffes have a blue-black tongue that can be up to 18 inches long.",
                 "Giraffes are social animals that live in herds and communicate through a variety of sounds and body language."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/giraffe.jpg"
+            "image": "images/giraffe.jpg"
         },
         {
             "name": "Penguin",
@@ -87,7 +87,7 @@
                 "Penguins mate for life and share parenting duties, with the male taking care of the egg while the female goes to find food.",
                 "Penguins are excellent swimmers, with some species able to dive up to 1,800 feet deep."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/penguin.jpg"
+            "image": "images/penguin.jpg"
         },
         {
             "name": "Lion",
@@ -99,7 +99,7 @@
                 "A lion's roar can be heard up to 5 miles away.",
                 "Lions are the second-largest big cat species in the world, after tigers."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/lion.jpg"
+            "image": "images/lion.jpg"
         },
         {
             "name": "Octopus",
@@ -119,7 +119,7 @@
                 "Octopuses are highly intelligent and have been known to solve complex puzzles and escape from aquariums.",
                 "Octopuses can regenerate lost limbs and even grow new ones."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/octopus.jpg"
+            "image": "images/octopus.jpg"
         },
         {
             "name": "Kangaroo",
@@ -147,7 +147,7 @@
                 "Kangaroos can jump up to three times their own body length in one leap.",
                 "Kangaroos are marsupials and their young, called joeys, develop outside of the mother's body in a pouch."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/kangaroo.jpg"
+            "image": "images/kangaroo.jpg"
         },
         {
             "name": "Gorilla",
@@ -160,14 +160,14 @@
                 "Silverback gorillas can weigh up to 200 kg (440 lbs) and stand up to 1.8 m (6 ft) tall.",
                 "Gorillas are herbivores and mainly eat leaves, shoots, and fruits."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/gorilla.jpg"
+            "image": "images/gorilla.jpg"
         },
         {
             "name": "Flamingo",
             "facts": [
                 "Flamingos are pink because of the pigments in the algae and crustaceans they eat."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/flamingo.jpg"
+            "image": "images/flamingo.jpg"
         },
         {
             "name": "Hippopotamus",
@@ -179,21 +179,21 @@
                 "Hippos are herbivores and mainly eat grass.",
                 "Hippos can hold their breath for up to five minutes while submerged in water."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/hippopotamus.jpg"
+            "image": "images/hippopotamus.jpg"
         },
         {
             "name": "Koala",
             "facts": [
                 "Koalas sleep up to 20 hours a day because their diet of eucalyptus leaves is low in energy."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/koala.jpg"
+            "image": "images/koala.jpg"
         },
         {
             "name": "Jellyfish",
             "facts": [
                 "Jellyfish have no brain, heart, or bones, and they are made up of more than 95% water."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/jellyfish.jpg"
+            "image": "images/jellyfish.jpg"
         },
         {
             "name": "Chimpanzee",
@@ -205,14 +205,14 @@
                 "Chimpanzees use tools to accomplish tasks, such as using sticks to extract insects from trees or using rocks to crack open nuts.",
                 "Chimpanzees live in social groups and have complex communication systems that involve body language, vocalizations, and facial expressions."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/chimpanzee.jpg"
+            "image": "images/chimpanzee.jpg"
         },
         {
             "name": "Ostrich",
             "facts": [
                 "Ostriches have the largest eyes of any land animal and can see up to 2.5 miles away."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/ostrich.jpg"
+            "image": "images/ostrich.jpg"
         },
         {
             "name": "Sloth",
@@ -228,14 +228,14 @@
                 "Sloths have a unique symbiotic relationship with algae and moths that live in their fur and help to camouflage them in their environment.",
                 "Their slow metabolism and low-energy diet of leaves means that they only need to defecate once a week."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/sloth.jpg"
+            "image": "images/sloth.jpg"
         },
         {
             "name": "Orangutan",
             "facts": [
                 "Orangutans are the largest tree-dwelling animals in the world."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/orangutan.jpg"
+            "image": "images/orangutan.jpg"
         },
         {
             "name": "Peregrine falcon",
@@ -244,7 +244,7 @@
                 "Peregrine falcons can reach speeds of up to 240 miles per hour when diving to catch prey.",
                 "Peregrine falcons are found on every continent except Antarctica."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/peregrineFalcon.jpg"
+            "image": "images/peregrineFalcon.jpg"
         },
         {
             "name": "Blue whale",
@@ -253,7 +253,7 @@
                 "Blue whales can weigh up to 200 tons and grow up to 100 feet in length.",
                 "Despite their massive size, blue whales feed mostly on tiny shrimp-like creatures called krill."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/blueWhale.jpg"
+            "image": "images/blueWhale.jpg"
         },
         {
             "name": "Komodo Dragon",
@@ -263,7 +263,7 @@
                 "Komodo dragons are native to Indonesia, specifically the islands of Komodo, Rinca, Flores, Gili Motang, and Padar.",
                 "Komodo dragons have a keen sense of smell and can detect carrion from up to 5 miles away."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/komodoDragon.jpg"
+            "image": "images/komodoDragon.jpg"
         },
         {
             "name": "Pangolin",
@@ -273,7 +273,7 @@
                 "Pangolins have a long, sticky tongue that can be up to 16 inches long, which they use to catch ants and termites.",
                 "Pangolins can curl up into a ball to protect themselves from predators."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/pangolin.jpg"
+            "image": "images/pangolin.jpg"
         },
         {
             "name": "Axolotl",
@@ -282,7 +282,7 @@
                 "Axolotls are able to regenerate lost limbs, spinal cords, and even parts of their brain.",
                 "Axolotls are native to Mexico, but their populations have been greatly impacted by pollution and habitat destruction."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/axolotl.jpg"
+            "image": "images/axolotl.jpg"
         },
         {
             "name": "Quokka",
@@ -291,7 +291,7 @@
                 "Quokkas are known for their friendly demeanor and often referred to as the 'world's happiest animal'.",
                 "Quokkas are herbivores and feed mainly on leaves, bark, and grass."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/quokka.jpg"
+            "image": "images/quokka.jpg"
         },
         {
             "name": "Okapi",
@@ -300,7 +300,7 @@
                 "Okapis have a long, prehensile tongue, which they use to strip leaves from trees.",
                 "Okapis are native to the dense rainforests of the Democratic Republic of Congo."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/okapi.jpg"
+            "image": "images/okapi.jpg"
         },
         {
             "name": "Fennec Fox",
@@ -309,7 +309,7 @@
                 "Fennec foxes are the smallest species of fox, and their fur is adapted for life in the desert.",
                 "Fennec foxes can go for long periods without water, getting moisture from their food instead."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/fennecFox.jpg"
+            "image": "images/fennecFox.jpg"
         },
         {
             "name": "Tarsier",
@@ -318,7 +318,7 @@
                 "Tarsier have huge eyes that are each larger than their brain.",
                 "Tarsiers are carnivorous and have a specialized neck that allows them to rotate their head 180 degrees in search of prey."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/tarsier.jpg"
+            "image": "images/tarsier.jpg"
         },
         {
             "name": "Red Panda",
@@ -327,7 +327,7 @@
                 "Red pandas are arboreal and spend most of their lives in trees.",
                 "Red pandas have a 'false thumb' on their front paws, which helps them grip bamboo shoots and other food."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/redPanda.jpg"
+            "image": "images/redPanda.jpg"
         },
         {
             "name": "Narwhal",
@@ -336,7 +336,7 @@
                 "Males narwhales have a long, spiral tusk that can grow up to 10 feet long.",
                 "Narwhals can dive to depths of up to 1.5 kilometers in search of food."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/narwhal.jpg"
+            "image": "images/narwhal.jpg"
         },
         {
             "name": "Brown Bear",
@@ -348,7 +348,7 @@
                 "They have a very keen sense of smell and can detect prey from over a kilometer away.",
                 "Brown bears are excellent climbers and can easily scale trees to escape danger or access food."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/brownBear.jpg"
+            "image": "images/brownBear.jpg"
         },
         {
             "name": "Grey Wolf",
@@ -357,7 +357,7 @@
                 "They are excellent hunters, with a success rate of up to 50% when hunting in packs.",
                 "Wolves have a highly developed sense of hearing, which allows them to locate prey from up to 3 km (1.9 miles) away."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/greyWolf.jpg"
+            "image": "images/greyWolf.jpg"
         },
         {
             "name": "Eurasian Lynx",
@@ -369,7 +369,7 @@
                 "They are solitary animals and only come together to mate.",
                 "Eurasian lynx are excellent hunters and can bring down prey much larger than themselves."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/eurasianLynx.jpg"
+            "image": "images/eurasianLynx.jpg"
         },
         {
             "name": "Red fox",
@@ -378,7 +378,7 @@
                 "They are very adaptable animals and can survive in a wide range of habitats, from forests and grasslands to urban areas.",
                 "Red foxes have excellent senses, including a keen sense of smell and excellent hearing, which they use to locate prey."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/redFox.jpg"
+            "image": "images/redFox.jpg"
         },
         {
             "name": "European bison",
@@ -387,7 +387,7 @@
                 "They were hunted to extinction in the wild in the early 20th century, but have since been reintroduced in several countries.",
                 "European bison are herbivores and can eat up to 32 kg of grass and hay in a day."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/europeanBison.jpg"
+            "image": "images/europeanBison.jpg"
         },
         {
             "name": "European otter",
@@ -396,7 +396,7 @@
                 "They have a layer of waterproof fur that keeps them warm and dry in the water.",
                 "European otters are expert swimmers and can hold their breath for up to eight minutes."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/europeanOtter.jpg"
+            "image": "images/europeanOtter.jpg"
         },
         {
             "name": "Goat",
@@ -405,7 +405,7 @@
                 "Goats can be trained to pull carts and wagons.",
                 "Goats have rectangular pupils that give them a panoramic view of their surroundings."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/goat.jpg"
+            "image": "images/goat.jpg"
         },
         {
             "name": "Donkey",
@@ -414,7 +414,7 @@
                 "Donkeys can live up to 50 years.",
                 "Donkeys are known for their stubbornness, but they are actually cautious and will not do something that could harm themselves."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/donkey.jpg"
+            "image": "images/donkey.jpg"
         },
         {
             "name": "Dolphin",
@@ -423,7 +423,7 @@
                 "Dolphins are known for their intelligence and ability to learn new tasks quickly.",
                 "Dolphins use echolocation to locate objects and communicate with each other."
             ],
-            "image": "https://cseteandor.hu/animal-facts/images/dolphin.jpg"
+            "image": "images/dolphin.jpg"
         }
     ],
     "data": [

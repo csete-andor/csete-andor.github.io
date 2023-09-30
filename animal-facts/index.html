@@ -9,12 +9,12 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://cseteandor.hu/animal-facts/style.css"
+      href="style.css"
     />
     <link
       rel="icon"
       type="image/png"
-      href="https://cseteandor.hu/animal-facts/dinosaur.png"
+      href="dinosaur.png"
     />
     <style>
       main {
@@ -28,10 +28,10 @@
       <h1>Random Animal Facts</h1>
       <nav>
         <ul>
-          <li><a href="https://cseteandor.hu/animal-facts/">Home</a></li>
-          <li><a href="https://cseteandor.hu/animal-facts/about">About</a></li>
+          <li><a href="animal-facts/">Home</a></li>
+          <li><a href="about">About</a></li>
           <li>
-            <a href="https://cseteandor.hu/animal-facts/contact">Contact</a>
+            <a href="contact">Contact</a>
           </li>
         </ul>
       </nav>
@@ -250,7 +250,7 @@
           .catch((error) => console.error(error));
       }
       function randomfact() {
-        fetch("https://cseteandor.hu/animal-facts/facts.json")
+        fetch("facts.json")
           .then((response) => response.json())
           .then((data) => {
             if (Math.floor(Math.random() * (10 - 0 + 1) + 0) == 1) {
@@ -258,7 +258,7 @@
               document.getElementById("fact").innerHTML =
                 "People can share this page by one click. Please, if you enjoy this page, share to your friends and family so they can enjoy it as well. <br> <b>Thank you!</b>";
               document.getElementById("animalpic").innerHTML =
-                '<img src="https://cseteandor.hu/animal-facts/images/people.jpg" style="max-width: 80%; margin-top:2em;border-radius:5px;">';
+                '<img src="images/people.jpg" style="max-width: 80%; margin-top:2em;border-radius:5px;">';
               document.getElementById("animalimage").innerHTML =
                 '<span style="cursor: pointer;" onclick="randomfact()">New fact</span>';
               document.getElementById("new-fact").style.backgroundColor =
@@ -322,7 +322,7 @@
         document.getElementById("fact").innerHTML =
           "People can share this page by one click. Please, if you enjoy this page, share to your friends and family so they can enjoy it as well. <br> <b>Thank you!</b>";
         document.getElementById("animalpic").innerHTML =
-          '<img src="https://cseteandor.hu/animal-facts/images/people.jpg" style="max-width: 80%; margin-top:2em;border-radius:5px;">';
+          '<img src="images/people.jpg" style="max-width: 80%; margin-top:2em;border-radius:5px;">';
         document.getElementById("animalimage").innerHTML =
           '<span style="cursor: pointer;" onclick="randomfact()">New fact</span>';
         document.getElementById("new-fact").style.backgroundColor = "brown";
@@ -355,19 +355,23 @@
       });
     </script>
     <script>//add images to gallery
-      fetch("https://cseteandor.hu/animal-facts/facts.json")
+      fetch("facts.json")
         .then((response) => response.json())
         .then((data) => {
           const images = data.animals.map((animal) => animal.image);
+          const animalNames = data.animals.map((name) => animal.name);
           const container = document.getElementById("gallery");
           images.forEach((image) => {
+            const imgElementLink = document.createElement("a");
+            imgElementLink.setAttribute("href", "?search="+animalName)
             const imgElement = document.createElement("img");
             imgElement.src = image;
             imgElement.style.maxWidth = "30%";
             imgElement.style.margin = "1em";
             imgElement.style.borderRadius = "5px";
             imgElement.setAttribute("draggable", "false");
-            container.appendChild(imgElement);
+            imgElementLink.appendChild(imgElement);
+            container.appendChild(imgElementLink);
           });
         });
     </script>
