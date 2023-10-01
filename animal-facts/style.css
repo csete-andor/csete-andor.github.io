@@ -166,3 +166,19 @@
   .const{
     color: blue;
   }
+  .backToHomeArrow{
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 5em;
+  }
+  .backToHome:hover {
+    background-color: #3e8e41;
+  }

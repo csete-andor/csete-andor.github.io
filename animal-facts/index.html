@@ -28,7 +28,7 @@
       <h1>Random Animal Facts</h1>
       <nav>
         <ul>
-          <li><a href="animal-facts/">Home</a></li>
+          <li><a href="https://cseteandor.hu/animal-facts">Home</a></li>
           <li><a href="about">About</a></li>
           <li>
             <a href="contact">Contact</a>
@@ -173,7 +173,7 @@
     </footer>
     <script>//search engine and random facts and others
       function Search() {
-        fetch("https://cseteandor.hu/animal-facts/facts.json")
+        fetch("facts.json")
           .then((response) => response.json())
           .then((data) => {
             const matchingFacts = data.animals.find(
@@ -245,6 +245,11 @@
             currentChild.className = "deletable";
             currentChild.innerHTML =
               '<button class="backToHome" onclick="clearSearch()">Back to home</button>';
+            document.getElementById("main").appendChild(currentChild);
+            currentChild = document.createElement("div");
+            currentChild.className = "deletable";
+            currentChild.innerHTML =
+              '<button class="backToHomeArrow" onclick="clearSearch()">back</button>';
             document.getElementById("main").appendChild(currentChild);
           })
           .catch((error) => console.error(error));
@@ -358,20 +363,18 @@
       fetch("facts.json")
         .then((response) => response.json())
         .then((data) => {
-          const images = data.animals.map((animal) => animal.image);
-          const animalNames = data.animals.map((name) => animal.name);
+          const animals = data.animals.map((animal) => animal);
           const container = document.getElementById("gallery");
-          images.forEach((image) => {
-            const imgElementLink = document.createElement("a");
-            imgElementLink.setAttribute("href", "?search="+animalName)
+          animals.forEach((respond) => {
             const imgElement = document.createElement("img");
-            imgElement.src = image;
+            imgElement.src = respond.image;
+            imgElement.setAttribute("onclick", "location.replace('?search="+respond.name+"')")
             imgElement.style.maxWidth = "30%";
             imgElement.style.margin = "1em";
             imgElement.style.borderRadius = "5px";
+            imgElement.style.cursor = "pointer";
             imgElement.setAttribute("draggable", "false");
-            imgElementLink.appendChild(imgElement);
-            container.appendChild(imgElementLink);
+            container.appendChild(imgElement);
           });
         });
     </script>
