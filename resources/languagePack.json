@@ -1,0 +1,26 @@
+{
+    "lang": {
+        "hu": {
+            "title": "Kezdőlap - cseteandor.hu",
+            "content": "Csete andor vagyok, programozó, web designer és web fejlesztő. A pesthidegkúti waldorf iskola gimnazistája vagyok, ahol nyolcadikos évesmunkám témájaként a programozást és webfejlesztést választottam.",
+            "links": [
+                "évesmunka",
+                "animal facts",
+                "altimore",
+                "mystery"
+            ],
+            "cseteandor": "csete andor"
+        },
+        "en": {
+            "title": "Home - cseteandor.hu",
+            "content": "hi, i’m andor csete, programmer, web designer and developer. I go to the pesthidegkúti waldorf school, where i made my first big project named ‘programming and web development’ in 2022.",
+            "links": [
+                "project work",
+                "animal facts",
+                "altimore",
+                "mystery"
+            ],
+            "cseteandor": "andor csete"
+        }
+    }
+}

@@ -8,19 +8,21 @@ a{
 }
 body{
     margin: 0;
-    overflow: hidden;
     background-color: #FFB600;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
 }
 #background{
     transform: rotate(35deg);
     z-index: -2;
-    width: 1014.878px;
-    height: 1583.6px;
+    width: 1000%;
+    height: 1000%;
     transform: rotate(35deg);
-    position: absolute;
+    position: fixed;
     background-color: white;
     left: 55%;
-    top: -10em;
+    top: 10px;
 }
 #cseteandor{
     color: #000;
@@ -33,8 +35,8 @@ body{
 }
 #icon img{
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     top: 0px;
     right: 0px;
@@ -48,8 +50,7 @@ body{
     font-weight: 400;
     line-height: normal;
     width: 15.5em;
-    position: absolute;
-    left: 1.5em;
+    margin-left: 1.5em;
 }
 #contacts{
     margin-top: 1em;
@@ -83,17 +84,47 @@ body{
 #lang{
     color: #000;
     font-family: Bebas Neue;
-    font-size: 50px;
+    font-size: 35px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     border-radius: 50px;
     background-color: #fadf5a;
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     text-align: center;
-    line-height: 60px;
+    line-height: 45px;
     cursor: pointer;
     text-decoration: none;
+    bottom: .2em;
+    right: .2em;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    body{
+        overflow: hidden;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    body{
+        overflow: hidden;
+    }
 }
