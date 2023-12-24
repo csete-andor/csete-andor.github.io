@@ -1,0 +1,92 @@
+{
+    "products": [
+        {
+            "product_1": [
+                {
+                    "name": "Weboldalbővítés"
+                },
+                {
+                    "name_en": "Website expansion"
+                },
+                {
+                    "description": "Egy létező weboldal kibővítése új funkciókkal/dizájnokkal, vagy meglévő funkciók/dizájnok korszerűsítése, javítása."
+                },
+                {
+                    "description_en": "Expanding an existing website with new functions/designs, or updating and improving existing functions/designs."
+                },
+                {
+                    "price_old": 20000
+                },
+                {
+                    "price_new": 9000
+                }
+            ]
+        },
+        {
+            "product_2": [
+                {
+                    "name": "Weboldal fejlesztés"
+                },
+                {
+                    "name_en": "Website development"
+                },
+                {
+                    "description": "Egy személyreszabott, látványos, statikus weboldal cégeknek és magánszemélyeknek. A legtöbb ügyfélnek ez a csomag a legmegfelelőbb."
+                },
+                {
+                    "description_en": "A personalized, stunning, static website for companies and individuals. This service is the most suitable for most customers."
+                },
+                {
+                    "price_old": 150000
+                },
+                {
+                    "price_new": 99000
+                }
+            ]
+        },
+        {
+            "product_3": [
+                {
+                    "name": "Blog készítés"
+                },
+                {
+                    "name_en": "Blog development"
+                },
+                {
+                    "description": "Blog vagy internetes magazin készítése saját számítógépes programmal a cikkek létrehozására és feltöltésére."
+                },
+                {
+                    "description_en": "Blog or internet magazine with custom dewsktop program for creating and uploading articles."
+                },
+                {
+                    "price_old": null
+                },
+                {
+                    "price_new": 139000
+                }
+            ]
+        },
+        {
+            "product_4": [
+                {
+                    "name": "Professzionális weboldal készítés"
+                },
+                {
+                    "name_en": "Professional website development"
+                },
+                {
+                    "description": "Professzionális kivitelezés professzionális igényekre. Fejlett, személyreszabott, szemetkápráztató weboldal egyedi igények alapján. Dinamikus weboldal azoknak akiknek magas elvárásaik vannak."
+                },
+                {
+                    "description_en": "Professional design for professional needs. Advanced, customized, eye-catching website based on individual needs. A dynamic website for those who have high expectations."
+                },
+                {
+                    "price_old": 350000
+                },
+                {
+                    "price_new": 199900
+                }
+            ]
+        }
+    ]
+}
