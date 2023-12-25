@@ -57,13 +57,16 @@
 >
 <label for="name">
     Teljes név:<span class="red">*</span> <br>
-    <input required title="Kérlek add meg a teljes neved!" id="name" type="text" name="name" placeholder="Vezeték- és keresztnév" pattern="^(\w+)\s(\w+)$" oninvalid="this.setCustomValidity('Add meg a teljes neved. (Vezeték- és keresztnév)')"></input>
+    <input autocomplete="name" required title="Kérlek add meg a teljes neved!" id="name" type="text" name="name" placeholder="Vezeték- és keresztnév" pattern="^(\w+)\s(\w+)$" oninvalid="this.setCustomValidity('Add meg a teljes neved. (Vezeték- és keresztnév)')" oninput="this.setCustomValidity('')"></input>
   </label><br>
   <label for="email">
     Add meg az email címed:<span class="red">*</span> <br>
-    <input required title="Kérlek add meg az email címed!" type="email" id="email" name="email" placeholder="email@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninvalid="this.setCustomValidity('Kérlek adj meg egy érvényes email címet!')">
+    <input autocomplete="email" required title="Kérlek add meg az email címed!" type="email" id="email" name="email" placeholder="email@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninvalid="this.setCustomValidity('Kérlek adj meg egy érvényes email címet!')" oninput="this.setCustomValidity('')">
   </label><br>
-  <label for="service_selection" oninvalid="this.setCustomValidity('Kérlek válassz egy szolgáltatást!')">Szolgáltatás:<span class="red">*</span> <br>
+  <label for="phonenumber">Kérlek add meg a telefonszámod <span class="red">*</span><br>
+    <input type="number" id="phonenumber" title="Kérlek add meg a telefonszámod!" required autocomplete="mobile" placeholder="+36 1 12345678" pattern="(^(\+36|06)(1|20|30|70)\d{7}$)" oninvalid="this.setCustomValidity('Kérlek adj meg egy érvényes telefonszámot!')" oninput="this.setCustomValidity('')">
+  </label><br>
+  <label for="service_selection" oninvalid="this.setCustomValidity('Kérlek válassz egy szolgáltatást!')" oninput="this.setCustomValidity('')">Szolgáltatás:<span class="red">*</span> <br>
     <select required title="Kérlek válassz egy szolgáltatást!" name="service" id="service_selection">
         <option value="free_consultation">Ingyenes tanácsadás</option>
         <option value="website_expansion">Weboldalbővítés</option>
