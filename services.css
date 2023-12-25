@@ -64,6 +64,7 @@ header {
   font-size: 1vw;
   color: #ff7300;
   animation: popping infinite 1s;
+  z-index: -10;
 }
 @keyframes popping {
 50%{
