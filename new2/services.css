@@ -8,6 +8,10 @@ body {
   font-family: Bebas Neue !important;
   height: 100%;
 }
+a{
+  text-decoration: none;
+  color: black;
+}
 .red {
   color: red;
 }
@@ -100,13 +104,13 @@ header {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    z-index: 10;
     top: 0;
     left: 0;
     background-color: #ffb600;
     display: flex;
     align-items: center;
     vertical-align: middle;
+    display: none;
 }
 #register form{
     margin: auto;
@@ -125,6 +129,10 @@ form button{
     background-color: #fbe367;
     font-family: Bebas Neue;
     font-size: 21px;
+}
+.gray{
+  color: gray;
+  font-size: 18px;
 }
 @media only screen and (min-width: 768px) {
 }

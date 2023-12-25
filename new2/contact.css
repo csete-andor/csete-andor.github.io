@@ -1,19 +1,29 @@
+@font-face {
+    font-family: Bebas Neue;
+    src: url(../resources/BebasNeue-Regular.ttf);
+  }
 body{
     margin: 0px;
-    background-color: ;
+    background-color: #FFB600;
+    font-family: Bebas Neue !important;
 }
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+header{
+    text-align: center;
+    font-size: 50px;
+}
+.content{
+    max-width: 75vw;
+    font-size: 23px;
+    margin: auto;
+    margin-top: 7em;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.content a:hover{
+    text-decoration: underline;
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
-}

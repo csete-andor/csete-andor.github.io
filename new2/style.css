@@ -2,7 +2,10 @@
     font-family: Bebas Neue;
     src: url(../resources/BebasNeue-Regular.ttf);
 }
-
+a{
+    text-decoration: none;
+    color: black;
+}
 body {
     font-family: Bebas Neue;
     margin: 0px;
