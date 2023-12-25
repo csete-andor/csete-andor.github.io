@@ -49,74 +49,93 @@
         </div>
     </section>
     <section id="outro"></section>
+
     <div id="register">
         <button id="backtoitems" onclick="backToBrowsing()">Vissza</button>
-        <form
-  action="https://formspree.io/f/mayrwvvl"
-  method="POST"
->
-<label for="name">
-    Teljes név:<span class="red">*</span> <br>
-    <input autocomplete="name" required title="Kérlek add meg a teljes neved!" id="name" type="text" name="name" placeholder="Vezeték- és keresztnév" pattern="^(\w+)\s(\w+)$" oninvalid="this.setCustomValidity('Add meg a teljes neved. (Vezeték- és keresztnév)')" oninput="this.setCustomValidity('')"></input>
-  </label><br>
-  <label for="email">
-    Add meg az email címed:<span class="red">*</span> <br>
-    <input autocomplete="email" required title="Kérlek add meg az email címed!" type="email" id="email" name="email" placeholder="email@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninvalid="this.setCustomValidity('Kérlek adj meg egy érvényes email címet!')" oninput="this.setCustomValidity('')">
-  </label><br>
-  <label for="phonenumber">Kérlek add meg a telefonszámod <span class="red">*</span><br>
-    <input type="number" id="phonenumber" title="Kérlek add meg a telefonszámod!" required autocomplete="mobile" placeholder="+36 1 12345678" pattern="(^(\+36|06)(1|20|30|70)\d{7}$)" oninvalid="this.setCustomValidity('Kérlek adj meg egy érvényes telefonszámot!')" oninput="this.setCustomValidity('')">
-  </label><br>
-  <label for="service_selection" oninvalid="this.setCustomValidity('Kérlek válassz egy szolgáltatást!')" oninput="this.setCustomValidity('')">Szolgáltatás:<span class="red">*</span> <br>
-    <select required title="Kérlek válassz egy szolgáltatást!" name="service" id="service_selection">
-        <option value="free_consultation">Ingyenes tanácsadás</option>
-        <option value="website_expansion">Weboldalbővítés</option>
-        <option value="website_development">Weboldal fejlesztés</option>
-        <option value="blog_development">Blog készítés</option>
-        <option value="professional_website_development">Professzionális weboldal készítés</option>
-    </select>
-  </label><br>
-  <label for="message">
-    Egyéb megjegyzés (weboldalak melyeket szeret, domain név ami szimpatikus, stb...) <br>
-    <textarea name="message" id="message" cols="30" rows="7"></textarea>
-  </label><br>
-    <!-- your other form fields go here -->
-  <br><span class="gray">Kérlek csak egyszer küld be a kérdőívet. Ha esetleg elírtál volna valamit (az email címeden kívül), később az egyeztetésnél ki tudod javítani. <br>Kérlek csak komoly szándék esetén rendeld meg a szolgáltatást! <br></span><br>
-  <button disabled type="submit" id="orderService">Megrendelés</button>
-</form>
-<div id="cloudflare"></div>
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" defer></script>
+        <form action="https://formspree.io/f/mayrwvvl" method="POST">
+            <label for="name">
+                Teljes név:<span class="red">*</span> <br>
+                <input autocomplete="name" required title="Kérlek add meg a teljes neved!" id="name" type="text"
+                    name="name" placeholder="Vezeték- és keresztnév" pattern="^(\w+)\s(\w+)$"
+                    oninvalid="this.setCustomValidity('Add meg a teljes neved. (Vezeték- és keresztnév)')"
+                    oninput="this.setCustomValidity('')"></input>
+            </label><br>
+            <label for="email">
+                Add meg az email címed:<span class="red">*</span> <br>
+                <input autocomplete="email" required title="Kérlek add meg az email címed!" type="email" id="email"
+                    name="email" placeholder="email@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    oninvalid="this.setCustomValidity('Kérlek adj meg egy érvényes email címet!')"
+                    oninput="this.setCustomValidity('')">
+            </label><br>
+            <label for="phonenumber">Kérlek add meg a telefonszámod <span class="red">*</span><br>
+                <input type="number" id="phonenumber" title="Kérlek add meg a telefonszámod!" required
+                    autocomplete="mobile" placeholder="+36 1 12345678" pattern="(^(\+36|06)(1|20|30|70)\d{7}$)"
+                    oninvalid="this.setCustomValidity('Kérlek adj meg egy érvényes telefonszámot!')"
+                    oninput="this.setCustomValidity('')">
+            </label><br>
+            <label for="service_selection" oninvalid="this.setCustomValidity('Kérlek válassz egy szolgáltatást!')"
+                oninput="this.setCustomValidity('')">Szolgáltatás:<span class="red">*</span> <br>
+                <select required title="Kérlek válassz egy szolgáltatást!" name="service" id="service_selection">
+                    <option value="free_consultation">Ingyenes tanácsadás</option>
+                    <option value="website_expansion">Weboldalbővítés</option>
+                    <option value="website_development">Weboldal fejlesztés</option>
+                    <option value="blog_development">Blog készítés</option>
+                    <option value="professional_website_development">Professzionális weboldal készítés</option>
+                </select>
+            </label><br>
+            <label for="message">
+                Egyéb megjegyzés (weboldalak melyeket szeret, domain név ami szimpatikus, stb...) <br>
+                <textarea style="font-family: Bebas Neue;" name="message" id="message" cols="30" rows="7"></textarea>
+            </label><br>
+            <!-- your other form fields go here -->
+            <br><span class="gray">Kérlek csak egyszer küld be a kérdőívet. Ha esetleg elírtál volna valamit (az email
+                címeden kívül), később az egyeztetésnél ki tudod javítani. <br>Kérlek csak komoly szándék esetén rendeld
+                meg a szolgáltatást! <br></span><br>
+            <button disabled type="submit" onclick="clearForm()" id="orderService">Megrendelés</button>
+            <input type="reset" value="Törlés" style="display: none;" id="rst">
+        </form>
+        <div id="cloudflare"></div>
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback"
+            defer></script>
     </div>
     <script>
         window.onloadTurnstileCallback = function () {
-    turnstile.render('#cloudflare', {
-        sitekey: '0x4AAAAAAAPDE96qFBzE6QKn',
-        callback: function(token) {
-            document.getElementById("orderService").removeAttribute("disabled");
-        },
-    });
-};
+            turnstile.render('#cloudflare', {
+                sitekey: '0x4AAAAAAAPDE96qFBzE6QKn',
+                callback: function (token) {
+                    document.getElementById("orderService").removeAttribute("disabled");
+                },
+            });
+        };
     </script>
     <script>
-        function orderService(selectedService){
-            if (selectedService === 0){
-                document.getElementById('service_selection').value= "website_expansion";
+        function orderService(selectedService) {
+            if (selectedService === 0) {
+                document.getElementById('service_selection').value = "website_expansion";
             }
-            else if (selectedService === 1){
-                document.getElementById('service_selection').value="website_development";
+            else if (selectedService === 1) {
+                document.getElementById('service_selection').value = "website_development";
             }
-            else if(selectedService === 2) {
-                document.getElementById('service_selection').value="blog_development";
+            else if (selectedService === 2) {
+                document.getElementById('service_selection').value = "blog_development";
             }
-            else if(selectedService ===3){
-                document.getElementById('service_selection').value="professional_website_development";
+            else if (selectedService === 3) {
+                document.getElementById('service_selection').value = "professional_website_development";
             }
-            else{
-                document.getElementById('service_selection').value="free_consultation";
+            else {
+                document.getElementById('service_selection').value = "free_consultation";
             }
             document.getElementById("register").style.display = "flex";
         };
-        function backToBrowsing(){
+        function backToBrowsing() {
             document.getElementById("register").style.display = "none";
+        };
+    </script>
+    <script>
+        window.onbeforeunload = () => {
+            for (const form of document.getElementsByTagName('form')) {
+                form.reset();
+            }
         }
     </script>
 </body>
