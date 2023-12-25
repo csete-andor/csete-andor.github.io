@@ -61,16 +61,16 @@ header {
   transform: rotate(-45deg);
   position: absolute;
   margin-top: 20px;
-  font-size: 19px;
+  font-size: 1vw;
   color: #ff7300;
   animation: popping infinite 1s;
 }
 @keyframes popping {
 50%{
-  font-size: 22px;
+  font-size: 1.4vw;
 }
 100%{
-  font-size: 19px;
+  font-size: 1vw;
 }
 }
 .service .name {
@@ -285,4 +285,14 @@ form button {
   form select{
     color: black;
   }
-}
+  .service .bandage{
+    font-size: 3vw;
+  }
+  @keyframes popping {
+  50%{
+    font-size: 5vw;
+  }
+  100%{
+    font-size: 3vw;
+  }
+}}
