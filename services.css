@@ -2,31 +2,46 @@
   font-family: Bebas Neue;
   src: url(../resources/BebasNeue-Regular.ttf);
 }
+
+button {
+  color: black;
+  border: none;
+}
+button:disabled{
+  color: rgb(92, 92, 92);
+  background-color: #d3be55;
+}
+
 body {
   background-color: #ffb600;
   margin: 0px;
   font-family: Bebas Neue !important;
   height: 100%;
 }
-a{
+
+a {
   text-decoration: none;
   color: black;
 }
+
 .red {
   color: red;
 }
+
 header {
   font-size: 50px;
   text-align: center;
 }
+
 #services {
   display: flex;
   flex-wrap: nowrap;
-  gap: 20px;
+  gap: 2vw;
   width: fit-content;
   margin: auto;
   margin-top: 7em;
 }
+
 .service {
   width: 15vw;
   height: 25vw;
@@ -35,11 +50,28 @@ header {
   padding: 15px;
   position: relative;
 }
+
 .service.b {
   height: 30vw;
   transform: translateY(-2.5vw);
   border: solid 4px black;
   background-color: #fff5c3;
+}
+.service .bandage{
+  transform: rotate(-45deg);
+  position: absolute;
+  margin-top: 20px;
+  font-size: 19px;
+  color: #ff7300;
+  animation: popping infinite 1s;
+}
+@keyframes popping {
+50%{
+  font-size: 22px;
+}
+100%{
+  font-size: 19px;
+}
 }
 .service .name {
   font-size: 1.5vw;
@@ -49,16 +81,7 @@ header {
   left: 50%;
   transform: translateX(-50%);
 }
-.service .NOTlogo {
-  background: url(https://cdn-icons-png.flaticon.com/512/359/359220.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100px;
-  height: 100px;
-  margin: auto;
-  margin-top: 3em;
-}
+
 .service .desciption {
   font-size: 1.1vw;
   position: absolute;
@@ -66,6 +89,7 @@ header {
   bottom: 3.3em;
   line-height: 90%;
 }
+
 .service .order {
   background-color: #fbe367;
   border: none;
@@ -81,16 +105,19 @@ header {
   cursor: pointer;
   transition: 400ms;
 }
+
 .service .order:hover {
   background-color: #ffdd30;
   padding-left: 20px;
   padding-right: 20px;
 }
+
 #intro {
   margin-left: 17.5vw;
   font-size: 32px;
   margin-top: 3em;
 }
+
 .info button {
   padding: 10px;
   background-color: #fbe367;
@@ -100,41 +127,48 @@ header {
   cursor: pointer;
   font-size: 1.75vw;
 }
-#register{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-color: #ffb600;
-    display: flex;
-    align-items: center;
-    vertical-align: middle;
-    display: none;
+
+#register {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #ffb600;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  display: none;
 }
-#register form{
-    margin: auto;
-    font-size: 23px;
-    font-family: Bebas Neue;
+
+#register form {
+  margin: auto;
+  font-size: 23px;
+  font-family: Bebas Neue;
 }
-form input, select{
-    font-family: Bebas Neue;
-    font-size: 19px;
+
+form input,
+select {
+  font-family: Bebas Neue;
+  font-size: 19px;
 }
-form button{
-    padding: 10px;
-    width: 7em;
-    border: none;
-    border-radius: 40px;
-    background-color: #fbe367;
-    font-family: Bebas Neue;
-    font-size: 21px;
+
+form button {
+  padding: 10px;
+  width: 7em;
+  border: none;
+  border-radius: 40px;
+  background-color: #fbe367;
+  font-family: Bebas Neue;
+  font-size: 21px;
 }
-.gray{
+
+.gray {
   color: gray;
   font-size: 18px;
 }
-#backtoitems{
+
+#backtoitems {
   padding: 10px;
   background-color: #fbe367;
   font-size: 23px;
@@ -146,20 +180,109 @@ form button{
   position: absolute;
   top: 1em;
 }
-.price{
-  width: 5em;
+
+.price {
+  width: 75%;
   left: 50%;
   transform: translateX(-50%);
   position: absolute;
-  bottom: 10vw;
+  bottom: 45%;
   text-align: center;
   font-size: 1.5vw;
   border: 2px solid black;
 }
-.price del{
-  font-size: 19px;
+
+.price del {
+  font-size: 1.3vw;
   color: rgb(48, 48, 48);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 600px) {
+  #services {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .service {
+    width: 70vw;
+    height: 100vw;
+  }
+
+  .service.b {
+    margin-top: 20px;
+    height: 110vw;
+    width: 70vw;
+    border: 2px solid black;
+  }
+
+  .service .name {
+    font-size: 21px;
+  }
+
+  .service .desciption {
+    font-size: 14px;
+    bottom: 20vw;
+  }
+
+  .service .price {
+    font-size: 23px;
+  }
+
+  .service .price del {
+    font-size: 19px;
+  }
+
+  .service .order {
+    font-size: 23px;
+    padding: 10px;
+    color: black;
+  }
+
+  body {
+    padding-bottom: 100px;
+  }
+
+  .info {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    background-color: #ffa600;
+    width: 100%;
+    text-align: center;
+    border: 2px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 30px 30px 0px 0px;
+    transition: 300ms;
+  }
+
+  .info.closed {
+    bottom: -3em;
+  }
+
+  .info button {
+    font-size: 21px;
+    color: black;
+    opacity: 1;
+    transition: 300ms;
+  }
+
+  .info.closed button {
+    opacity: 0;
+  }
+  #register{
+    padding-left: 15px;
+    height: 100vmax;
+    z-index: 99;
+  }
+  #register .gray{
+    line-height: 85%;
+    display: block;
+  }
+  #orderService{
+    margin-top: 10px;
+  }
+  form select{
+    color: black;
+  }
 }

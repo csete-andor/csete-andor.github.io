@@ -26,13 +26,12 @@
             <button onclick="orderService(0)" class="order">Megrendelés</button>
         </div>
         <div class="service b">
-            <div class="bandage"></div>
             <span class="name">Weboldal fejlesztés</span>
-            <div class="logo"></div>
-                <div class="price">
-                    <div id="oldserviceprice_b"><del>150 000ft</del></div>
-                    <div id="serviceprice_b">99 000ft-tól</div>
-                </div>
+            <div class="bandage">Ajánlott</div>
+            <div class="price" style="bottom: 46.5%;">
+                <div id="oldserviceprice_b"><del>150 000ft</del></div>
+                <div id="serviceprice_b">99 000ft-tól</div>
+            </div>
             <div class="desciption">Egy személyreszabott, látványos, statikus weboldal cégeknek és magánszemélyeknek. A
                 legtöbb ügyfélnek ez a csomag a legmegfelelőbb.</div>
             <button onclick="orderService(1)" class="order">Megrendelés</button>
@@ -55,11 +54,12 @@
                 <div id="oldserviceprice_d"><del>350 000ft</del></div>
                 <div id="serviceprice_d">199 900ft-tól</div>
             </div>
-            <div class="desciption">Professzionális kivitelezés. Fejlett, személyreszabott, weboldal egyedi igények alapján. Dinamikus weboldal azoknak akiknek magas elvárásaik
+            <div class="desciption">Professzionális kivitelezés. Fejlett, személyreszabott, weboldal egyedi igények
+                alapján. Dinamikus weboldal azoknak akiknek magas elvárásaik
                 vannak.</div>
             <button onclick="orderService(3)" class="order">Megrendelés</button>
         </div>
-        <div class="info">
+        <div class="info open" id="info" onclick="if(this.className==='info open'){this.className='info closed'}else{this.className='info open'}">
             Nem vagy biztos, melyik szolgáltatást válaszd? <br>
             <button onclick="orderService(4)">Kérj egy ingyenes tanácsadást!</button>
         </div>
@@ -104,9 +104,9 @@
                 <textarea style="font-family: Bebas Neue;" name="message" id="message" cols="30" rows="7"></textarea>
             </label><br>
             <!-- your other form fields go here -->
-            <br><span class="gray">Kérlek csak egyszer küld be a kérdőívet. Ha esetleg elírtál volna valamit (az email
+            <span class="gray">Kérlek csak egyszer küld be a kérdőívet. Ha esetleg elírtál volna valamit (az email
                 címeden kívül), később az egyeztetésnél ki tudod javítani. <br>Kérlek csak komoly szándék esetén rendeld
-                meg a szolgáltatást! <br></span><br>
+                meg a szolgáltatást! <br></span>
             <button disabled type="submit" onclick="backToBrowsing()" id="orderService">Megrendelés</button>
         </form>
         <div id="cloudflare"></div>
@@ -141,10 +141,28 @@
                 document.getElementById('service_selection').value = "free_consultation";
             }
             document.getElementById("register").style.display = "flex";
+            document.body.style.overflowY = "hidden";
+            document.html.style.overflowY = "hidden";
         };
         function backToBrowsing() {
             document.getElementById("register").style.display = "none";
+            document.body.style.overflowY = "scroll";
+            document.html.style.overflowY = "scroll";
         };
+    </script>
+    <script>
+        let infoMobile = document.getElementById("info");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                infoMobile.className = "info closed";
+            } else {
+                infoMobile.className = "info open";
+            }
+        }
     </script>
 </body>
 
