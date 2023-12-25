@@ -91,8 +91,7 @@
             <br><span class="gray">Kérlek csak egyszer küld be a kérdőívet. Ha esetleg elírtál volna valamit (az email
                 címeden kívül), később az egyeztetésnél ki tudod javítani. <br>Kérlek csak komoly szándék esetén rendeld
                 meg a szolgáltatást! <br></span><br>
-            <button disabled type="submit" onclick="clearForm()" id="orderService">Megrendelés</button>
-            <input type="reset" value="Törlés" style="display: none;" id="rst">
+            <button disabled type="submit" onclick="backToBrowsing()" id="orderService">Megrendelés</button>
         </form>
         <div id="cloudflare"></div>
         <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback"
@@ -130,13 +129,6 @@
         function backToBrowsing() {
             document.getElementById("register").style.display = "none";
         };
-    </script>
-    <script>
-        window.onbeforeunload = () => {
-            for (const form of document.getElementsByTagName('form')) {
-                form.reset();
-            }
-        }
     </script>
 </body>
 
