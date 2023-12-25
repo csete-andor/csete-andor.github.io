@@ -7,6 +7,7 @@
     <title>Szolgáltatások - Csete Andor</title>
     <link rel="stylesheet" href="services.css">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -16,6 +17,10 @@
         <div class="service a">
             <span class="name">Weboldalbővítés</span>
             <div class="logo"></div>
+            <div class="price">
+                <div id="oldserviceprice_a"><del>20 000ft</del></div>
+                <div id="serviceprice_a">9 000ft-tól</div>
+            </div>
             <div class="desciption">Egy létező weboldal kibővítése új funkciókkal/dizájnokkal, vagy meglévő
                 funkciók/dizájnok korszerűsítése, javítása.</div>
             <button onclick="orderService(0)" class="order">Megrendelés</button>
@@ -24,6 +29,10 @@
             <div class="bandage"></div>
             <span class="name">Weboldal fejlesztés</span>
             <div class="logo"></div>
+                <div class="price">
+                    <div id="oldserviceprice_b"><del>150 000ft</del></div>
+                    <div id="serviceprice_b">99 000ft-tól</div>
+                </div>
             <div class="desciption">Egy személyreszabott, látványos, statikus weboldal cégeknek és magánszemélyeknek. A
                 legtöbb ügyfélnek ez a csomag a legmegfelelőbb.</div>
             <button onclick="orderService(1)" class="order">Megrendelés</button>
@@ -31,15 +40,22 @@
         <div class="service c">
             <span class="name">Blog készítés</span>
             <div class="logo"></div>
+            <div class="price">
+                <div id="oldserviceprice_c"></div>
+                <div id="serviceprice_c">139 000ft-tól</div>
+            </div>
             <div class="desciption">Blog vagy internetes magazin készítése saját számítógépes programmal a cikkek
                 létrehozására és feltöltésére.</div>
             <button onclick="orderService(2)" class="order">Megrendelés</button>
         </div>
         <div class="service d">
-            <span class="name">Professzionális weboldal készítés</span>
+            <span class="name">Profi weboldal készítés</span>
             <div class="logo"></div>
-            <div class="desciption">Professzionális kivitelezés professzionális igényekre. Fejlett, személyreszabott,
-                szemetkápráztató weboldal egyedi igények alapján. Dinamikus weboldal azoknak akiknek magas elvárásaik
+            <div class="price">
+                <div id="oldserviceprice_d"><del>350 000ft</del></div>
+                <div id="serviceprice_d">199 900ft-tól</div>
+            </div>
+            <div class="desciption">Professzionális kivitelezés. Fejlett, személyreszabott, weboldal egyedi igények alapján. Dinamikus weboldal azoknak akiknek magas elvárásaik
                 vannak.</div>
             <button onclick="orderService(3)" class="order">Megrendelés</button>
         </div>

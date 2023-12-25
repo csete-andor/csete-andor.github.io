@@ -42,7 +42,7 @@ header {
   background-color: #fff5c3;
 }
 .service .name {
-  font-size: 2.3vw;
+  font-size: 1.5vw;
   position: absolute;
   text-align: center;
   top: 0.65em;
@@ -63,7 +63,7 @@ header {
   font-size: 1.1vw;
   position: absolute;
   margin: 10px;
-  bottom: 4em;
+  bottom: 3.3em;
   line-height: 90%;
 }
 .service .order {
@@ -72,7 +72,7 @@ header {
   border-radius: 40px;
   padding: 0.5vw;
   font-family: Bebas Neue;
-  font-size: 2vw;
+  font-size: 1.5vw;
   text-align: center;
   position: absolute;
   left: 50%;
@@ -146,7 +146,20 @@ form button{
   position: absolute;
   top: 1em;
 }
-
+.price{
+  width: 5em;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 10vw;
+  text-align: center;
+  font-size: 1.5vw;
+  border: 2px solid black;
+}
+.price del{
+  font-size: 19px;
+  color: rgb(48, 48, 48);
+}
 
 @media only screen and (min-width: 768px) {
 }
