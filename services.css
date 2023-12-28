@@ -164,7 +164,7 @@ form button {
   font-size: 18px;
 }
 
-#backtoitems {
+#backtoitems .back{
   padding: 10px;
   background-color: #fbe367;
   font-size: 23px;
@@ -175,6 +175,10 @@ form button {
   left: 1em;
   position: absolute;
   top: 1em;
+  display: block;
+}
+#backtoitems .back.mobile{
+  display: none;
 }
 
 .price {
@@ -283,6 +287,17 @@ form button {
   }
   .service .bandage{
     font-size: 3vw;
+  }
+  #backtoitems .back.desktop{
+    display: none;
+  }
+  #backtoitems .back.mobile{
+    display: block;
+    padding: 3px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    left: 5px;
   }
   @keyframes popping {
   50%{

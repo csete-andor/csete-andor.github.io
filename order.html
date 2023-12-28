@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Szolgáltatások - Csete Andor</title>
-    <link rel="stylesheet" href="services.css?v=1.0.2">
+    <link rel="stylesheet" href="services.css?v=1.0.5">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
     <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <header><a href="https://cseteandor.hu">Csete Andor</a></header>
+    <header style="font-size: 35px;"><a href="https://cseteandor.hu">Csete Andor</a></header>
 
-    <div id="register">
-        <a href="services.html" id="backtoitems">Vissza</a>
+    <div id="register" style="padding-top: 3em;">
+        <a href="services.html" id="backtoitems"><span class="back desktop ">Vissza</span><span class="back mobile">←</span></a>
         <form action="https://formspree.io/f/mayrwvvl" method="POST">
             <label for="name">
                 Teljes név:<span class="red">*</span> <br>
@@ -89,21 +89,7 @@
                 document.getElementById('service_selection').value = "free_consultation";
             }
         
-    </script>
-    <script>
-        let infoMobile = document.getElementById("info");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                infoMobile.className = "info closed";
-            } else {
-                infoMobile.className = "info open";
-            }
-        }
-    </script>
+    </script>s
 </body>
 
 </html>
