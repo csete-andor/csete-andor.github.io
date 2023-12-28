@@ -119,7 +119,7 @@ header {
   margin-top: 3em;
 }
 
-.info button {
+.info a {
   padding: 10px;
   background-color: #fbe367;
   border: none;
@@ -255,14 +255,14 @@ form button {
     bottom: -3em;
   }
 
-  .info button {
+  .info a {
     font-size: 21px;
     color: black;
     opacity: 1;
     transition: 300ms;
   }
 
-  .info.closed button {
+  .info.closed a {
     opacity: 0;
   }
   #register{
