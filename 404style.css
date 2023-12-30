@@ -8,8 +8,6 @@ body{
     font-family: Bebas Neue;
     min-height: 100vh;
 }
-
-@media only screen and (max-width: 600px) {
     h1{
         font-size: 70vw;
         width: 100%;
@@ -69,35 +67,18 @@ body{
     #buttons a:nth-child(1){
         bottom: 2.5em;
     }
-}
-
-@media only screen and (min-width: 601px){
-
-}
-
-
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
+    h1{
+        font-size: 20vw;
+    }
+    h2{
+        font-size: 5vw;
+    }
+    .oval.big{
+        height: 50vw;
+        width: 50vw;
+        top: 15vh;
+    }
 }

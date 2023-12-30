@@ -119,14 +119,15 @@ header {
   margin-top: 3em;
 }
 
-.info button {
-  padding: 10px;
+.info a {
+  padding: 5px;
   background-color: #fbe367;
   border: none;
   border-radius: 40px;
   font-family: Bebas Neue;
   cursor: pointer;
-  font-size: 1.75vw;
+  font-size: 1.5vw;
+  transform: translateY(100vw);
 }
 
 #register {
@@ -260,14 +261,14 @@ form button {
     bottom: -3em;
   }
 
-  .info button {
+  .info a {
     font-size: 21px;
     color: black;
     opacity: 1;
     transition: 300ms;
   }
 
-  .info.closed button {
+  .info.closed a {
     opacity: 0;
   }
   #register{

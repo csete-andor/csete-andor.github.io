@@ -92,6 +92,9 @@ section.white {
 #buttons span{
     display: none;
 }
+.desktop_only{
+    display: none;
+}
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     header{
@@ -127,5 +130,8 @@ section.white {
         width: 2em;
         font-size: 25px;
         cursor: pointer;
+    }
+    .desktop_only{
+        display: block;
     }
 }
