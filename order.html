@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4N4CH6TDGW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-4N4CH6TDGW');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Szolgáltatások - Csete Andor</title>
@@ -14,7 +22,8 @@
     <header style="font-size: 35px;"><a href="https://cseteandor.hu">Csete Andor</a></header>
 
     <div id="register" style="padding-top: 3em;">
-        <a href="services.html" id="backtoitems"><span class="back desktop ">Vissza</span><span class="back mobile">←</span></a>
+        <a href="services.html" id="backtoitems"><span class="back desktop ">Vissza</span><span
+                class="back mobile">←</span></a>
         <form action="https://formspree.io/f/mayrwvvl" method="POST">
             <label for="name">
                 Teljes név:<span class="red">*</span> <br>
@@ -71,24 +80,24 @@
         };
     </script>
     <script>
-            const urlParams = new URLSearchParams(window.location.search);
-            const selectedService = urlParams.get("serviceID");
-            if (selectedService == "0") {
-                document.getElementById('service_selection').value = "website_expansion";
-            }
-            else if (selectedService == "1") {
-                document.getElementById('service_selection').value = "website_development";
-            }
-            else if (selectedService == "2") {
-                document.getElementById('service_selection').value = "blog_development";
-            }
-            else if (selectedService == "3") {
-                document.getElementById('service_selection').value = "professional_website_development";
-            }
-            else {
-                document.getElementById('service_selection').value = "free_consultation";
-            }
-        
+        const urlParams = new URLSearchParams(window.location.search);
+        const selectedService = urlParams.get("serviceID");
+        if (selectedService == "0") {
+            document.getElementById('service_selection').value = "website_expansion";
+        }
+        else if (selectedService == "1") {
+            document.getElementById('service_selection').value = "website_development";
+        }
+        else if (selectedService == "2") {
+            document.getElementById('service_selection').value = "blog_development";
+        }
+        else if (selectedService == "3") {
+            document.getElementById('service_selection').value = "professional_website_development";
+        }
+        else {
+            document.getElementById('service_selection').value = "free_consultation";
+        }
+
     </script>
 </body>
 

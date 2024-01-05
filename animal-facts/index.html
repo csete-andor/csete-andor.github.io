@@ -1,53 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Random Animal Facts</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="style.css"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="dinosaur.png"
-    />
-    <style>
-      main {
-        transition: 300ms;
-      }
-    </style>
-  </head>
 
-  <body>
-    <header>
-      <h1>Random Animal Facts</h1>
-      <nav>
-        <ul>
-          <li><a href="https://cseteandor.hu/animal-facts">Home</a></li>
-          <li><a href="about">About</a></li>
-          <li>
-            <a href="contact">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <div>
-        <input
-          type="text"
-          placeholder="Search for an animal..."
-          id="searchbar"
-        />
-        <button class="searchbtn" onclick="searchInput()">search</button>
-      </div>
-    </header>
-    <div id="sharePad" style="width: 100%; position: fixed; z-index: -10"> <!--share pan-->
-      <div
-        id="sharePan"
-        style="
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4N4CH6TDGW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4N4CH6TDGW');
+  </script>
+  <title>Random Animal Facts</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="icon" type="image/png" href="dinosaur.png" />
+  <style>
+    main {
+      transition: 300ms;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Random Animal Facts</h1>
+    <nav>
+      <ul>
+        <li><a href="https://cseteandor.hu/animal-facts">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li>
+          <a href="contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div>
+      <input type="text" placeholder="Search for an animal..." id="searchbar" />
+      <button class="searchbtn" onclick="searchInput()">search</button>
+    </div>
+  </header>
+  <div id="sharePad" style="width: 100%; position: fixed; z-index: -10"> <!--share pan-->
+    <div id="sharePan" style="
           width: 50%;
           margin: auto;
           transform: translateY(50%);
@@ -59,357 +50,321 @@
           text-align: center;
           border: solid black 2px;
           border-radius: 5px;
-        "
-      >
-        <div style="transform: translateY(35%)">
-          <strong>Share this page!</strong><br /><br />
-          <span
-            id="copytextspan"
-            style="cursor: pointer; color: green"
-            id="copy-text"
-            >Copy URL</span
-          ><br />
+        ">
+      <div style="transform: translateY(35%)">
+        <strong>Share this page!</strong><br /><br />
+        <span id="copytextspan" style="cursor: pointer; color: green" id="copy-text">Copy URL</span><br />
 
-          <a
-            target="_blank"
-            href=" https://www.facebook.com/sharer/sharer.php?u=https://cseteandor.hu/animal-facts"
-            >Facebook</a
-          ><br />
-          <a
-            href="https://www.pinterest.com/pin/create/button/?url=https://cseteandor.hu/animal-facts&media=https://cseteandor.hu/animal-facts/images/people.jpg&description=Checkout%20this%20cool%20website"
-            target="_blank"
-            >Pinterest</a
-          ><br />
-          <a
-            target="_blank"
-            href=" https://www.reddit.com/submit?url=https://cseteandor.hu/animal-facts&title=Checkout%20this%20cool%20website!"
-            >Reddit</a
-          ><br />
-          <a
-            target="_blank"
-            href="https://twitter.com/intent/tweet?url=https://cseteandor.hu/animal-facts&text=Checkout%20this%20cool%20website!"
-            >Twitter</a
-          ><br />
-          <a
-            target="_blank"
-            href=" https://www.linkedin.com/shareArticle?mini=true&url=https://cseteandor.hu/animal-facts&title=Check%20out%20this%20cool%20website!&summary=On%20this%20website%20you%20can%20learn%20a%20lot%20about%20animals,%20by%20reading%20interesting%20facts%20about%20them!&source=RandomAnimalFacts"
-            >LinkedIn</a
-          ><br />
-        </div>
+        <a target="_blank"
+          href=" https://www.facebook.com/sharer/sharer.php?u=https://cseteandor.hu/animal-facts">Facebook</a><br />
+        <a href="https://www.pinterest.com/pin/create/button/?url=https://cseteandor.hu/animal-facts&media=https://cseteandor.hu/animal-facts/images/people.jpg&description=Checkout%20this%20cool%20website"
+          target="_blank">Pinterest</a><br />
+        <a target="_blank"
+          href=" https://www.reddit.com/submit?url=https://cseteandor.hu/animal-facts&title=Checkout%20this%20cool%20website!">Reddit</a><br />
+        <a target="_blank"
+          href="https://twitter.com/intent/tweet?url=https://cseteandor.hu/animal-facts&text=Checkout%20this%20cool%20website!">Twitter</a><br />
+        <a target="_blank"
+          href=" https://www.linkedin.com/shareArticle?mini=true&url=https://cseteandor.hu/animal-facts&title=Check%20out%20this%20cool%20website!&summary=On%20this%20website%20you%20can%20learn%20a%20lot%20about%20animals,%20by%20reading%20interesting%20facts%20about%20them!&source=RandomAnimalFacts">LinkedIn</a><br />
       </div>
     </div>
-    <main id="main" style="padding-top: 10em; padding-bottom: 30em">
-      <div
-        style="width: 99%; height: 100vmax; position: fixed; z-index: -99"
-        id="sharehider"
-        onclick="hideShare()"
-      ></div>
-      <div class="animal-fact" id="mainfact">
-        <h2 class="fact-title">Did you know?</h2>
-        <h5 id="animal"></h5>
-        <p id="fact" class="fact-text"></p>
-        <button class="new-fact-btn" onclick="randomfact()" id="new-fact">
-          New Fact
-        </button>
-        <div id="animalpic"></div>
-        <p
-          style="color: green; margin: 1em; margin-bottom: 0%"
-          id="animalimage"
-        ></p>
-      </div>
-      <div style="margin-top: 7em" id="full-gallery">
-        <h2><span style="color: green">Gallery</span></h2>
-        <div
-          style="display: flex; align-items: center; overflow-x: scroll"
-          id="gallery"
-        >
-          <div
-            class="scroll-left-btn"
-            style="
+  </div>
+  <main id="main" style="padding-top: 10em; padding-bottom: 30em">
+    <div style="width: 99%; height: 100vmax; position: fixed; z-index: -99" id="sharehider" onclick="hideShare()"></div>
+    <div class="animal-fact" id="mainfact">
+      <h2 class="fact-title">Did you know?</h2>
+      <h5 id="animal"></h5>
+      <p id="fact" class="fact-text"></p>
+      <button class="new-fact-btn" onclick="randomfact()" id="new-fact">
+        New Fact
+      </button>
+      <div id="animalpic"></div>
+      <p style="color: green; margin: 1em; margin-bottom: 0%" id="animalimage"></p>
+    </div>
+    <div style="margin-top: 7em" id="full-gallery">
+      <h2><span style="color: green">Gallery</span></h2>
+      <div style="display: flex; align-items: center; overflow-x: scroll" id="gallery">
+        <div class="scroll-left-btn" style="
               height: 100%;
               width: 200px;
               position: fixed;
               left: 0px;
               top: 5em;
-            "
-          ></div>
-          <div
-            class="scroll-right-btn"
-            style="
+            "></div>
+        <div class="scroll-right-btn" style="
               height: 100%;
               width: 200px;
               position: fixed;
               right: 0px;
               top: 5em;
-            "
-          ></div>
-          <script>
-            const gallery = document.querySelector("#gallery");
-            const scrollLeftBtn = document.querySelector(".scroll-left-btn");
-            const scrollRightBtn = document.querySelector(".scroll-right-btn");
+            "></div>
+        <script>
+          const gallery = document.querySelector("#gallery");
+          const scrollLeftBtn = document.querySelector(".scroll-left-btn");
+          const scrollRightBtn = document.querySelector(".scroll-right-btn");
 
-            scrollLeftBtn.addEventListener("click", () => {
-              gallery.scrollBy({
-                left: -700,
-                behavior: "smooth",
-              });
+          scrollLeftBtn.addEventListener("click", () => {
+            gallery.scrollBy({
+              left: -700,
+              behavior: "smooth",
             });
-
-            scrollRightBtn.addEventListener("click", () => {
-              gallery.scrollBy({
-                left: 700,
-                behavior: "smooth",
-              });
-            });
-          </script>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <p>
-        Created by Csete Andor in 2023. <br />
-        All rights reserved!
-      </p>
-    </footer>
-    <script>//search engine and random facts and others
-      function Search() {
-        fetch("facts.json")
-          .then((response) => response.json())
-          .then((data) => {
-            const matchingFacts = data.animals.find(
-              (fact) => fact.name.toLowerCase() === searchName.toLowerCase()
-            );
-            var elements = document.querySelectorAll(".deletable");
-            for (var i = 0; i < elements.length; i++) {
-              elements[i].parentNode.removeChild(elements[i]);
-            }
-            var titleDoc = document.createElement("h1");
-            titleDoc.className = "deletable";
-            titleDoc.innerHTML =
-              "Facts about " +
-              searchName.charAt(0).toUpperCase() +
-              searchName.slice(1);
-            document.getElementById("main").appendChild(titleDoc);
-            document.getElementById("mainfact").style.display = "none";
-            document.getElementById("full-gallery").style.display = "none";
-            if (typeof matchingFacts === "undefined") {
-              const animalName = searchName;
-              const apiKey = "5IYR0L__P8FIZUpsVS05DAkoQxOHeF0Ca5hE5UBfq5Y";
-              const apiUrl = `https://api.unsplash.com/photos/random?query=${animalName}&client_id=${apiKey}`;
-              fetch(apiUrl)
-                .then((response) => response.json())
-                .then((data) => {
-                  const imgSrc = data.urls.regular;
-                  var currentChild = document.createElement("h3");
-                  currentChild.innerHTML = "Picture for " + searchName;
-                  currentChild.style.marginTop = "3em";
-                  currentChild.className = "deletable";
-                  document.getElementById("main").appendChild(currentChild);
-                  currentChild = document.createElement("img");
-                  currentChild.style.maxHeight = "20vmax";
-                  currentChild.style.marginTop = "1em";
-                  currentChild.style.borderRadius = "5px";
-                  currentChild.className = "deletable";
-                  currentChild.setAttribute("src", imgSrc);
-                  document.getElementById("main").appendChild(currentChild);
-                })
-                .catch((error) => console.log(error));
-
-              var currentChild = document.createElement("h2");
-              currentChild.className = "deletable";
-              currentChild.innerHTML =
-                "Sorry, we couldn't find any facts for <i>'" +
-                searchName +
-                "'</i>.";
-              document.getElementById("main").appendChild(currentChild);
-            } else {
-              var currentChild = document.createElement("img");
-              currentChild.setAttribute("src", matchingFacts.image);
-              currentChild.style.maxHeight = "20vmax";
-              currentChild.style.borderRadius = "5px";
-              currentChild.className = "deletable";
-              document.getElementById("main").appendChild(currentChild);
-              for (let i = 0; i < matchingFacts.facts.length; i++) {
-                currentChild = document.createElement("div");
-                currentChild.className = "deletable";
-                currentChild.innerHTML =
-                  '<div style="margin-top:5em;" class="animal-fact"><h2 class="fact-title">Fact ' +
-                  (i + 1) +
-                  '</h2><p class="fact-text">' +
-                  matchingFacts.facts[i] +
-                  "</p></div>";
-                document.getElementById("main").appendChild(currentChild);
-              }
-            }
-            currentChild = document.createElement("div");
-            currentChild.className = "deletable";
-            currentChild.innerHTML =
-              '<button class="backToHome" onclick="clearSearch()">Back to home</button>';
-            document.getElementById("main").appendChild(currentChild);
-            currentChild = document.createElement("div");
-            currentChild.className = "deletable";
-            currentChild.innerHTML =
-              '<button class="backToHomeArrow" onclick="clearSearch()">back</button>';
-            document.getElementById("main").appendChild(currentChild);
-          })
-          .catch((error) => console.error(error));
-      }
-      function randomfact() {
-        fetch("facts.json")
-          .then((response) => response.json())
-          .then((data) => {
-            if (Math.floor(Math.random() * (10 - 0 + 1) + 0) == 1) {
-              document.getElementById("animal").innerHTML = "People";
-              document.getElementById("fact").innerHTML =
-                "People can share this page by one click. Please, if you enjoy this page, share to your friends and family so they can enjoy it as well. <br> <b>Thank you!</b>";
-              document.getElementById("animalpic").innerHTML =
-                '<img src="images/people.jpg" style="max-width: 80%; margin-top:2em;border-radius:5px;">';
-              document.getElementById("animalimage").innerHTML =
-                '<span style="cursor: pointer;" onclick="randomfact()">New fact</span>';
-              document.getElementById("new-fact").style.backgroundColor =
-                "brown";
-              document.getElementById("new-fact").innerHTML = "Share this page";
-              document
-                .getElementById("new-fact")
-                .setAttribute("onclick", "sharePage()");
-            } else {
-              const animals = data.animals;
-              const randomIndex = Math.floor(Math.random() * animals.length);
-              const animal = animals[randomIndex];
-
-              let fact;
-              let animalName;
-              let animalImage;
-              if (Array.isArray(animal.facts)) {
-                const randomFactIndex = Math.floor(
-                  Math.random() * animal.facts.length
-                );
-                fact = animal.facts[randomFactIndex];
-                animalName = animal.name;
-                animalImage = animal.image;
-              } else {
-                fact = animal.facts;
-                animalName = animal.name;
-                animalImage = animal.image;
-              }
-
-              document.getElementById("fact").innerHTML = fact;
-              document.getElementById("animal").innerHTML = animalName;
-              document.getElementById(
-                "animalimage"
-              ).innerHTML = `<a target="_blank" href="https://www.google.com/search?q=${animalName}&tbm=isch">More images of ${animalName}</a>`;
-              document.getElementById(
-                "animalpic"
-              ).innerHTML = `<img src="${animalImage}" style="max-width:80%; margin-top:2em;border-radius:5px;">`;
-              document.getElementById("new-fact").style.backgroundColor =
-                "green";
-              document.getElementById("new-fact").innerHTML = "New fact";
-              document
-                .getElementById("new-fact")
-                .setAttribute("onclick", "randomfact()");
-            }
           });
-      }
-      let searchName = "";
-      const urlParams = new URLSearchParams(window.location.search);
-      const data = urlParams.get("t");
-      const data1 = urlParams.get("search");
-      if (data != "share") {
-        if (data1 != "") {
-          searchName = data1;
-          Search();
-          randomfact();
-        } else {
-          randomfact();
-        }
-      } else {
-        document.getElementById("animal").innerHTML = "People";
-        document.getElementById("fact").innerHTML =
-          "People can share this page by one click. Please, if you enjoy this page, share to your friends and family so they can enjoy it as well. <br> <b>Thank you!</b>";
-        document.getElementById("animalpic").innerHTML =
-          '<img src="images/people.jpg" style="max-width: 80%; margin-top:2em;border-radius:5px;">';
-        document.getElementById("animalimage").innerHTML =
-          '<span style="cursor: pointer;" onclick="randomfact()">New fact</span>';
-        document.getElementById("new-fact").style.backgroundColor = "brown";
-        document.getElementById("new-fact").innerHTML = "Share this page";
-        document
-          .getElementById("new-fact")
-          .setAttribute("onclick", "sharePage()");
-      }
-      function searchInput() {
-        searchName = document.getElementById("searchbar").value;
-        location.replace("?search=" + searchName);
-      }
-      function clearSearch() {
-        var elements = document.querySelectorAll(".deletable");
-        for (var i = 0; i < elements.length; i++) {
-          elements[i].parentNode.removeChild(elements[i]);
-        }
-        document.getElementById("mainfact").style.display = "block";
-        document.getElementById("full-gallery").style.display = "block";
-        location.replace("?");
-      }
-    </script>
-    <script>//search by search bar
-      const input = document.getElementById("searchbar");
 
-      input.addEventListener("keypress", function (event) {
-        if (event.keyCode === 13) {
-          searchInput();
-        }
-      });
-    </script>
-    <script>//add images to gallery
+          scrollRightBtn.addEventListener("click", () => {
+            gallery.scrollBy({
+              left: 700,
+              behavior: "smooth",
+            });
+          });
+        </script>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>
+      Created by Csete Andor in 2023. <br />
+      All rights reserved!
+    </p>
+  </footer>
+  <script>//search engine and random facts and others
+    function Search() {
       fetch("facts.json")
         .then((response) => response.json())
         .then((data) => {
-          const animals = data.animals.map((animal) => animal);
-          const container = document.getElementById("gallery");
-          animals.forEach((respond) => {
-            const imgElement = document.createElement("img");
-            imgElement.src = respond.image;
-            imgElement.setAttribute("onclick", "location.replace('?search="+respond.name+"')")
-            imgElement.style.maxWidth = "30%";
-            imgElement.style.margin = "1em";
-            imgElement.style.borderRadius = "5px";
-            imgElement.style.cursor = "pointer";
-            imgElement.setAttribute("draggable", "false");
-            container.appendChild(imgElement);
-          });
+          const matchingFacts = data.animals.find(
+            (fact) => fact.name.toLowerCase() === searchName.toLowerCase()
+          );
+          var elements = document.querySelectorAll(".deletable");
+          for (var i = 0; i < elements.length; i++) {
+            elements[i].parentNode.removeChild(elements[i]);
+          }
+          var titleDoc = document.createElement("h1");
+          titleDoc.className = "deletable";
+          titleDoc.innerHTML =
+            "Facts about " +
+            searchName.charAt(0).toUpperCase() +
+            searchName.slice(1);
+          document.getElementById("main").appendChild(titleDoc);
+          document.getElementById("mainfact").style.display = "none";
+          document.getElementById("full-gallery").style.display = "none";
+          if (typeof matchingFacts === "undefined") {
+            const animalName = searchName;
+            const apiKey = "5IYR0L__P8FIZUpsVS05DAkoQxOHeF0Ca5hE5UBfq5Y";
+            const apiUrl = `https://api.unsplash.com/photos/random?query=${animalName}&client_id=${apiKey}`;
+            fetch(apiUrl)
+              .then((response) => response.json())
+              .then((data) => {
+                const imgSrc = data.urls.regular;
+                var currentChild = document.createElement("h3");
+                currentChild.innerHTML = "Picture for " + searchName;
+                currentChild.style.marginTop = "3em";
+                currentChild.className = "deletable";
+                document.getElementById("main").appendChild(currentChild);
+                currentChild = document.createElement("img");
+                currentChild.style.maxHeight = "20vmax";
+                currentChild.style.marginTop = "1em";
+                currentChild.style.borderRadius = "5px";
+                currentChild.className = "deletable";
+                currentChild.setAttribute("src", imgSrc);
+                document.getElementById("main").appendChild(currentChild);
+              })
+              .catch((error) => console.log(error));
+
+            var currentChild = document.createElement("h2");
+            currentChild.className = "deletable";
+            currentChild.innerHTML =
+              "Sorry, we couldn't find any facts for <i>'" +
+              searchName +
+              "'</i>.";
+            document.getElementById("main").appendChild(currentChild);
+          } else {
+            var currentChild = document.createElement("img");
+            currentChild.setAttribute("src", matchingFacts.image);
+            currentChild.style.maxHeight = "20vmax";
+            currentChild.style.borderRadius = "5px";
+            currentChild.className = "deletable";
+            document.getElementById("main").appendChild(currentChild);
+            for (let i = 0; i < matchingFacts.facts.length; i++) {
+              currentChild = document.createElement("div");
+              currentChild.className = "deletable";
+              currentChild.innerHTML =
+                '<div style="margin-top:5em;" class="animal-fact"><h2 class="fact-title">Fact ' +
+                (i + 1) +
+                '</h2><p class="fact-text">' +
+                matchingFacts.facts[i] +
+                "</p></div>";
+              document.getElementById("main").appendChild(currentChild);
+            }
+          }
+          currentChild = document.createElement("div");
+          currentChild.className = "deletable";
+          currentChild.innerHTML =
+            '<button class="backToHome" onclick="clearSearch()">Back to home</button>';
+          document.getElementById("main").appendChild(currentChild);
+          currentChild = document.createElement("div");
+          currentChild.className = "deletable";
+          currentChild.innerHTML =
+            '<button class="backToHomeArrow" onclick="clearSearch()">back</button>';
+          document.getElementById("main").appendChild(currentChild);
+        })
+        .catch((error) => console.error(error));
+    }
+    function randomfact() {
+      fetch("facts.json")
+        .then((response) => response.json())
+        .then((data) => {
+          if (Math.floor(Math.random() * (10 - 0 + 1) + 0) == 1) {
+            document.getElementById("animal").innerHTML = "People";
+            document.getElementById("fact").innerHTML =
+              "People can share this page by one click. Please, if you enjoy this page, share to your friends and family so they can enjoy it as well. <br> <b>Thank you!</b>";
+            document.getElementById("animalpic").innerHTML =
+              '<img src="images/people.jpg" style="max-width: 80%; margin-top:2em;border-radius:5px;">';
+            document.getElementById("animalimage").innerHTML =
+              '<span style="cursor: pointer;" onclick="randomfact()">New fact</span>';
+            document.getElementById("new-fact").style.backgroundColor =
+              "brown";
+            document.getElementById("new-fact").innerHTML = "Share this page";
+            document
+              .getElementById("new-fact")
+              .setAttribute("onclick", "sharePage()");
+          } else {
+            const animals = data.animals;
+            const randomIndex = Math.floor(Math.random() * animals.length);
+            const animal = animals[randomIndex];
+
+            let fact;
+            let animalName;
+            let animalImage;
+            if (Array.isArray(animal.facts)) {
+              const randomFactIndex = Math.floor(
+                Math.random() * animal.facts.length
+              );
+              fact = animal.facts[randomFactIndex];
+              animalName = animal.name;
+              animalImage = animal.image;
+            } else {
+              fact = animal.facts;
+              animalName = animal.name;
+              animalImage = animal.image;
+            }
+
+            document.getElementById("fact").innerHTML = fact;
+            document.getElementById("animal").innerHTML = animalName;
+            document.getElementById(
+              "animalimage"
+            ).innerHTML = `<a target="_blank" href="https://www.google.com/search?q=${animalName}&tbm=isch">More images of ${animalName}</a>`;
+            document.getElementById(
+              "animalpic"
+            ).innerHTML = `<img src="${animalImage}" style="max-width:80%; margin-top:2em;border-radius:5px;">`;
+            document.getElementById("new-fact").style.backgroundColor =
+              "green";
+            document.getElementById("new-fact").innerHTML = "New fact";
+            document
+              .getElementById("new-fact")
+              .setAttribute("onclick", "randomfact()");
+          }
         });
-    </script>
-    <script>//show and hide share page
-      function sharePage() {
-        document.getElementById("sharePad").style.zIndex = "99";
-        document.getElementById("sharehider").style.zIndex = "98";
-        document.getElementById("sharePan").style.opacity = "1";
-        document.getElementById("main").style.filter = "blur(5px)";
+    }
+    let searchName = "";
+    const urlParams = new URLSearchParams(window.location.search);
+    const data = urlParams.get("t");
+    const data1 = urlParams.get("search");
+    if (data != "share") {
+      if (data1 != "") {
+        searchName = data1;
+        Search();
+        randomfact();
+      } else {
+        randomfact();
       }
-      function hideShare() {
-        document.getElementById("sharePan").style.opacity = "0";
-        setTimeout(() => {
-          document.getElementById("sharePad").style.zIndex = "-10";
-          document.getElementById("sharehider").style.zIndex = "-11";
-          document.getElementById("main").style.filter = "blur(0px)";
-        }, 300);
+    } else {
+      document.getElementById("animal").innerHTML = "People";
+      document.getElementById("fact").innerHTML =
+        "People can share this page by one click. Please, if you enjoy this page, share to your friends and family so they can enjoy it as well. <br> <b>Thank you!</b>";
+      document.getElementById("animalpic").innerHTML =
+        '<img src="images/people.jpg" style="max-width: 80%; margin-top:2em;border-radius:5px;">';
+      document.getElementById("animalimage").innerHTML =
+        '<span style="cursor: pointer;" onclick="randomfact()">New fact</span>';
+      document.getElementById("new-fact").style.backgroundColor = "brown";
+      document.getElementById("new-fact").innerHTML = "Share this page";
+      document
+        .getElementById("new-fact")
+        .setAttribute("onclick", "sharePage()");
+    }
+    function searchInput() {
+      searchName = document.getElementById("searchbar").value;
+      location.replace("?search=" + searchName);
+    }
+    function clearSearch() {
+      var elements = document.querySelectorAll(".deletable");
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].parentNode.removeChild(elements[i]);
       }
-    </script>
-    <script> //copy text
-      const copyText = document.querySelector("#copytextspan");
+      document.getElementById("mainfact").style.display = "block";
+      document.getElementById("full-gallery").style.display = "block";
+      location.replace("?");
+    }
+  </script>
+  <script>//search by search bar
+    const input = document.getElementById("searchbar");
 
-      copyText.addEventListener("click", () => {
-        // Copy the text to the clipboard
-        const text = "https://cseteandor.hu/animal-facts";
-        navigator.clipboard.writeText(text);
-
-        // Show the "Text copied" message for 3 seconds
-        const message = document.getElementById("copytextspan");
-        message.innerHTML = "Text copied";
-
-        setTimeout(() => {
-          message.innerHTML = "Copy URL";
-        }, 750);
+    input.addEventListener("keypress", function (event) {
+      if (event.keyCode === 13) {
+        searchInput();
+      }
+    });
+  </script>
+  <script>//add images to gallery
+    fetch("facts.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const animals = data.animals.map((animal) => animal);
+        const container = document.getElementById("gallery");
+        animals.forEach((respond) => {
+          const imgElement = document.createElement("img");
+          imgElement.src = respond.image;
+          imgElement.setAttribute("onclick", "location.replace('?search=" + respond.name + "')")
+          imgElement.style.maxWidth = "30%";
+          imgElement.style.margin = "1em";
+          imgElement.style.borderRadius = "5px";
+          imgElement.style.cursor = "pointer";
+          imgElement.setAttribute("draggable", "false");
+          container.appendChild(imgElement);
+        });
       });
-    </script>
-  </body>
+  </script>
+  <script>//show and hide share page
+    function sharePage() {
+      document.getElementById("sharePad").style.zIndex = "99";
+      document.getElementById("sharehider").style.zIndex = "98";
+      document.getElementById("sharePan").style.opacity = "1";
+      document.getElementById("main").style.filter = "blur(5px)";
+    }
+    function hideShare() {
+      document.getElementById("sharePan").style.opacity = "0";
+      setTimeout(() => {
+        document.getElementById("sharePad").style.zIndex = "-10";
+        document.getElementById("sharehider").style.zIndex = "-11";
+        document.getElementById("main").style.filter = "blur(0px)";
+      }, 300);
+    }
+  </script>
+  <script> //copy text
+    const copyText = document.querySelector("#copytextspan");
+
+    copyText.addEventListener("click", () => {
+      // Copy the text to the clipboard
+      const text = "https://cseteandor.hu/animal-facts";
+      navigator.clipboard.writeText(text);
+
+      // Show the "Text copied" message for 3 seconds
+      const message = document.getElementById("copytextspan");
+      message.innerHTML = "Text copied";
+
+      setTimeout(() => {
+        message.innerHTML = "Copy URL";
+      }, 750);
+    });
+  </script>
+</body>
+
 </html>
