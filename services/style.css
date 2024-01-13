@@ -1,0 +1,45 @@
+@font-face {
+    font-family: Bebas Neue;
+    src: url(../resources/BebasNeue-Regular.ttf);
+  }
+body{
+    margin: 0px;
+    background-color: #FFB600;
+    font-family: Bebas Neue !important;
+}
+header {
+    text-align: center;
+    width: 100%;
+    font-size: 70px;
+    cursor: pointer;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+main{
+    width: 40vw;
+    margin: auto;
+    margin-top: 20vh;
+    background-color: aliceblue;
+    font-family: Bebas Neue !important;
+    padding: 2vw;
+    position: relative;
+    height: 20em;
+}
+.container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10em;
+}
+ul{
+    padding-left: 21px;
+}
+.name{
+    font-size: 2vw;
+    text-align: center;
+}
+.price{
+    
+}
