@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Csete Andor</title>
+    <link rel="stylesheet" href="style.css?v=1.0.1">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <meta name="description" content="Csete Andor weboldala. Ha egy megfizethető, modern weboldalat szeretne!">
+    <meta name="keywords" content="web fejlesztés, web dizájn, web design, web development, csete andor, weboldal készítés, megfizethető weboldal készítés, budapest, blog készítés, megbízható, minőségi, email rendszer">
+    <meta name="author" content="Csete Andor">
+</head>
+
+<body>
+
+    <section class="yellow">
+        <header><span><a href="https://cseteandor.hu">Csete Andor</a></span></header>
+        <div id="about">Csete andor vagyok, programozó, web designer és web fejlesztő. A pesthidegkúti waldorf
+            iskola gimnazistája, ahol nyolcadikos évesmunkám témájaként a programozást és webfejlesztést
+            választottam <br>
+            <a href="contact.html">Kapcsolat</a>
+            <a href="services.html">Ajánlat kérés</a>
+        </div>
+    </section>
+    <section class="white">
+        <div id="buttons">
+            <div><a class="button" href="https://cseteandor.hu/evesmunka/info">Évesmunka</a><br>
+            </div>
+            <div><a class="button" href="https://cseteandor.hu/animal-facts">Animal Facts</a><br></div>
+            <div class="desktop_only"><a class="button" href="https://cseteandor.hu/altimore">Altimore</a><br></div>
+        </div>
+
+    </section>
+
+    <section class="yellow">
+        <h1>Képességeim:</h1>
+        <div class="skills">
+            <div class="skill">Web dizájn</div>
+            <div class="skill">Web fejlesztés</div>
+            <div class="skill">UI/UX</div>
+            <div class="skill"></div>
+            <div class="skill"></div>
+            <div class="skill"></div>
+        </div>
+    </section>
+
+    <button id="totop" style="display: none;" onclick="scrollToTop()">↑</button>
+    <script>
+        let toTopBtn = document.getElementById("totop");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                toTopBtn.style.display = "block";
+            } else {
+                toTopBtn.style.display = "none";
+            }
+        }
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+
+</html>
