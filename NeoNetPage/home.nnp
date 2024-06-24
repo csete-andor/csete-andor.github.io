@@ -1,0 +1,9 @@
+{title:Welcome to NeoNet!}
+{tags: neonet; browser; internet; fast; secure; neovisuals; neo; neohub;}
+{style: #heading(fontsize=32, horizontalalign="center"); text(fontsize=19); button(fontsize=27, backgroundcolor=#0909d6, fontcolor=#fce300, padding=10); #footer(horizontalalign="center"); page(backgroundcolor=#ebe5b5)}
+{text#heading: Welcome to NeoNet!}
+{text: Download the NeoNet browser now for free and start use the NeoNetwork! It is secure and fast, and open-source! Click on the button below to begin the download}
+{button&nntp>neonet.nnp/browser:download}
+{text: Publish your website on the NeoNetwork for free! For more info check the lin below!}
+{link&nntp>neonet.nnp/nnp:NNP documentation}
+{text#footer:Created by Andor Csete in 2024}
