@@ -1,0 +1,39 @@
+{title:Classic Video Games}
+{tags: retro; video games; classic games; arcade; gaming history}
+{style: 
+    #header(fontsize=36, horizontalalign="center", fontcolor=#f1c40f);
+    #subheader(fontsize=24, horizontalalign="center", fontcolor=#2ecc71);
+    #main(fontsize=20, padding=20);
+    #game-title(fontsize=28, fontcolor=#e74c3c);
+    #game-description(fontsize=18, fontcolor=#34495e);
+    #highlight(fontcolor=#9b59b6, fontsize=22);
+    #button(fontsize=25, backgroundcolor=#2980b9, fontcolor=#ecf0f1, padding=15);
+    #link(fontsize=18, fontcolor=#3498db, textdecoration="underline");
+    #footer(horizontalalign="center", fontsize=16, fontcolor=#95a5a6);
+    page(backgroundcolor=#f5f5f5)
+}
+
+{text#header: Classic Video Games}
+{text#subheader: Relive the Golden Age of Arcade and Console Gaming}
+
+{text#game-title: Pac-Man (1980)}
+{text#game-description: Pac-Man is a maze action game developed and released by Namco. The player controls Pac-Man, who must eat all the dots inside an enclosed maze while avoiding four colored ghosts.}
+
+{text#game-title: Space Invaders (1978)}
+{text#game-description: Space Invaders is a shoot 'em up arcade game created by Tomohiro Nishikado. It was manufactured and sold by Taito in Japan and licensed by the Midway division of Bally for overseas distribution.}
+
+{text#game-title: Donkey Kong (1981)}
+{text#game-description: Donkey Kong is an arcade game developed by Nintendo. The gameplay focuses on maneuvering the protagonist across a series of platforms while dodging and jumping over obstacles.}
+
+{text#game-title: The Legend of Zelda (1986)}
+{text#game-description: The Legend of Zelda is an action-adventure game developed and published by Nintendo. The player controls Link, who embarks on a quest to rescue Princess Zelda and defeat the evil Ganon.}
+
+{text#subheader: Featured Game:}
+{text#highlight: Super Mario Bros. (1985)}
+{text#game-description: Super Mario Bros. is a platform game developed and published by Nintendo. The player controls Mario as he travels through the Mushroom Kingdom to rescue Princess Toadstool from Bowser.}
+
+{link#link&https://example.com/mario: Learn more about Super Mario Bros.}
+
+{button#button&https://example.com/classic-games-archive: Explore More Classic Games}
+
+{text#footer: Created by [Your Name] in 2024}
