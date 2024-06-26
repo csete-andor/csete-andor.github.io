@@ -1,16 +1,16 @@
 {title:Classic Video Games}
 {tags: retro; video games; classic games; arcade; gaming history}
 {style: 
-    #header(fontsize=36, horizontalalign="center", fontcolor=#f1c40f);
-    #subheader(fontsize=24, horizontalalign="center", fontcolor=#2ecc71);
+    #header(fontsize=36, horizontalalign="center", fontcolor="#f1c40f");
+    #subheader(fontsize=24, horizontalalign="center", fontcolor="#2ecc71");
     #main(fontsize=20, padding=20);
-    #game-title(fontsize=28, fontcolor=#e74c3c);
-    #game-description(fontsize=18, fontcolor=#34495e);
-    #highlight(fontcolor=#9b59b6, fontsize=22);
-    #button(fontsize=25, backgroundcolor=#2980b9, fontcolor=#ecf0f1, padding=15);
-    #link(fontsize=18, fontcolor=#3498db, textdecoration="underline");
-    #footer(horizontalalign="center", fontsize=16, fontcolor=#95a5a6);
-    page(backgroundcolor=#f5f5f5)
+    #game-title(fontsize=28, fontcolor="#e74c3c");
+    #game-description(fontsize=18, fontcolor="#34495e");
+    #highlight(fontcolor="#9b59b6", fontsize=22);
+    #button(fontsize=25, backgroundcolor="#2980b9", fontcolor="#ecf0f1", padding=15);
+    #link(fontsize=18, fontcolor="#3498db", textdecoration="underline");
+    #footer(horizontalalign="center", fontsize=16, fontcolor="#95a5a6");
+    page(backgroundcolor="#f5f5f5")
 }
 
 {text#header: Classic Video Games}
